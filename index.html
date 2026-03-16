@@ -1,189 +1,700 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Israel Torres | Conectando datos, procesos y personas</title>
-    <meta name="description" content="Portafolio y laboratorio personal de Israel Torres. Análisis, sistemas, mejora de procesos y conexión de ideas.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Israel Torres — Conectando datos, procesos y personas</title>
+  <meta name="description" content="Ingeniero Civil Industrial. Business Intelligence, transformación digital y mejora de procesos. Santiago, Chile." />
+
+  <!-- Fonts: Syne (display, angular, técnico) + Figtree (cuerpo, cálido) + JetBrains Mono (código) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Figtree:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="#inicio" class="logo">IT.</a>
-            <ul class="nav-links">
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#metodo">Cómo pienso</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#reflexiones">Reflexiones</a></li>
-                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
-            </ul>
-            <button class="mobile-menu-btn" aria-label="Abrir menú">☰</button>
-        </div>
-    </nav>
+  <!-- ══════════════════════════════════════════
+       CURSOR
+  ══════════════════════════════════════════ -->
+  <div class="cursor" id="cursor"></div>
 
-    <header id="inicio" class="hero fade-in-section">
-        <div class="container">
-            <p class="greeting">Hola, soy Israel Torres</p>
-            <h1 class="tagline">Conectando <span class="highlight-blue">datos</span>, procesos y <span class="highlight-brown">personas</span>.</h1>
-            <p class="hero-description">
-                No soy solo un analista o un gestor. Soy un traductor de sistemas. Me dedico a entender el panorama completo para construir soluciones que converjan en resultados reales.
+  <!-- ══════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#inicio" class="nav__logo">IT<span>.</span></a>
+
+      <nav class="nav__links" id="nav-links">
+        <a href="#sobre-mi">Sistema</a>
+        <a href="#metricas">Métricas</a>
+        <a href="#como-pienso">Proceso</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#habilidades">Skills</a>
+        <a href="#mas-alla">Lado B</a>
+        <a href="#reflexiones">Ideas</a>
+        <a href="#contacto" class="nav__cta">Hablemos</a>
+      </nav>
+
+      <button class="nav__burger" id="nav-burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <!-- Grilla de fondo tipo blueprint -->
+    <div class="hero__grid" aria-hidden="true"></div>
+    <!-- Líneas decorativas -->
+    <div class="hero__lines" aria-hidden="true">
+      <div class="hline hline--1"></div>
+      <div class="hline hline--2"></div>
+      <div class="hline hline--3"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__badge mono">
+        <span class="badge-dot"></span>
+        Ing. Civil Industrial · Santiago, Chile
+      </div>
+
+      <h1 class="hero__name">
+        <span class="hero__name-first">Israel</span>
+        <span class="hero__name-last">Torres</span>
+      </h1>
+
+      <p class="hero__tagline">
+        Conectando <em>datos</em>,<br />procesos y personas.
+      </p>
+
+      <p class="hero__desc">
+        No soy solo un analista ni solo un gestor. Soy el nodo que entiende
+        el sistema completo y construye soluciones que el equipo puede sostener
+        sin que yo esté.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#experiencia" class="btn btn--primary">Ver mi experiencia</a>
+        <a href="#como-pienso" class="btn btn--ghost">Cómo pienso →</a>
+      </div>
+    </div>
+
+    <!-- Diagrama abstracto CSS -->
+    <div class="hero__diagram" aria-hidden="true">
+      <div class="diagram">
+        <div class="diagram__ring diagram__ring--outer"></div>
+        <div class="diagram__ring diagram__ring--mid"></div>
+        <div class="diagram__ring diagram__ring--inner"></div>
+        <div class="diagram__core">
+          <span class="mono">IT</span>
+        </div>
+        <!-- Nodos orbitales -->
+        <div class="diagram__node diagram__node--1"><span>Datos</span></div>
+        <div class="diagram__node diagram__node--2"><span>Procesos</span></div>
+        <div class="diagram__node diagram__node--3"><span>Personas</span></div>
+        <div class="diagram__node diagram__node--4"><span>Sistemas</span></div>
+        <div class="diagram__node diagram__node--5"><span>BI</span></div>
+        <div class="diagram__node diagram__node--6"><span>Ideas</span></div>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+      <span class="mono">scroll</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SOBRE MÍ
+  ══════════════════════════════════════════ -->
+  <section class="section sobre" id="sobre-mi">
+    <div class="container">
+      <div class="section__label mono">// 01 — Sistema</div>
+      <div class="sobre__grid">
+        <div class="sobre__left">
+          <h2 class="section__title">El nodo<br /><em>conector</em></h2>
+          <p class="sobre__lead">
+            Tengo un perfil difícil de meter en una sola caja. Entiendo sistemas
+            completos, detecto patrones y construyo soluciones que realmente
+            funcionan en el tiempo.
+          </p>
+          <p>
+            Mi mente mezcla algo inusual: mucha creatividad con mucha capacidad
+            de estructurar. Cuando enfrento un problema, proceso el panorama
+            completo antes de moverme. Me interesa la visión macro tanto como
+            los detalles de implementación.
+          </p>
+          <p>
+            Lo que más me mueve es poder traducir entre personas, herramientas,
+            datos y organización para que el sistema converja. No aprendo por
+            teoría: aprendo para aplicar.
+          </p>
+        </div>
+
+        <div class="sobre__right">
+          <div class="sobre__card">
+            <span class="sobre__card-icon">◈</span>
+            <h3>Análisis sistémico</h3>
+            <p>Convierto datos desordenados en conclusiones claras. Detecto
+            patrones donde otros ven ruido.</p>
+          </div>
+          <div class="sobre__card">
+            <span class="sobre__card-icon">◎</span>
+            <h3>Conexión de piezas</h3>
+            <p>Traduzco entre áreas, herramientas y personas. Soy el puente
+            que hace converger sistemas que no se hablaban.</p>
+          </div>
+          <div class="sobre__card">
+            <span class="sobre__card-icon">◇</span>
+            <h3>Construcción real</h3>
+            <p>No me quedo en el diagnóstico. Diseño soluciones, las implemento
+            y evalúo si se sostendrán sin mi presencia.</p>
+          </div>
+          <div class="sobre__card">
+            <span class="sobre__card-icon">○</span>
+            <h3>Comunicación con fuerza</h3>
+            <p>Explico lo complejo con claridad. Me han dicho que tengo
+            velocidad para hilar ideas y presentarlas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       MÉTRICAS (contadores animados)
+  ══════════════════════════════════════════ -->
+  <section class="section metricas" id="metricas">
+    <div class="container">
+      <div class="metricas__grid">
+        <div class="metrica">
+          <div class="metrica__num">
+            <span class="counter" data-target="33">0</span>
+            <span class="metrica__plus">+</span>
+          </div>
+          <p class="metrica__label">Equipos coordinados<br /><span class="mono">Universidad San Sebastián</span></p>
+        </div>
+        <div class="metrica">
+          <div class="metrica__num">
+            <span class="counter" data-target="5">0</span>
+          </div>
+          <p class="metrica__label">Empresas e instituciones<br /><span class="mono">en 3 años</span></p>
+        </div>
+        <div class="metrica">
+          <div class="metrica__num">
+            <span class="counter" data-target="100">0</span>
+            <span class="metrica__plus">%</span>
+          </div>
+          <p class="metrica__label">Gestión comercial<br /><span class="mono">basada en datos · SALFA</span></p>
+        </div>
+        <div class="metrica">
+          <div class="metrica__num">
+            <span class="counter" data-target="3">0</span>
+          </div>
+          <p class="metrica__label">Sectores distintos<br /><span class="mono">salud · retail · consultoría</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CÓMO PIENSO
+  ══════════════════════════════════════════ -->
+  <section class="section proceso" id="como-pienso">
+    <div class="container">
+      <div class="section__label mono">// 02 — Proceso</div>
+      <h2 class="section__title">Mi mente<br /><em>funciona así</em></h2>
+      <p class="proceso__intro">
+        Cuando enfrento un problema, activo un protocolo. No es rígido ni
+        mecánico, pero siempre sigue la lógica de quien entiende sistemas.
+      </p>
+
+      <div class="proceso__steps">
+
+        <div class="pstep">
+          <div class="pstep__num mono">01</div>
+          <div class="pstep__bar"></div>
+          <div class="pstep__body">
+            <h3>Entender el sistema completo</h3>
+            <p>Primero mapeo. Necesito ver el todo: actores, flujos,
+            dependencias y contexto. No me muevo antes de tener el panorama.</p>
+          </div>
+        </div>
+
+        <div class="pstep">
+          <div class="pstep__num mono">02</div>
+          <div class="pstep__bar"></div>
+          <div class="pstep__body">
+            <h3>Separar y cuestionar</h3>
+            <p>Un sistema complejo es un conjunto de partes simples. Divido
+            para abordar, y hago las preguntas incómodas que otros evitan.</p>
+          </div>
+        </div>
+
+        <div class="pstep">
+          <div class="pstep__num mono">03</div>
+          <div class="pstep__bar"></div>
+          <div class="pstep__body">
+            <h3>Identificar recursos reales</h3>
+            <p>Datos, personas, tiempo, herramientas. Trabajo con lo que hay
+            y sé cuándo hace falta pedir lo que falta.</p>
+          </div>
+        </div>
+
+        <div class="pstep">
+          <div class="pstep__num mono">04</div>
+          <div class="pstep__bar"></div>
+          <div class="pstep__body">
+            <h3>Conectar los hilos</h3>
+            <p>Esto es lo que más disfruto. Ver cómo las partes se relacionan,
+            encontrar la lógica oculta del sistema, presentar lo que nadie
+            había unido antes.</p>
+          </div>
+        </div>
+
+        <div class="pstep">
+          <div class="pstep__num mono">05</div>
+          <div class="pstep__bar"></div>
+          <div class="pstep__body">
+            <h3>Diseñar y evaluar sostenibilidad</h3>
+            <p>Construyo la solución y evalúo si puede mantenerse sin que yo
+            esté. Una buena solución es la que el sistema absorbe y hace propia.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       EXPERIENCIA (corazón de la web)
+  ══════════════════════════════════════════ -->
+  <section class="section experiencia" id="experiencia">
+    <div class="container">
+      <div class="section__label mono">// 03 — Experiencia</div>
+      <h2 class="section__title">Dónde he<br /><em>construido</em></h2>
+
+      <div class="timeline">
+
+        <!-- SALFA -->
+        <article class="titem titem--featured">
+          <div class="titem__meta">
+            <span class="titem__date mono">Dic 2024 — Sep 2025</span>
+            <span class="titem__type tag">BI · Datos</span>
+          </div>
+          <div class="titem__dot"></div>
+          <div class="titem__content">
+            <div class="titem__header">
+              <h3>Analista BI y Gestión Comercial</h3>
+              <span class="titem__company">SALFA</span>
+            </div>
+            <p class="titem__desc">
+              Optimicé el proceso de provisionamiento y construí dashboards de
+              actualización diaria que convirtieron la gestión comercial en un
+              proceso 100% basado en datos. La reportería dejó de ser manual
+              y pasó a ser un sistema vivo.
             </p>
-            <div class="hero-cta">
-                <a href="#metodo" class="btn btn-primary">Ver mi proceso</a>
-                <a href="#proyectos" class="btn btn-secondary">Explorar proyectos</a>
+            <div class="titem__tags">
+              <span class="tag tag--sm">Power BI</span>
+              <span class="tag tag--sm">Automatización</span>
+              <span class="tag tag--sm">Dashboards</span>
+              <span class="tag tag--sm">Gestión comercial</span>
             </div>
+            <div class="titem__achievement">
+              <span class="mono achieve-label">[ logro clave ]</span>
+              <p>Gestión comercial automatizada al 100% sobre datos en tiempo real.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- USS Scrum Master -->
+        <article class="titem titem--featured">
+          <div class="titem__meta">
+            <span class="titem__date mono">Sep 2025 — Nov 2025</span>
+            <span class="titem__type tag">Gestión · Scrum</span>
+          </div>
+          <div class="titem__dot"></div>
+          <div class="titem__content">
+            <div class="titem__header">
+              <h3>Scrum Master</h3>
+              <span class="titem__company">Universidad San Sebastián</span>
+            </div>
+            <p class="titem__desc">
+              Coordiné un proyecto con 33 equipos de distintas carreras,
+              diseñando una herramienta de evaluación semiautomatizada.
+              El desafío: estandarizar el seguimiento de un sistema que
+              nunca había tenido estructura.
+            </p>
+            <div class="titem__tags">
+              <span class="tag tag--sm">Scrum</span>
+              <span class="tag tag--sm">Coordinación</span>
+              <span class="tag tag--sm">33 equipos</span>
+              <span class="tag tag--sm">Herramienta ad hoc</span>
+            </div>
+            <div class="titem__achievement">
+              <span class="mono achieve-label">[ logro clave ]</span>
+              <p>Sistema de evaluación semiautomatizado para 33 equipos en paralelo.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Hospital San José de Maipo -->
+        <article class="titem">
+          <div class="titem__meta">
+            <span class="titem__date mono">Mar 2025 — Jul 2025</span>
+            <span class="titem__type tag">Consultoría · Digital</span>
+          </div>
+          <div class="titem__dot"></div>
+          <div class="titem__content">
+            <div class="titem__header">
+              <h3>Consultor Transformación Digital</h3>
+              <span class="titem__company">Hospital San José de Maipo</span>
+            </div>
+            <p class="titem__desc">
+              Diagnostiqué brechas digitales reales en un entorno de salud y
+              entregué un plan maestro de automatización con tecnología OCR/NLP.
+              El cliente recibió una hoja de ruta técnica concreta para su
+              modernización.
+            </p>
+            <div class="titem__tags">
+              <span class="tag tag--sm">OCR / NLP</span>
+              <span class="tag tag--sm">Diagnóstico</span>
+              <span class="tag tag--sm">Plan maestro</span>
+              <span class="tag tag--sm">Salud</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ludum Bar -->
+        <article class="titem">
+          <div class="titem__meta">
+            <span class="titem__date mono">Oct 2023 — Feb 2025</span>
+            <span class="titem__type tag">BI · Finanzas</span>
+          </div>
+          <div class="titem__dot"></div>
+          <div class="titem__content">
+            <div class="titem__header">
+              <h3>Analista de Inteligencia Comercial</h3>
+              <span class="titem__company">Ludum Bar</span>
+            </div>
+            <p class="titem__desc">
+              Gestioné análisis de rentabilidad y pricing usando herramientas
+              de BI, vinculando métricas financieras con estrategias de marketing.
+              Semiautomaticé la generación de estados financieros para la gerencia.
+            </p>
+            <div class="titem__tags">
+              <span class="tag tag--sm">BI</span>
+              <span class="tag tag--sm">Pricing</span>
+              <span class="tag tag--sm">EEFF</span>
+              <span class="tag tag--sm">Automatización</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- GETC -->
+        <article class="titem">
+          <div class="titem__meta">
+            <span class="titem__date mono">Ene 2023 — Feb 2025</span>
+            <span class="titem__type tag">Consultoría</span>
+          </div>
+          <div class="titem__dot"></div>
+          <div class="titem__content">
+            <div class="titem__header">
+              <h3>Consultor en Gestión Empresarial</h3>
+              <span class="titem__company">G.E.T.C.</span>
+            </div>
+            <p class="titem__desc">
+              Modernización administrativa de empresa de servicios de
+              construcción: plantillas semiautomatizadas para contratos,
+              levantamiento de costos por proyecto y soporte en terreno
+              para control de avance de obras.
+            </p>
+            <div class="titem__tags">
+              <span class="tag tag--sm">Procesos</span>
+              <span class="tag tag--sm">Construcción</span>
+              <span class="tag tag--sm">Automatización</span>
+              <span class="tag tag--sm">Control</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       HABILIDADES TÉCNICAS
+  ══════════════════════════════════════════ -->
+  <section class="section habilidades" id="habilidades">
+    <div class="container">
+      <div class="section__label mono">// 04 — Skills</div>
+      <h2 class="section__title">Con qué<br /><em>trabajo</em></h2>
+
+      <div class="skills__grid">
+
+        <div class="skills__group">
+          <h3 class="skills__group-title mono">// Datos & BI</h3>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="92">
+              <div class="skill-bar__label">Power BI</div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              <span class="skill-bar__pct mono">92%</span>
+            </div>
+            <div class="skill-bar" data-pct="88">
+              <div class="skill-bar__label">Excel Avanzado + Power Query</div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              <span class="skill-bar__pct mono">88%</span>
+            </div>
+            <div class="skill-bar" data-pct="72">
+              <div class="skill-bar__label">SQL</div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              <span class="skill-bar__pct mono">72%</span>
+            </div>
+          </div>
         </div>
-    </header>
 
-    <section id="sobre-mi" class="about fade-in-section">
-        <div class="container grid-2-cols">
-            <div class="about-text">
-                <h2>El centro conector</h2>
-                <p>Me considero una mezcla inusual: tengo mucha imaginación y creatividad, pero mi mente funciona de forma altamente estructurada y sistemática.</p>
-                <p>Me gusta entender cómo funcionan las cosas desde la raíz y actuar como un puente. Traduzco las necesidades de las personas, el potencial de las herramientas, la rigidez de los procesos y la verdad de los datos para crear sistemas que funcionen en armonía.</p>
-                <p>Aprendo rápido, pero no por la teoría en sí misma: <strong>aprendo para aplicar y resolver problemas concretos.</strong></p>
+        <div class="skills__group">
+          <h3 class="skills__group-title mono">// Automatización & Procesos</h3>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="82">
+              <div class="skill-bar__label">Power Automate</div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              <span class="skill-bar__pct mono">82%</span>
             </div>
-            <div class="about-stats">
-                <div class="stat-box">
-                    <h3>Análisis</h3>
-                    <p>Detectar patrones en el caos de los datos.</p>
-                </div>
-                <div class="stat-box">
-                    <h3>Creatividad</h3>
-                    <p>Encontrar soluciones donde otros ven muros.</p>
-                </div>
-                <div class="stat-box">
-                    <h3>Liderazgo</h3>
-                    <p>Coordinar piezas para que todo converja.</p>
-                </div>
+            <div class="skill-bar" data-pct="85">
+              <div class="skill-bar__label">Mejora de Procesos / BPMN</div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              <span class="skill-bar__pct mono">85%</span>
             </div>
+            <div class="skill-bar" data-pct="78">
+              <div class="skill-bar__label">SAP + IA aplicada</div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              <span class="skill-bar__pct mono">78%</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <section id="metodo" class="process bg-light fade-in-section">
-        <div class="container">
-            <h2 class="section-title">Mi mente es una pizarra</h2>
-            <p class="section-subtitle">Así es como desmonto y resuelvo problemas complejos.</p>
-            
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Entender el sistema</h3>
-                    <p>Miro el bosque antes que el árbol. Busco la visión macro y entiendo cómo interactúan las distintas áreas del negocio.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Desglosar y cuestionar</h3>
-                    <p>Separo el problema en partes manejables. Hago las preguntas difíciles para descubrir qué falta y qué recursos tenemos.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Conectar hilos</h3>
-                    <p>Aquí ocurre la magia. Uno datos, procesos y personas. Detecto patrones que antes no eran evidentes y presento las ideas con fuerza.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Diseño sostenible</h3>
-                    <p>Construyo la solución evaluando siempre si es viable y si podrá mantenerse en el tiempo por sí sola.</p>
-                </div>
+        <div class="skills__group">
+          <h3 class="skills__group-title mono">// Gestión & Metodologías</h3>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="88">
+              <div class="skill-bar__label">Scrum / Gestión de proyectos</div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              <span class="skill-bar__pct mono">88%</span>
             </div>
-        </div>
-    </section>
-
-    <section id="proyectos" class="projects fade-in-section">
-        <div class="container">
-            <h2 class="section-title">Laboratorio de Proyectos</h2>
-            <p class="section-subtitle">Experiencias donde he conectado las piezas del puzzle.</p>
-
-            <div class="project-grid">
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="project-tag">Esports / Liderazgo</span>
-                        <h3>Organización Comunidades Universitarias</h3>
-                        <p>Gestión integral de torneos de League of Legends y Valorant. Convergencia de equipos, adjudicación de fondos concursables, organización de eventos y presentaciones estratégicas.</p>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="project-tag">Datos / Power BI</span>
-                        <h3>Inteligencia de Negocios Corporativa</h3>
-                        <p>Transformación de datos crudos en conclusiones accionables. Creación de dashboards en Power BI para dar visibilidad a áreas que no entendían el sistema completo.</p>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="project-tag">Automatización / Procesos</span>
-                        <h3>Optimización Sistémica</h3>
-                        <p>Análisis y mejora de procesos en entornos dinámicos (desde un restobar hasta el mundo corporativo), eliminando cuellos de botella mediante tecnología y flujos estandarizados.</p>
-                    </div>
-                </article>
+            <div class="skill-bar" data-pct="80">
+              <div class="skill-bar__label">Lean Management</div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              <span class="skill-bar__pct mono">80%</span>
             </div>
-        </div>
-    </section>
-
-    <section id="lado-b" class="human-side bg-light fade-in-section">
-        <div class="container grid-2-cols align-center">
-            <div class="human-text">
-                <h2>Detrás de la pizarra</h2>
-                <p>Soy una persona alegre, con mucha energía y siempre listo para una broma, pero mi cerebro rara vez se apaga: siempre estoy filosofando y haciéndome preguntas sobre cómo funciona el mundo.</p>
-                <ul class="human-list">
-                    <li>🎲 <strong>Juegos de mesa & Videojuegos:</strong> Mi campo de entrenamiento estratégico.</li>
-                    <li>🏋️ <strong>Gimnasio:</strong> Mi forma de estructurar la disciplina física.</li>
-                    <li>🤝 <strong>Entorno:</strong> Disfruto enormemente compartir con mis amigos y mi pareja.</li>
-                </ul>
+            <div class="skill-bar" data-pct="90">
+              <div class="skill-bar__label">Pensamiento sistémico</div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              <span class="skill-bar__pct mono">90%</span>
             </div>
-            <div class="human-quote">
-                <blockquote>
-                    "La mejor manera de entender un sistema complejo es intentar construirlo desde cero o intentar explicarlo de forma sencilla."
-                </blockquote>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3 class="skills__group-title mono">// Soft skills</h3>
+          <div class="skills__chips">
+            <span class="chip">Comunicación</span>
+            <span class="chip">Presentación</span>
+            <span class="chip">Liderazgo</span>
+            <span class="chip">Análisis crítico</span>
+            <span class="chip">Aprendizaje rápido</span>
+            <span class="chip">Coordinación</span>
+            <span class="chip">Visión macro</span>
+            <span class="chip">Storytelling con datos</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       MÁS ALLÁ DEL CV
+  ══════════════════════════════════════════ -->
+  <section class="section masalla" id="mas-alla">
+    <div class="container">
+      <div class="section__label mono">// 05 — Más allá</div>
+      <h2 class="section__title">Detrás de<br /><em>la pizarra</em></h2>
+
+      <div class="masalla__grid">
+
+        <div class="masalla__text">
+          <p class="masalla__lead">
+            Soy alegre, con energía y siempre listo para una broma. Pero mi
+            cerebro rara vez se apaga: siempre estoy filosofando y haciéndome
+            preguntas sobre cómo funciona el mundo.
+          </p>
+          <p>
+            Antes de trabajar con datos corporativos, organicé comunidades de
+            videojuegos. Coordiné torneos de League of Legends y Valorant,
+            gané fondos concursables y construí sistemas desde cero.
+            Ese fue el primer momento donde entendí que me gustaba coordinar,
+            pensar y hacer que todo convergiera en un resultado.
+          </p>
+          <blockquote class="masalla__quote">
+            "Mentalmente siempre estoy analizando, pensando y filosofando.
+            Pero la energía que tengo encima hace que eso nunca se sienta pesado."
+          </blockquote>
+        </div>
+
+        <div class="masalla__interests">
+          <div class="interest">
+            <div class="interest__icon">♟</div>
+            <div>
+              <strong>Juegos de mesa</strong>
+              <p>Mi campo de entrenamiento estratégico.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="reflexiones" class="reflections fade-in-section">
-        <div class="container">
-            <h2 class="section-title">Notas del Laboratorio</h2>
-            <p class="section-subtitle">Ideas cortas, aprendizajes y filosofía de trabajo.</p>
-
-            <div class="reflections-grid">
-                <div class="reflection-note">
-                    <p>"Un dato no es información hasta que no cuenta una historia, y no es útil hasta que no genera una acción."</p>
-                </div>
-                <div class="reflection-note">
-                    <p>"El desconocimiento del negocio por parte de los equipos técnicos es el origen del 90% de las soluciones fallidas."</p>
-                </div>
-                <div class="reflection-note">
-                    <p>"Liderar no es solo mandar, es hacer que todas las piezas del sistema entiendan por qué están colaborando."</p>
-                </div>
+          </div>
+          <div class="interest">
+            <div class="interest__icon">◉</div>
+            <div>
+              <strong>Videojuegos</strong>
+              <p>Fui relator de LoL y Valorant. Los sistemas complejos me fascinan.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="contact bg-dark fade-in-section">
-        <div class="container text-center">
-            <h2>¿Conectamos?</h2>
-            <p>Si tienes un problema complejo, datos desordenados o un sistema que necesita sentido, hablemos.</p>
-            <div class="contact-links">
-                <a href="mailto:tu-correo@ejemplo.com" class="btn btn-primary">Envíame un correo</a>
-                <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="btn btn-secondary btn-outline">LinkedIn</a>
-                <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-secondary btn-outline">GitHub</a>
+          </div>
+          <div class="interest">
+            <div class="interest__icon">◈</div>
+            <div>
+              <strong>Gimnasio</strong>
+              <p>Estructura y disciplina fuera de la pantalla.</p>
             </div>
+          </div>
+          <div class="interest">
+            <div class="interest__icon">◎</div>
+            <div>
+              <strong>Filosofía cotidiana</strong>
+              <p>Siempre hay una pregunta que vale la pena hacerse.</p>
+            </div>
+          </div>
+          <div class="interest">
+            <div class="interest__icon">○</div>
+            <div>
+              <strong>Amigos & pareja</strong>
+              <p>El balance real del sistema.</p>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Israel Torres. Diseñado y construido con análisis y creatividad.</p>
+      </div>
+
+      <!-- Horizonte -->
+      <div class="horizonte">
+        <span class="mono horizonte__label">[ horizonte — 10 años ]</span>
+        <p>
+          Me veo en un rol de alta responsabilidad con real capacidad de generar
+          cambios estructurales. Construyendo sistemas que importen y que
+          funcionen mucho después de que yo haya pasado por ellos.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       REFLEXIONES
+  ══════════════════════════════════════════ -->
+  <section class="section reflexiones" id="reflexiones">
+    <div class="container">
+      <div class="section__label mono">// 06 — Ideas</div>
+      <h2 class="section__title">Notas de<br /><em>laboratorio</em></h2>
+      <p class="reflexiones__intro">
+        Ideas sueltas. Aprendizajes que se quedaron. El cuaderno de notas del sistema.
+      </p>
+
+      <div class="reflexiones__grid">
+        <!-- Edita el texto de cada <p> para actualizar tus reflexiones -->
+        <article class="rnota">
+          <span class="mono rnota__num">001</span>
+          <p>"Un dato no es útil hasta que cuenta una historia. Y una historia no vale nada si no genera una acción."</p>
+        </article>
+        <article class="rnota rnota--wide">
+          <span class="mono rnota__num">002</span>
+          <p>"El problema más común no es falta de datos ni falta de herramientas. Es que nadie tiene la visión completa del sistema. Mostrar el total es ya resolver la mitad."</p>
+        </article>
+        <article class="rnota">
+          <span class="mono rnota__num">003</span>
+          <p>"Aprender sin aplicar es ruido. El conocimiento vale cuando se convierte en algo que el mundo puede tocar."</p>
+        </article>
+        <article class="rnota">
+          <span class="mono rnota__num">004</span>
+          <p>"Una buena solución es la que el sistema puede mantener sin que yo esté. Si me necesitan para que funcione, no resolví nada: me volví dependencia."</p>
+        </article>
+        <article class="rnota rnota--wide">
+          <span class="mono rnota__num">005</span>
+          <p>"Las áreas que no se hablan entre sí generan fricciones invisibles que nadie diagnostica correctamente. Conectarlas es, muchas veces, la mejora de proceso más poderosa disponible."</p>
+        </article>
+        <article class="rnota">
+          <span class="mono rnota__num">006</span>
+          <p>"La creatividad no se opone a la estructura. Las mejores ideas nacen cuando tienes muy claro el problema y muy abierta la mente."</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACTO
+  ══════════════════════════════════════════ -->
+  <section class="section contacto" id="contacto">
+    <div class="container">
+      <div class="contacto__inner">
+        <div class="section__label mono">// 07 — Contacto</div>
+        <h2 class="section__title">¿Construimos<br /><em>algo juntos</em>?</h2>
+        <p class="contacto__desc">
+          Si tienes un problema que necesita visión sistémica, datos que no
+          cuentan una historia todavía, o simplemente quieres conversar sobre
+          sistemas e ideas, aquí estoy.
+        </p>
+
+        <div class="contacto__links">
+          <a href="mailto:itorresl@correo.uss.cl" class="clink">
+            <span class="clink__icon mono">@</span>
+            <div class="clink__text">
+              <strong>Email</strong>
+              <span class="mono">itorresl@correo.uss.cl</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/israeltorresl" target="_blank" rel="noopener" class="clink">
+            <span class="clink__icon mono">in</span>
+            <div class="clink__text">
+              <strong>LinkedIn</strong>
+              <span class="mono">linkedin.com/in/israeltorresl</span>
+            </div>
+          </a>
+          <a href="https://israeltorresindustrial.github.io/Israel-Torres-Web/" target="_blank" rel="noopener" class="clink">
+            <span class="clink__icon mono">gh</span>
+            <div class="clink__text">
+              <strong>GitHub</strong>
+              <span class="mono">israeltorresindustrial</span>
+            </div>
+          </a>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="mono footer__text">
+        Israel Torres © <span id="yr"></span>
+        <span class="footer__sep">—</span>
+        Ingeniería Civil Industrial · Santiago, Chile
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
