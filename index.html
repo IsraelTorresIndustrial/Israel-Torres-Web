@@ -9,10 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TCSS74EV2J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TCSS74EV2J', {
+      send_page_view: true
+    });
+  </script>
 </head>
 <body>
 
-  <!-- Barra de progreso -->
+  <!-- Barra de progreso de scroll -->
   <div class="scroll-progress" id="scroll-progress"></div>
 
   <!-- Índice lateral -->
@@ -28,9 +39,7 @@
     <a href="#contacto"    class="si-dot" data-label="Contacto"><span></span></a>
   </nav>
 
-  <!-- ══════════════════════════════════════
-       NAV
-  ══════════════════════════════════════ -->
+  <!-- ══════════════ NAV ══════════════ -->
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#inicio" class="nav__logo">IT<span>.</span></a>
@@ -49,14 +58,11 @@
     </div>
   </header>
 
-  <!-- ══════════════════════════════════════
-       HERO
-  ══════════════════════════════════════ -->
+  <!-- ══════════════ HERO ══════════════ -->
   <section class="hero" id="inicio">
     <div class="hero__grid-bg" aria-hidden="true"></div>
-    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__glow"    aria-hidden="true"></div>
     <div class="hero__bg-word" aria-hidden="true">SISTEMAS</div>
-
     <div class="hero__content">
       <p class="hero__eyebrow mono">
         <span class="hero__dot"></span>
@@ -76,30 +82,22 @@
         <a href="#proceso"     class="btn btn--ghost">Cómo pienso →</a>
       </div>
     </div>
-
     <div class="hero__scroll-hint" aria-hidden="true">
       <div class="hero__scroll-line"></div>
       <span class="mono">scroll</span>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       SOBRE MÍ
-  ══════════════════════════════════════ -->
+  <!-- ══════════════ SOBRE MÍ ══════════════ -->
   <section class="section sobre" id="sobre">
     <div class="container">
-
       <div class="section__eyebrow mono reveal">
         <span class="ey-label">// 01 — Sobre mí</span>
         <span class="ey-comment">donde otros ven partes, intento ver el sistema</span>
       </div>
-
       <div class="sobre__grid">
-
-        <!-- Texto -->
         <div class="sobre__text reveal">
           <h2 class="section__title">El centro<br /><em>conector</em></h2>
-
           <div class="sobre__blocks">
             <div class="sobre__block">
               <span class="mono sobre__block-label">[ qué busco ]</span>
@@ -120,7 +118,6 @@
               meto en algo, me meto de verdad.</p>
             </div>
           </div>
-
           <blockquote class="sobre__quote">
             "La vida es simple. Uno se la complica.<br />
             No podemos controlar lo que pasa,<br />
@@ -131,22 +128,16 @@
         <!-- Mapa conceptual SVG -->
         <div class="sobre__map reveal reveal-d2">
           <svg class="concept-map" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-label="Mapa conceptual de Israel Torres">
-
-            <!-- Líneas de conexión (se trazan con animación) -->
             <line class="cm-line" x1="210" y1="210" x2="210" y2="68"  stroke-dasharray="142" stroke-dashoffset="142"/>
             <line class="cm-line" x1="210" y1="210" x2="352" y2="130" stroke-dasharray="164" stroke-dashoffset="164"/>
             <line class="cm-line" x1="210" y1="210" x2="352" y2="290" stroke-dasharray="164" stroke-dashoffset="164"/>
             <line class="cm-line" x1="210" y1="210" x2="210" y2="352" stroke-dasharray="142" stroke-dashoffset="142"/>
             <line class="cm-line" x1="210" y1="210" x2="68"  y2="290" stroke-dasharray="164" stroke-dashoffset="164"/>
             <line class="cm-line" x1="210" y1="210" x2="68"  y2="130" stroke-dasharray="164" stroke-dashoffset="164"/>
-
-            <!-- Nodo central -->
             <circle class="cm-center-ring" cx="210" cy="210" r="56"/>
-            <circle class="cm-center" cx="210" cy="210" r="46"/>
-            <text class="cm-center-text" x="210" y="205" text-anchor="middle">Israel</text>
+            <circle class="cm-center"      cx="210" cy="210" r="46"/>
+            <text class="cm-center-text"             x="210" y="205" text-anchor="middle">Israel</text>
             <text class="cm-center-text cm-center-text--sub" x="210" y="222" text-anchor="middle">Torres</text>
-
-            <!-- Nodos satélite -->
             <g class="cm-node" style="--d:.6s">
               <circle cx="210" cy="68"  r="30"/>
               <text x="210" y="64"  text-anchor="middle">Datos</text>
@@ -177,81 +168,66 @@
               <text x="68"  y="126" text-anchor="middle">Ideas</text>
               <text x="68"  y="140" text-anchor="middle" class="cm-node-sub">Construir</text>
             </g>
-
           </svg>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       CÓMO PIENSO
-  ══════════════════════════════════════ -->
+  <!-- ══════════════ CÓMO PIENSO ══════════════ -->
   <section class="section proceso" id="proceso">
     <div class="container">
-
       <div class="section__eyebrow mono reveal">
         <span class="ey-label">// 02 — Proceso</span>
         <span class="ey-comment">entender primero, mover después</span>
       </div>
-
       <h2 class="section__title reveal">Mi mente<br /><em>funciona así</em></h2>
       <p class="section__intro reveal">
         Cuando enfrento un problema activo un protocolo. No es rígido,
         pero siempre sigue la lógica de quien necesita ver el sistema
         completo antes de mover una sola pieza.
       </p>
-
       <div class="proceso__steps">
         <div class="pstep reveal">
           <div class="pstep__num mono">01</div>
           <div class="pstep__body">
             <h3>Entender el sistema completo</h3>
-            <p>Primero mapeo el todo: actores, flujos, dependencias.
-            No me muevo sin tener el panorama.</p>
+            <p>Primero mapeo el todo: actores, flujos, dependencias. No me muevo sin tener el panorama.</p>
           </div>
         </div>
         <div class="pstep reveal reveal-d1">
           <div class="pstep__num mono">02</div>
           <div class="pstep__body">
             <h3>Separar y cuestionar</h3>
-            <p>Divido el problema en partes y hago las preguntas
-            incómodas que otros evitan.</p>
+            <p>Divido el problema en partes y hago las preguntas incómodas que otros evitan.</p>
           </div>
         </div>
         <div class="pstep reveal reveal-d2">
           <div class="pstep__num mono">03</div>
           <div class="pstep__body">
             <h3>Identificar los recursos reales</h3>
-            <p>Datos, personas, tiempo, herramientas. Trabajo con lo
-            que hay y sé cuándo falta algo.</p>
+            <p>Datos, personas, tiempo, herramientas. Trabajo con lo que hay y sé cuándo falta algo.</p>
           </div>
         </div>
         <div class="pstep reveal reveal-d1">
           <div class="pstep__num mono">04</div>
           <div class="pstep__body">
             <h3>Conectar los hilos</h3>
-            <p>Ver cómo las partes se relacionan y encontrar lo que
-            nadie había unido. Aquí ocurre lo interesante.</p>
+            <p>Ver cómo las partes se relacionan y encontrar lo que nadie había unido. Aquí ocurre lo interesante.</p>
           </div>
         </div>
         <div class="pstep reveal reveal-d2">
           <div class="pstep__num mono">05</div>
           <div class="pstep__body">
             <h3>Construir con sostenibilidad</h3>
-            <p>La solución tiene que funcionar sin que yo esté.
-            Si me necesitan para que corra, me volví dependencia.</p>
+            <p>La solución tiene que funcionar sin que yo esté. Si me necesitan para que corra, me volví dependencia.</p>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       MÉTRICAS
-  ══════════════════════════════════════ -->
+  <!-- ══════════════ MÉTRICAS ══════════════ -->
   <section class="metricas" id="metricas">
     <div class="container">
       <div class="metricas__grid">
@@ -279,23 +255,17 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       EXPERIENCIA — TIMELINE VERTICAL
-  ══════════════════════════════════════ -->
+  <!-- ══════════════ EXPERIENCIA ══════════════ -->
   <section class="section experiencia" id="experiencia">
     <div class="container">
-
       <div class="section__eyebrow mono reveal">
         <span class="ey-label">// 03 — Experiencia</span>
         <span class="ey-comment">// Status: construyendo sistemas desde 2023</span>
       </div>
-
       <h2 class="section__title reveal">Dónde he<br /><em>construido</em></h2>
-
       <div class="timeline">
         <div class="tl-spine" aria-hidden="true"></div>
 
-        <!-- 1 · Scrum Master USS -->
         <article class="tl-item tl-item--anchor reveal" id="tl-0">
           <div class="tl-item__dot"></div>
           <div class="tl-item__card">
@@ -308,13 +278,11 @@
               <span class="tl-item__badge">Más reciente</span>
             </div>
             <p class="tl-item__desc">
-              Coordiné 33 equipos de distintas carreras y diseñé una
-              herramienta de evaluación semiautomatizada desde cero.
-              El desafío: darle estructura a un sistema que nunca la había tenido.
+              Coordiné 33 equipos de distintas carreras y diseñé una herramienta
+              de evaluación semiautomatizada desde cero. El desafío: darle
+              estructura a un sistema que nunca la había tenido.
             </p>
-            <button class="tl-toggle mono" aria-expanded="false" aria-controls="tl-detail-0">
-              ver detalle ↓
-            </button>
+            <button class="tl-toggle mono" data-job="Scrum Master USS" aria-expanded="false" aria-controls="tl-detail-0">ver detalle ↓</button>
             <div class="tl-detail" id="tl-detail-0" hidden>
               <div class="tl-achieve">
                 <span class="mono">[ logro clave ]</span>
@@ -330,7 +298,6 @@
           </div>
         </article>
 
-        <!-- 2 · SALFA -->
         <article class="tl-item tl-item--anchor reveal reveal-d1" id="tl-1">
           <div class="tl-item__dot tl-item__dot--blue"></div>
           <div class="tl-item__card tl-item__card--blue">
@@ -343,14 +310,12 @@
               <span class="tl-item__badge tl-item__badge--blue">Destacado</span>
             </div>
             <p class="tl-item__desc">
-              Construí dashboards de actualización diaria que convirtieron
-              la gestión comercial en un proceso 100% basado en datos.
-              La reportería dejó de ser manual y pasó a ser un sistema vivo,
-              usando IA para acelerar el análisis y la toma de decisiones.
+              Construí dashboards de actualización diaria que convirtieron la
+              gestión comercial en un proceso 100% basado en datos. La reportería
+              dejó de ser manual y pasó a ser un sistema vivo, usando IA para
+              acelerar el análisis y la toma de decisiones.
             </p>
-            <button class="tl-toggle mono" aria-expanded="false" aria-controls="tl-detail-1">
-              ver detalle ↓
-            </button>
+            <button class="tl-toggle mono" data-job="Analista BI SALFA" aria-expanded="false" aria-controls="tl-detail-1">ver detalle ↓</button>
             <div class="tl-detail" id="tl-detail-1" hidden>
               <div class="tl-achieve">
                 <span class="mono">[ logro clave ]</span>
@@ -367,7 +332,6 @@
           </div>
         </article>
 
-        <!-- 3 · Hospital -->
         <article class="tl-item reveal reveal-d1" id="tl-2">
           <div class="tl-item__dot"></div>
           <div class="tl-item__card">
@@ -383,9 +347,7 @@
               un plan maestro de automatización con tecnología OCR/NLP,
               apoyándome en IA para el análisis del diagnóstico.
             </p>
-            <button class="tl-toggle mono" aria-expanded="false" aria-controls="tl-detail-2">
-              ver detalle ↓
-            </button>
+            <button class="tl-toggle mono" data-job="Consultor Hospital" aria-expanded="false" aria-controls="tl-detail-2">ver detalle ↓</button>
             <div class="tl-detail" id="tl-detail-2" hidden>
               <div class="tl-achieve">
                 <span class="mono">[ logro clave ]</span>
@@ -401,7 +363,6 @@
           </div>
         </article>
 
-        <!-- 4 · Ludum Bar -->
         <article class="tl-item reveal reveal-d1" id="tl-3">
           <div class="tl-item__dot"></div>
           <div class="tl-item__card">
@@ -417,9 +378,7 @@
               financieras con estrategias de marketing. Semiautomaticé los
               estados financieros y optimicé la estrategia de precios.
             </p>
-            <button class="tl-toggle mono" aria-expanded="false" aria-controls="tl-detail-3">
-              ver detalle ↓
-            </button>
+            <button class="tl-toggle mono" data-job="Analista Ludum Bar" aria-expanded="false" aria-controls="tl-detail-3">ver detalle ↓</button>
             <div class="tl-detail" id="tl-detail-3" hidden>
               <div class="tl-achieve">
                 <span class="mono">[ logro clave ]</span>
@@ -435,7 +394,6 @@
           </div>
         </article>
 
-        <!-- 5 · GETC -->
         <article class="tl-item reveal reveal-d1" id="tl-4">
           <div class="tl-item__dot"></div>
           <div class="tl-item__card">
@@ -452,9 +410,7 @@
               plantillas semiautomatizadas para contratos, levantamiento
               de costos por proyecto y control de avance en terreno.
             </p>
-            <button class="tl-toggle mono" aria-expanded="false" aria-controls="tl-detail-4">
-              ver detalle ↓
-            </button>
+            <button class="tl-toggle mono" data-job="Consultor GETC" aria-expanded="false" aria-controls="tl-detail-4">ver detalle ↓</button>
             <div class="tl-detail" id="tl-detail-4" hidden>
               <div class="tl-achieve">
                 <span class="mono">[ logro clave ]</span>
@@ -474,415 +430,214 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       SKILLS — TABS + FLIP CARDS
-  ══════════════════════════════════════ -->
+  <!-- ══════════════ SKILLS ══════════════ -->
   <section class="section skills" id="skills">
     <div class="container">
-
       <div class="section__eyebrow mono reveal">
         <span class="ey-label">// 04 — Skills</span>
         <span class="ey-comment">menos fricción, más claridad</span>
       </div>
-
       <h2 class="section__title reveal">Con qué<br /><em>trabajo</em></h2>
       <p class="section__intro reveal">
         No colecciono herramientas. Cada una resuelve algo concreto.
         Pasa el cursor — o toca — para ver cómo la aplico.
       </p>
-
-      <!-- Tabs -->
       <div class="skills__tabs reveal" role="tablist">
-        <button class="stab active" role="tab" data-tab="bi"       aria-selected="true">Hacer visible lo importante</button>
-        <button class="stab"        role="tab" data-tab="auto"     aria-selected="false">Ordenar y simplificar</button>
-        <button class="stab"        role="tab" data-tab="gestion"  aria-selected="false">Mover equipos</button>
+        <button class="stab active" role="tab" data-tab="bi"      aria-selected="true">Hacer visible lo importante</button>
+        <button class="stab"        role="tab" data-tab="auto"    aria-selected="false">Ordenar y simplificar</button>
+        <button class="stab"        role="tab" data-tab="gestion" aria-selected="false">Mover equipos</button>
       </div>
 
       <!-- Panel BI -->
       <div class="skills__panel active" id="tab-bi" role="tabpanel">
         <div class="deck">
-
           <div class="flip reveal">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">◈</span>
-                <h3>Power BI</h3>
-                <span class="flip__lvl mono">Avanzado</span>
-              </div>
-              <div class="flip__back">
-                <h3>Power BI</h3>
-                <p>"Construyo modelos de datos que la gerencia puede consultar en tiempo real sin romper nada."</p>
-                <span class="flip__use mono">DAX · Power Query · Dashboards en vivo</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">◈</span><h3>Power BI</h3><span class="flip__lvl mono">Avanzado</span></div>
+              <div class="flip__back"><h3>Power BI</h3><p>"Construyo modelos de datos que la gerencia puede consultar en tiempo real sin romper nada."</p><span class="flip__use mono">DAX · Power Query · Dashboards en vivo</span></div>
             </div>
           </div>
-
           <div class="flip reveal reveal-d1">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">◇</span>
-                <h3>Excel Avanzado</h3>
-                <span class="flip__lvl mono">Avanzado</span>
-              </div>
-              <div class="flip__back">
-                <h3>Excel + Power Query</h3>
-                <p>"El modelo que nadie más quería mantener — lo hago legible, rápido y automatizado."</p>
-                <span class="flip__use mono">Modelos financieros · Tablas dinámicas · Automatización</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">◇</span><h3>Excel Avanzado</h3><span class="flip__lvl mono">Avanzado</span></div>
+              <div class="flip__back"><h3>Excel + Power Query</h3><p>"El modelo que nadie más quería mantener — lo hago legible, rápido y automatizado."</p><span class="flip__use mono">Modelos financieros · Tablas dinámicas · Automatización</span></div>
             </div>
           </div>
-
           <div class="flip reveal reveal-d2">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">○</span>
-                <h3>SQL</h3>
-                <span class="flip__lvl mono">Intermedio</span>
-              </div>
-              <div class="flip__back">
-                <h3>SQL</h3>
-                <p>"Extraigo exactamente lo que necesito de la base de datos, sin pedir ayuda al equipo técnico."</p>
-                <span class="flip__use mono">Consultas · Joins · Filtros · Extracción para BI</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">○</span><h3>SQL</h3><span class="flip__lvl mono">Intermedio</span></div>
+              <div class="flip__back"><h3>SQL</h3><p>"Extraigo exactamente lo que necesito de la base de datos, sin pedir ayuda al equipo técnico."</p><span class="flip__use mono">Consultas · Joins · Filtros · Extracción para BI</span></div>
             </div>
           </div>
-
           <div class="flip reveal reveal-d3">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">◎</span>
-                <h3>IA Aplicada</h3>
-                <span class="flip__lvl mono">Avanzado</span>
-              </div>
-              <div class="flip__back">
-                <h3>IA Aplicada</h3>
-                <p>"Uso IA como palanca para acelerar análisis, generar soluciones y crear herramientas que antes tomaban semanas."</p>
-                <span class="flip__use mono">Automatización · Análisis · Generación de soluciones</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">◎</span><h3>IA Aplicada</h3><span class="flip__lvl mono">Avanzado</span></div>
+              <div class="flip__back"><h3>IA Aplicada</h3><p>"Uso IA como palanca para acelerar análisis, generar soluciones y crear herramientas que antes tomaban semanas."</p><span class="flip__use mono">Automatización · Análisis · Generación de soluciones</span></div>
             </div>
           </div>
-
         </div>
       </div>
 
       <!-- Panel Automatización -->
       <div class="skills__panel" id="tab-auto" role="tabpanel" hidden>
         <div class="deck">
-
           <div class="flip reveal">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">◈</span>
-                <h3>Power Automate</h3>
-                <span class="flip__lvl mono">Funcional</span>
-              </div>
-              <div class="flip__back">
-                <h3>Power Automate</h3>
-                <p>"Si una tarea se repite más de tres veces a la semana, la automatizo."</p>
-                <span class="flip__use mono">Flujos · Notificaciones · Integración entre herramientas</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">◈</span><h3>Power Automate</h3><span class="flip__lvl mono">Avanzado</span></div>
+              <div class="flip__back"><h3>Power Automate</h3><p>"Si una tarea se repite más de tres veces a la semana, la automatizo."</p><span class="flip__use mono">Flujos · Notificaciones · Integración entre herramientas</span></div>
             </div>
           </div>
-
           <div class="flip reveal reveal-d1">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">◇</span>
-                <h3>Mejora de Procesos</h3>
-                <span class="flip__lvl mono">Avanzado</span>
-              </div>
-              <div class="flip__back">
-                <h3>BPMN · Lean</h3>
-                <p>"Mapeo el flujo real, no el que está en el manual. Ahí es donde viven los cuellos de botella."</p>
-                <span class="flip__use mono">BPMN · Lean Management · Rediseño de flujos</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">◇</span><h3>Mejora de Procesos</h3><span class="flip__lvl mono">Avanzado</span></div>
+              <div class="flip__back"><h3>BPMN · Lean</h3><p>"Mapeo el flujo real, no el que está en el manual. Ahí es donde viven los cuellos de botella."</p><span class="flip__use mono">BPMN · Lean Management · Rediseño de flujos</span></div>
             </div>
           </div>
-
           <div class="flip reveal reveal-d2">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">○</span>
-                <h3>Python</h3>
-                <span class="flip__lvl mono">Funcional</span>
-              </div>
-              <div class="flip__back">
-                <h3>Python</h3>
-                <p>"Scripts de análisis, automatización de tareas y procesamiento de datos cuando Excel ya no alcanza."</p>
-                <span class="flip__use mono">Pandas · Scripts · Automatización de datos</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">○</span><h3>Python</h3><span class="flip__lvl mono">Funcional</span></div>
+              <div class="flip__back"><h3>Python</h3><p>"Scripts de análisis, automatización de tareas y procesamiento de datos cuando Excel ya no alcanza."</p><span class="flip__use mono">Pandas · Scripts · Automatización de datos</span></div>
             </div>
           </div>
-
           <div class="flip reveal reveal-d3">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">◎</span>
-                <h3>SAP</h3>
-                <span class="flip__lvl mono">Funcional</span>
-              </div>
-              <div class="flip__back">
-                <h3>SAP</h3>
-                <p>"Navego el sistema para extraer la información que necesito y conectarla con los análisis de gestión."</p>
-                <span class="flip__use mono">Extracción · Gestión · Integración con BI</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">◎</span><h3>SAP</h3><span class="flip__lvl mono">Funcional</span></div>
+              <div class="flip__back"><h3>SAP</h3><p>"Navego el sistema para extraer la información que necesito y conectarla con los análisis de gestión."</p><span class="flip__use mono">Extracción · Gestión · Integración con BI</span></div>
             </div>
           </div>
-
         </div>
       </div>
 
       <!-- Panel Gestión -->
       <div class="skills__panel" id="tab-gestion" role="tabpanel" hidden>
         <div class="deck">
-
           <div class="flip reveal">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">◈</span>
-                <h3>Scrum</h3>
-                <span class="flip__lvl mono">Avanzado</span>
-              </div>
-              <div class="flip__back">
-                <h3>Scrum / Gestión de Proyectos</h3>
-                <p>"Coordiné 33 equipos en paralelo. El método no es el fin — el fin es que el equipo entregue."</p>
-                <span class="flip__use mono">Sprints · Retrospectivas · Coordinación · Certificado</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">◈</span><h3>Scrum</h3><span class="flip__lvl mono">Avanzado</span></div>
+              <div class="flip__back"><h3>Scrum / Gestión de Proyectos</h3><p>"Coordiné 33 equipos en paralelo. El método no es el fin — el fin es que el equipo entregue."</p><span class="flip__use mono">Sprints · Retrospectivas · Coordinación · Certificado</span></div>
             </div>
           </div>
-
           <div class="flip reveal reveal-d1">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">◇</span>
-                <h3>Lean Management</h3>
-                <span class="flip__lvl mono">Sólido</span>
-              </div>
-              <div class="flip__back">
-                <h3>Lean Management</h3>
-                <p>"Eliminar lo que no agrega valor es, muchas veces, la mejora más poderosa disponible."</p>
-                <span class="flip__use mono">Reducción de desperdicios · Mejora continua</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">◇</span><h3>Lean Management</h3><span class="flip__lvl mono">Sólido</span></div>
+              <div class="flip__back"><h3>Lean Management</h3><p>"Eliminar lo que no agrega valor es, muchas veces, la mejora más poderosa disponible."</p><span class="flip__use mono">Reducción de desperdicios · Mejora continua</span></div>
             </div>
           </div>
-
           <div class="flip reveal reveal-d2">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">○</span>
-                <h3>Trello / Planner</h3>
-                <span class="flip__lvl mono">En desarrollo</span>
-              </div>
-              <div class="flip__back">
-                <h3>Trello / Planner</h3>
-                <p>"Seguimiento de tareas en equipos distribuidos. Simple, visible y que todo el mundo entienda."</p>
-                <span class="flip__use mono">Gestión de tareas · Equipos · Seguimiento</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">○</span><h3>Trello / Planner</h3><span class="flip__lvl mono">En desarrollo</span></div>
+              <div class="flip__back"><h3>Trello / Planner</h3><p>"Seguimiento de tareas en equipos distribuidos. Simple, visible y que todo el mundo entienda."</p><span class="flip__use mono">Gestión de tareas · Equipos · Seguimiento</span></div>
             </div>
           </div>
-
           <div class="flip reveal reveal-d3">
             <div class="flip__inner">
-              <div class="flip__front">
-                <span class="flip__icon">◎</span>
-                <h3>Comunicación</h3>
-                <span class="flip__lvl mono">Natural</span>
-              </div>
-              <div class="flip__back">
-                <h3>Presentación y Oratoria</h3>
-                <p>"Explico lo complejo con claridad. Velocidad para hilar ideas y presentarlas con fuerza."</p>
-                <span class="flip__use mono">Talleres USS · Relatoría en vivo · Presentaciones ejecutivas</span>
-              </div>
+              <div class="flip__front"><span class="flip__icon">◎</span><h3>Comunicación</h3><span class="flip__lvl mono">Natural</span></div>
+              <div class="flip__back"><h3>Presentación y Oratoria</h3><p>"Explico lo complejo con claridad. Velocidad para hilar ideas y presentarlas con fuerza."</p><span class="flip__use mono">Talleres USS · Relatoría en vivo · Presentaciones ejecutivas</span></div>
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       DETRÁS DE LA PIZARRA
-  ══════════════════════════════════════ -->
+  <!-- ══════════════ DETRÁS DE LA PIZARRA ══════════════ -->
   <section class="section masalla" id="masalla">
     <div class="container">
-
       <div class="section__eyebrow mono reveal">
         <span class="ey-label">// 05 — Más allá</span>
         <span class="ey-comment">energía por fuera, pizarra por dentro</span>
       </div>
-
       <h2 class="section__title reveal">Detrás de<br /><em>la pizarra</em></h2>
-
       <div class="masalla__grid">
-
         <div class="masalla__story reveal">
-          <p class="lead">
-            Soy alegre, con energía y siempre listo para una broma.
-            Pero internamente mi cerebro rara vez se apaga.
-          </p>
-          <p>
-            Me da energía el frío de la mañana, un buen café y empezar el día
-            con algo que resolver. Me gusta que la gente se sienta cómoda, pero
-            tengo carácter firme cuando algo importa. Escucho con atención y
-            también hablo con fuerza cuando es necesario.
-          </p>
-          <p>
-            Me encanta reflexionar y filosofar sobre las decisiones que tomo y
-            cómo quiero vivir. No aprendo por teoría — aprendo para aplicar.
-            Y cuando me meto en algo, me meto de verdad.
-          </p>
+          <p class="lead">Soy alegre, con energía y siempre listo para una broma. Pero internamente mi cerebro rara vez se apaga.</p>
+          <p>Me da energía el frío de la mañana, un buen café y empezar el día con algo que resolver. Me gusta que la gente se sienta cómoda, pero tengo carácter firme cuando algo importa. Escucho con atención y también hablo con fuerza cuando es necesario.</p>
+          <p>Me encanta reflexionar y filosofar sobre las decisiones que tomo y cómo quiero vivir. No aprendo por teoría — aprendo para aplicar. Y cuando me meto en algo, me meto de verdad.</p>
           <blockquote class="masalla__quote">
             "Soy buen escuchador y también conversador.
             La vida ya trae suficiente ruido — prefiero
             ayudar a ordenarlo."
           </blockquote>
         </div>
-
         <div class="masalla__creds">
           <h3 class="masalla__creds-title mono">// Formación & comunidad</h3>
-
           <div class="cred reveal">
             <span class="cred__year mono">2022</span>
-            <div class="cred__body">
-              <strong>FEUSS Coordinador</strong>
-              <p>Federación de Estudiantes de la Sede Santiago, USS. Coordinación a nivel de sede con múltiples carreras y proyectos.</p>
-            </div>
+            <div class="cred__body"><strong>FEUSS Coordinador</strong><p>Federación de Estudiantes de la Sede Santiago, USS. Coordinación a nivel de sede con múltiples carreras y proyectos.</p></div>
           </div>
-
           <div class="cred reveal reveal-d1">
             <span class="cred__year mono">2019</span>
-            <div class="cred__body">
-              <strong>CCEE Coordinador</strong>
-              <p>Centro de Estudiantes de Ingeniería Civil Industrial, USS. Primer sistema de coordinación que construí desde cero.</p>
-            </div>
+            <div class="cred__body"><strong>CCEE Coordinador</strong><p>Centro de Estudiantes de Ingeniería Civil Industrial, USS. Primer sistema de coordinación que construí desde cero.</p></div>
           </div>
-
           <div class="cred reveal reveal-d2">
             <span class="cred__year mono">2022–23</span>
-            <div class="cred__body">
-              <strong>Ganador × 2 Fondos Concursables</strong>
-              <p>Proyectos adjudicados en la USS (2022 y 2023). No solo gestiono lo que me dan — salgo a buscar recursos, compito y gano.</p>
-            </div>
+            <div class="cred__body"><strong>Ganador × 2 Fondos Concursables</strong><p>Proyectos adjudicados en la USS (2022 y 2023). No solo gestiono lo que me dan — salgo a buscar recursos, compito y gano.</p></div>
           </div>
-
           <div class="cred reveal reveal-d1">
             <span class="cred__year mono">2019–23</span>
-            <div class="cred__body">
-              <strong>Escuela de Liderazgo USS</strong>
-              <p>Talleres de Comunicación y Oratoria, Formación Líder Público, Claves para Liderar, Campamento de Liderazgo.</p>
-            </div>
+            <div class="cred__body"><strong>Escuela de Liderazgo USS</strong><p>Talleres de Comunicación y Oratoria, Formación Líder Público, Claves para Liderar, Campamento de Liderazgo.</p></div>
           </div>
-
           <div class="cred reveal reveal-d2">
             <span class="cred__year mono">2019+</span>
-            <div class="cred__body">
-              <strong>Relator eSports & Comunidad</strong>
-              <p>Relator en vivo de torneos de League of Legends y Valorant. Organización de comunidades universitarias y proyectos de eSports.</p>
-            </div>
+            <div class="cred__body"><strong>Relator eSports & Comunidad</strong><p>Relator en vivo de torneos de League of Legends y Valorant. Organización de comunidades universitarias y proyectos de eSports.</p></div>
           </div>
-
         </div>
       </div>
-
       <div class="horizonte reveal">
         <span class="mono horizonte__label">[ horizonte — 10 años ]</span>
         <p>Me veo en un rol de alta responsabilidad con real capacidad de generar cambios estructurales. Construyendo sistemas que importen y que funcionen mucho después de que yo haya pasado por ellos. Sin miedo a nada, aprendiendo de todo.</p>
       </div>
-
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       IDEAS
-  ══════════════════════════════════════ -->
+  <!-- ══════════════ IDEAS ══════════════ -->
   <section class="section ideas" id="ideas">
     <div class="container">
-
       <div class="section__eyebrow mono reveal">
         <span class="ey-label">// 06 — Ideas</span>
         <span class="ey-comment">no todo problema necesita más complejidad</span>
       </div>
-
       <h2 class="section__title reveal">Notas del<br /><em>sistema</em></h2>
-      <p class="section__intro reveal">
-        Ideas sueltas. Aprendizajes que se quedaron.<br />
-        Edita el texto de cada nota cuando quieras.
-      </p>
-
+      <p class="section__intro reveal">Ideas sueltas. Aprendizajes que se quedaron. Edita el texto de cada nota cuando quieras.</p>
       <div class="ideas__grid">
-        <article class="idea reveal">
-          <span class="mono idea__num">001</span>
-          <p>"Un dato no es útil hasta que cuenta una historia. Y una historia no vale nada si no genera una acción."</p>
-        </article>
-        <article class="idea idea--wide reveal reveal-d1">
-          <span class="mono idea__num">002</span>
-          <p>"El problema más común no es falta de datos ni de herramientas. Es que nadie tiene la visión completa del sistema. Mostrar el total es ya resolver la mitad."</p>
-        </article>
-        <article class="idea reveal reveal-d2">
-          <span class="mono idea__num">003</span>
-          <p>"Aprender sin aplicar es ruido. El conocimiento vale cuando se convierte en algo que el mundo puede tocar."</p>
-        </article>
-        <article class="idea reveal">
-          <span class="mono idea__num">004</span>
-          <p>"Una buena solución es la que el sistema puede mantener sin que yo esté. Si me necesitan para que funcione, me volví dependencia."</p>
-        </article>
-        <article class="idea idea--wide reveal reveal-d1">
-          <span class="mono idea__num">005</span>
-          <p>"Las áreas que no se hablan generan fricciones invisibles que nadie diagnostica bien. Conectarlas es, muchas veces, la mejora más poderosa disponible."</p>
-        </article>
-        <article class="idea reveal reveal-d2">
-          <span class="mono idea__num">006</span>
-          <p>"La creatividad no se opone a la estructura. Las mejores ideas nacen cuando tienes muy claro el problema y muy abierta la mente."</p>
-        </article>
+        <article class="idea reveal"><span class="mono idea__num">001</span><p>"Un dato no es útil hasta que cuenta una historia. Y una historia no vale nada si no genera una acción."</p></article>
+        <article class="idea idea--wide reveal reveal-d1"><span class="mono idea__num">002</span><p>"El problema más común no es falta de datos ni de herramientas. Es que nadie tiene la visión completa del sistema. Mostrar el total es ya resolver la mitad."</p></article>
+        <article class="idea reveal reveal-d2"><span class="mono idea__num">003</span><p>"Aprender sin aplicar es ruido. El conocimiento vale cuando se convierte en algo que el mundo puede tocar."</p></article>
+        <article class="idea reveal"><span class="mono idea__num">004</span><p>"Una buena solución es la que el sistema puede mantener sin que yo esté. Si me necesitan para que funcione, me volví dependencia."</p></article>
+        <article class="idea idea--wide reveal reveal-d1"><span class="mono idea__num">005</span><p>"Las áreas que no se hablan generan fricciones invisibles que nadie diagnostica bien. Conectarlas es, muchas veces, la mejora más poderosa disponible."</p></article>
+        <article class="idea reveal reveal-d2"><span class="mono idea__num">006</span><p>"La creatividad no se opone a la estructura. Las mejores ideas nacen cuando tienes muy claro el problema y muy abierta la mente."</p></article>
       </div>
-
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       CONTACTO
-  ══════════════════════════════════════ -->
+  <!-- ══════════════ CONTACTO ══════════════ -->
   <section class="section contacto" id="contacto">
     <div class="container">
       <div class="contacto__wrap">
-
         <div class="section__eyebrow mono reveal">
           <span class="ey-label">// 07 — Contacto</span>
           <span class="ey-comment">[Esperando input del usuario...]</span>
         </div>
-
         <h2 class="section__title reveal">¿Construimos<br /><em>algo juntos</em>?</h2>
-
         <p class="contacto__desc reveal">
           Si tienes datos que no cuentan una historia, procesos que nadie ha
           mapeado bien, o simplemente quieres conversar sobre sistemas e ideas,
           aquí estoy.
         </p>
-
         <div class="contacto__links">
-          <a href="mailto:itorresl@correo.uss.cl" class="clink reveal">
+          <a href="mailto:itorresl@correo.uss.cl" class="clink reveal" id="link-email">
             <span class="clink__icon mono">@</span>
-            <div>
-              <strong>Email</strong>
-              <span class="mono">itorresl@correo.uss.cl</span>
-            </div>
+            <div><strong>Email</strong><span class="mono">itorresl@correo.uss.cl</span></div>
           </a>
-          <a href="https://linkedin.com/in/israeltorresl" target="_blank" rel="noopener" class="clink reveal reveal-d1">
+          <a href="https://linkedin.com/in/israeltorresl" target="_blank" rel="noopener" class="clink reveal reveal-d1" id="link-linkedin">
             <span class="clink__icon mono">in</span>
-            <div>
-              <strong>LinkedIn</strong>
-              <span class="mono">linkedin.com/in/israeltorresl</span>
-            </div>
+            <div><strong>LinkedIn</strong><span class="mono">linkedin.com/in/israeltorresl</span></div>
           </a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <p class="footer__text mono">
