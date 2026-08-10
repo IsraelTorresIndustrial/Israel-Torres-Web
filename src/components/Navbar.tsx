@@ -1,87 +1,99 @@
-import React from 'react';
-import { motion, useScroll, useSpring } from 'motion/react';
-import { Menu, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
+
+const navLinks = [
+  { name: 'Perfil', href: '#perfil' },
+  { name: 'Casos', href: '#casos' },
+  { name: 'Trayectoria', href: '#trayectoria' },
+  { name: 'Capacidades', href: '#capacidades' },
+];
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [scrolled, setScrolled] = React.useState(false);
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 16);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'Proyectos', href: '#proyectos' },
-    { name: 'Método', href: '#metodo' },
-    { name: 'Experiencia', href: '#experiencia' },
-    { name: 'Capacidades', href: '#capacidades' },
-  ];
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsOpen(false);
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [isOpen]);
 
   return (
-    <>
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-exec origin-left z-50"
-        style={{ scaleX }}
-      />
-      <header
-        className={`fixed top-0 w-full z-40 transition-all duration-300 h-[72px] flex items-center bg-white/80 backdrop-blur-md border-b border-gray-200`}
-      >
-        <div className="max-w-[1240px] w-full mx-auto px-5 md:px-6 flex items-center justify-between">
-          <a href="#" className="font-display font-bold text-xl tracking-tight text-night">
-            Israel Torres
-          </a>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'border-b border-white/10 bg-night/92 shadow-lg backdrop-blur-xl' : 'bg-transparent'
+      }`}
+    >
+      <div className="mx-auto flex h-[76px] max-w-[1280px] items-center justify-between px-5 md:px-8">
+        <a href="#inicio" className="group flex items-center gap-3 text-white" aria-label="Volver al inicio">
+          <span className="grid h-10 w-10 place-items-center rounded-full border border-white/20 font-mono text-sm font-medium transition-colors group-hover:border-acid group-hover:bg-acid group-hover:text-night">
+            IT
+          </span>
+          <span className="hidden text-sm font-bold tracking-tight sm:block">Israel Torres</span>
+        </a>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegación principal">
+          {navLinks.map((link) => (
+            <a key={link.name} href={link.href} className="text-sm font-medium text-white/65 transition-colors hover:text-white">
+              {link.name}
+            </a>
+          ))}
+        </nav>
+
+        <div className="hidden items-center gap-4 lg:flex">
+          <a
+            href="#contacto"
+            className="inline-flex items-center gap-2 rounded-full bg-acid px-5 py-2.5 text-sm font-extrabold text-night transition-transform hover:-translate-y-0.5"
+          >
+            Conversemos <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setIsOpen((value) => !value)}
+          className="grid h-11 w-11 place-items-center rounded-full border border-white/20 text-white lg:hidden"
+          aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={isOpen}
+          aria-controls="menu-movil"
+        >
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </div>
+
+      {isOpen && (
+        <nav id="menu-movil" className="border-t border-white/10 bg-night px-5 pb-6 pt-3 lg:hidden" aria-label="Navegación móvil">
+          <div className="mx-auto flex max-w-[1280px] flex-col">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-exec transition-colors"
+                onClick={() => setIsOpen(false)}
+                className="border-b border-white/10 py-4 text-lg font-semibold text-white"
               >
                 {link.name}
               </a>
             ))}
-          </nav>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden p-2 -mr-2 text-night"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Nav */}
-        {isOpen && (
-          <div className="absolute top-[72px] left-0 w-full bg-white border-b border-gray-200 shadow-sm md:hidden">
-            <div className="px-5 py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-800 font-medium py-3 border-b border-gray-100"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
+            <a
+              href="#contacto"
+              onClick={() => setIsOpen(false)}
+              className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-acid px-5 py-3 text-sm font-extrabold text-night"
+            >
+              Conversemos <ArrowUpRight className="h-4 w-4" />
+            </a>
           </div>
-        )}
-      </header>
-    </>
+        </nav>
+      )}
+    </header>
   );
 }

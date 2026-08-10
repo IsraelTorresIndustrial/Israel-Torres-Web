@@ -1,20 +1,21 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Israel Torres — Portfolio
 
-# Run and deploy your AI Studio app
+Portafolio profesional de Israel Torres López, Ingeniero Civil Industrial y Data Consultant.
 
-This contains everything you need to run your app locally.
+El sitio presenta experiencia en estrategia, CRM, Business Intelligence, inteligencia artificial aplicada, automatización y coordinación de proyectos. Está construido con React, TypeScript, Vite y Tailwind CSS, y se despliega automáticamente en Vercel desde la rama `main`.
 
-View your app in AI Studio: https://ai.studio/apps/b5cf6606-ff38-420f-914b-9d11297d1a7c
+## Desarrollo local
 
-## Run Locally
+```bash
+npm install
+npm run dev
+```
 
-**Prerequisites:**  Node.js
+## Verificaciones
 
+```bash
+npm run lint
+npm run build
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Sitio publicado: [israel-torres-web.vercel.app](https://israel-torres-web.vercel.app/)

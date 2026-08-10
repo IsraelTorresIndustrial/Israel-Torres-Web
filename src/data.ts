@@ -1,139 +1,241 @@
 export const portfolioData = {
   personalInfo: {
-    name: "Israel Torres",
-    fullName: "Israel Torres López",
-    title: "Ingeniero Civil Industrial · Data Consultant",
-    headline: "Conecto estrategia, datos e IA para resolver problemas de negocio.",
-    description: "Trabajo en CRM, Business Intelligence, automatización y transformación digital, conectando necesidades de negocio con datos, tecnología y equipos multidisciplinarios. Actualmente participo en iniciativas regionales para Chile y Argentina, desde el diseño de la lógica hasta la construcción y coordinación de soluciones.",
-    email: "itorresl@correo.uss.cl",
-    linkedin: "https://www.linkedin.com/in/israeltorresl",
-    github: "https://israeltorresindustrial.github.io/Israel-Torres-Web/"
+    name: 'Israel Torres',
+    fullName: 'Israel Torres López',
+    title: 'Ingeniero Civil Industrial · Data Consultant',
+    eyebrow: 'Estrategia · Datos · IA aplicada',
+    headline: 'Convierto problemas difusos en soluciones que hacen avanzar el trabajo.',
+    description:
+      'Me muevo entre negocio, datos y tecnología para entender lo que frena a un equipo, ordenar la complejidad y construir una respuesta útil. No pretendo saberlo todo: aprendo rápido, conecto disciplinas y mejoro lo que está a mi alcance.',
+    email: 'itorresl@correo.uss.cl',
+    linkedin: 'https://www.linkedin.com/in/israeltorresl',
+    github: 'https://github.com/IsraelTorresIndustrial/Israel-Torres-Web',
+    location: 'Santiago, Chile',
   },
   metrics: [
-    { value: "7", label: "Sectores", description: "Banca, medios de pago, automotriz, salud, retail, servicios y educación." },
-    { value: "2", label: "Países", description: "Experiencia en iniciativas para Chile y Argentina." },
-    { value: "30+", label: "Equipos", description: "Coordinación de proyectos multidisciplinarios." },
-    { value: "3+", label: "Años", description: "Experiencia en consultoría, datos y transformación digital." }
+    {
+      value: '2',
+      label: 'países',
+      description: 'Iniciativas regionales para Chile y Argentina.',
+    },
+    {
+      value: '30+',
+      label: 'equipos',
+      description: 'Coordinados en proyectos multidisciplinarios.',
+    },
+    {
+      value: '6',
+      label: 'sectores',
+      description: 'Banca, pagos, automotriz, salud, servicios y educación.',
+    },
+    {
+      value: '3+',
+      label: 'años',
+      description: 'Conectando análisis, procesos y ejecución.',
+    },
   ],
-  heroTags: ["CRM y ciclo de vida", "Business Intelligence", "Marketing estratégico", "IA aplicada", "Automatización"],
+  valuePillars: [
+    {
+      number: '01',
+      title: 'Entender el negocio',
+      description:
+        'Traduzco objetivos, restricciones y necesidades de personas distintas en un problema común y accionable.',
+      examples: ['Diagnóstico', 'Estrategia comercial', 'Customer lifecycle'],
+    },
+    {
+      number: '02',
+      title: 'Construir con tecnología',
+      description:
+        'Prototipo herramientas, dashboards y automatizaciones que vuelven más simple el trabajo cotidiano.',
+      examples: ['Business Intelligence', 'IA generativa', 'Automatización'],
+    },
+    {
+      number: '03',
+      title: 'Mover la ejecución',
+      description:
+        'Conecto equipos, ordeno hitos y dejo trazabilidad para que una buena idea pueda transformarse en una mejora real.',
+      examples: ['Coordinación', 'Project management', 'Mejora continua'],
+    },
+  ],
   projects: [
     {
-      title: "Estrategia CRM y automatización regional",
-      context: "Artefact · Medios de pago",
-      industry: "Servicios Financieros",
-      status: "Implementado",
-      role: "Estrategia",
-      image: "", // <-- Añade aquí la URL o ruta (ej. "/images/proyecto1.jpg") de la imagen de tu proyecto.
-      challenge: "Coordinar iniciativas de CRM para distintas etapas del ciclo de vida del cliente, trabajando con múltiples equipos, campañas y fuentes de información.",
-      contribution: "Diseñé lógicas de campaña, análisis competitivos y propuestas comunicacionales, coordinando con equipos de marketing, BI, Data Science y negocio.",
-      solution: "Construí marcos reutilizables para campañas, automaticé benchmarks y apliqué IA generativa para acelerar la preparación de propuestas y piezas.",
-      result: "Estandarización del proceso, mayor trazabilidad y aumento de la velocidad de iteración en las iniciativas regionales de CRM.",
-      tags: ["CRM", "GenAI", "Business Automation", "Estrategia"]
+      number: '01',
+      title: 'Estrategia de ciclo de vida para medios de pago',
+      context: 'Artefact · Iniciativas regionales para Visa',
+      industry: 'Servicios financieros',
+      role: 'Consultoría, estrategia y automatización',
+      challenge:
+        'Diseñar iniciativas de adquisición, activación, uso y reactivación para instituciones financieras de Chile y Argentina, articulando miradas de negocio, marketing, BI y Data Science.',
+      contribution:
+        'Estructuro journeys y segmentaciones, desarrollo benchmarks y propuestas, y creo prototipos basados en IA que ayudan a ordenar conocimiento y acelerar iteraciones.',
+      outcome:
+        'Marcos de trabajo reutilizables, mayor trazabilidad entre análisis y campaña, y una preparación más ágil de propuestas.',
+      tags: ['CRM', 'Customer lifecycle', 'GenAI', 'Benchmarking'],
+      visual: 'lifecycle',
     },
     {
-      title: "Plataforma de priorización y control de cartera judicial",
-      context: "Consultoría independiente · LegalTech",
-      industry: "LegalTech",
-      status: "MVP",
-      role: "Diseño funcional",
-      image: "", // <-- Añade aquí la URL o ruta (ej. "/images/proyecto2.jpg") de la imagen de tu proyecto.
-      challenge: "Información distribuida en archivos Excel, poca visibilidad sobre la evolución de los casos y dificultad para priorizar la gestión diaria.",
-      contribution: "Levanté las necesidades, definí indicadores y estructuré los datos para coordinar el desarrollo del MVP.",
-      solution: "Diseñé una plataforma centralizada para cargar bases, priorizar causas, comparar cargas y visualizar indicadores de cartera.",
-      result: "Construcción de un MVP funcional que centraliza el control operativo y transforma la base en una herramienta de gestión diaria.",
-      tags: ["Power BI", "Data Modeling", "UX funcional"]
+      number: '02',
+      title: 'Seguimiento digital de proyectos académicos',
+      context: 'Universidad San Sebastián',
+      industry: 'Educación',
+      role: 'Scrum Master y desarrollo de solución',
+      challenge:
+        'Centralizar avances, reuniones, hitos y entregables de varios equipos que trabajaban con información fragmentada.',
+      contribution:
+        'Coordiné el seguimiento y desarrollé una aplicación online para registrar el trabajo de cada equipo y hacer visible su evolución.',
+      outcome:
+        'Información centralizada, mejor trazabilidad y una base común para acompañar decisiones y entregas.',
+      tags: ['Scrum', 'Aplicación web', 'Trazabilidad', 'Coordinación'],
+      visual: 'teams',
     },
     {
-      title: "Aplicación para seguimiento de proyectos académicos",
-      context: "Universidad San Sebastián · Educación",
-      industry: "Educación",
-      status: "Implementado",
-      role: "Scrum Master",
-      image: "", // <-- Añade aquí la URL o ruta de la imagen de tu proyecto.
-      challenge: "Seguimiento fragmentado de proyectos, reuniones, avances, hitos y evaluaciones entre múltiples equipos.",
-      contribution: "Coordiné a los equipos como Scrum Master y lideré el diseño de una aplicación para centralizar la gestión.",
-      solution: "Desarrollé una herramienta online para registrar avances, organizar reuniones, visualizar entregables y mantener bitácoras.",
-      result: "Centralización de información y mayor trazabilidad en el control de proyectos y entregables.",
-      tags: ["Project Management", "Scrum", "Automation"]
+      number: '03',
+      title: 'Reportería para una gestión comercial más ágil',
+      context: 'SALFA · Vehículos y maquinaria',
+      industry: 'Automotriz',
+      role: 'BI y gestión comercial',
+      challenge:
+        'Reducir la fricción de procesos manuales y mejorar el acceso a información relevante para la gestión comercial.',
+      contribution:
+        'Rediseñé procesos operativos, estructuré indicadores y trabajé en dashboards y automatizaciones de reportería.',
+      outcome:
+        'Menos tareas manuales y mejor disponibilidad de información para el seguimiento comercial.',
+      tags: ['Power BI', 'KPIs', 'Automatización', 'Procesos'],
+      visual: 'analytics',
     },
     {
-      title: "Automatización de reportería comercial",
-      context: "SALFA · Vehículos y Maquinaria",
-      industry: "Automotriz",
-      status: "Implementado",
-      role: "BI Analytics",
-      image: "", // <-- Añade aquí la URL o ruta de la imagen de tu proyecto.
-      challenge: "Procesos de reportería manuales, información comercial fragmentada y tiempos elevados de preparación.",
-      contribution: "Analicé los procesos actuales, definí los indicadores clave y reestructuré las fuentes de datos.",
-      solution: "Desarrollé tableros en Power BI y automaticé la extracción de datos para consolidar la información relevante.",
-      result: "Reducción de tareas manuales y mejor disponibilidad de indicadores para la toma de decisiones comerciales.",
-      tags: ["Power BI", "Data Visualization", "KPIs"]
-    }
+      number: '04',
+      title: 'Inteligencia comercial conectada al negocio',
+      context: 'Ludum Bar',
+      industry: 'Servicios',
+      role: 'Analítica comercial',
+      challenge:
+        'Entender el desempeño del negocio desde variables de rentabilidad, precios, marketing y experiencia de cliente.',
+      contribution:
+        'Conecté métricas financieras y comerciales para interpretar resultados y apoyar decisiones de pricing y marketing.',
+      outcome:
+        'Una lectura más integrada del desempeño para orientar decisiones comerciales y de experiencia.',
+      tags: ['Rentabilidad', 'Pricing', 'Marketing', 'Customer experience'],
+      visual: 'pricing',
+    },
   ],
   process: [
-    { step: "01", title: "Entender", desc: "Analizo el contexto, los usuarios, las restricciones y los objetivos del negocio.", deliverable: "Diagnóstico y definición del problema." },
-    { step: "02", title: "Estructurar", desc: "Ordeno procesos, datos, actores, decisiones e indicadores relevantes.", deliverable: "Modelo funcional, flujo y métricas." },
-    { step: "03", title: "Diseñar", desc: "Defino la lógica, arquitectura y experiencia de la solución.", deliverable: "Propuesta, roadmap o prototipo." },
-    { step: "04", title: "Ejecutar", desc: "Construyo herramientas, coordino responsables y convierto el diseño en una solución utilizable.", deliverable: "Dashboard, automatización, aplicación o proceso." },
-    { step: "05", title: "Optimizar", desc: "Mido resultados, identifico brechas y documento mejoras para escalar.", deliverable: "Seguimiento, aprendizajes y siguientes pasos." }
+    {
+      step: '01',
+      title: 'Entender',
+      desc: 'Escucho, pregunto y observo antes de proponer. Busco la causa detrás del síntoma.',
+    },
+    {
+      step: '02',
+      title: 'Estructurar',
+      desc: 'Ordeno actores, datos, decisiones y restricciones hasta volver el desafío manejable.',
+    },
+    {
+      step: '03',
+      title: 'Construir',
+      desc: 'Creo una respuesta concreta: un análisis, proceso, dashboard, prototipo o herramienta.',
+    },
+    {
+      step: '04',
+      title: 'Mejorar',
+      desc: 'Mido, documento y ajusto para que la solución sea más clara, rápida y sostenible.',
+    },
   ],
   experience: [
     {
-      company: "Artefact",
-      role: "Data Consultant — Strategic Marketing, GenAI & Business Automation",
-      period: "Abril 2026 – Actualidad",
-      description: "Diseño y coordinación de iniciativas regionales de CRM, ciclo de vida, marketing y automatización para una compañía global de medios de pago y bancos de Chile y Argentina.",
+      company: 'Artefact Spanish LATAM (ex-Brain Food)',
+      role: 'Data Consultant · Strategic Marketing, GenAI & Business Automation',
+      period: 'Abr 2026 — Actualidad',
+      description:
+        'Consultoría en iniciativas de Visa para instituciones financieras de Chile y Argentina, conectando estrategia, CRM, analítica e IA aplicada.',
       highlights: [
-        "Diseño de mecánicas y propuestas de campañas.",
-        "Automatización de benchmarks y flujos operativos.",
-        "Aplicación de IA generativa a producción y procesos.",
-        "Coordinación con marketing, BI, Data Science y negocio."
-      ]
+        'Diseño de estrategias y journeys de ciclo de vida.',
+        'Inteligencia competitiva y desarrollo de propuestas.',
+        'Prototipos y automatizaciones basados en IA.',
+        'Coordinación con negocio, Marketing, BI y Data Science.',
+      ],
+      current: true,
     },
     {
-      company: "Universidad San Sebastián",
-      role: "Scrum Master — Taller de Tecnologías Digitales",
-      period: "Abril 2026 – Julio 2026",
-      description: "Coordinación de proyectos y desarrollo de una aplicación para centralizar seguimiento, reuniones, hitos y entregables.",
-      highlights: []
+      company: 'Universidad San Sebastián',
+      role: 'Scrum Master · Taller de Tecnologías Digitales',
+      period: 'Abr 2026 — Jul 2026',
+      description:
+        'Coordinación del avance de proyectos y desarrollo de una aplicación online para centralizar seguimiento, reuniones, hitos y entregables.',
+      highlights: [],
     },
     {
-      company: "Universidad San Sebastián",
-      role: "Scrum Master — Taller de Sustentabilidad",
-      period: "Septiembre 2025 – Noviembre 2025",
-      description: "Coordinación de más de 30 equipos y diseño de una herramienta semiautomatizada de evaluación y control.",
-      highlights: []
+      company: 'Universidad San Sebastián',
+      role: 'Scrum Master · Taller de Sustentabilidad',
+      period: 'Sep 2025 — Nov 2025',
+      description:
+        'Coordinación de más de 30 equipos multidisciplinarios y diseño de una herramienta semiautomatizada de evaluación y control.',
+      highlights: [],
     },
     {
-      company: "SALFA",
-      role: "Analista BI y Gestión Comercial",
-      period: "Diciembre 2024 – Septiembre 2025",
-      description: "Desarrollo de dashboards, automatización de reportería, indicadores comerciales y optimización de procesos.",
-      highlights: []
-    }
+      company: 'SALFA',
+      role: 'Analista BI y Gestión Comercial',
+      period: 'Dic 2024 — Sep 2025',
+      description:
+        'Optimización de reportería y gestión comercial mediante dashboards, automatización y rediseño de procesos operativos.',
+      highlights: [],
+    },
+    {
+      company: 'Ludum Bar',
+      role: 'Analista de Inteligencia Comercial',
+      period: 'Oct 2023 — Feb 2025',
+      description:
+        'Análisis de rentabilidad, pricing y desempeño comercial, conectando métricas financieras con marketing y experiencia de cliente.',
+      highlights: [],
+    },
+    {
+      company: 'GETC Contratista E.I.R.L.',
+      role: 'Consultor en Gestión Empresarial',
+      period: 'Ene 2023 — Feb 2025',
+      description:
+        'Modernización administrativa, control de costos y automatización documental para procesos de gestión interna.',
+      highlights: [],
+    },
   ],
-  additionalExperience: [
+  education: [
     {
-      title: "Consultor en Transformación Digital",
-      company: "Complejo Hospitalario San José de Maipo",
-      desc: "Diagnóstico de brechas y propuesta de automatización con OCR, NLP e IA."
+      degree: 'Ingeniería Civil Industrial',
+      institution: 'Universidad San Sebastián',
+      period: '2019 — 2026',
     },
     {
-      title: "Analista de Inteligencia Comercial",
-      company: "Ludum Bar",
-      desc: "Análisis de rentabilidad, pricing y desempeño comercial."
+      degree: 'Diplomado en Finanzas',
+      institution: 'Universidad San Sebastián',
+      period: '2024 — 2025',
     },
-    {
-      title: "Consultor en Gestión Empresarial",
-      company: "GETC",
-      desc: "Control de costos, modernización administrativa y automatización documental."
-    }
   ],
-  capabilities: {
-    "Estrategia y transformación": ["Diagnóstico de negocio", "Diseño de procesos", "Transformación digital", "Business cases", "Project Management", "Pricing y análisis financiero"],
-    "Datos y decisiones": ["Power BI", "Modelado de datos", "Definición de KPIs", "Reportería ejecutiva", "Data storytelling", "Analítica comercial"],
-    "CRM y experiencia de cliente": ["Customer Lifecycle", "Segmentación", "Mecánicas de campaña", "Benchmarking", "Marketing Automation", "Comunicación comercial"],
-    "Inteligencia artificial y automatización": ["Inteligencia artificial generativa", "Diseño de prompts y agentes", "Automatización de flujos", "OCR y NLP", "Herramientas no-code/low-code", "Prototipado de productos digitales"]
-  },
-  tools: ["Power BI", "SQL", "Google Cloud", "Firebase", "Google Apps Script", "GitHub", "AI Studio", "AJO"]
+  capabilities: [
+    {
+      title: 'Estrategia y negocio',
+      description: 'Para entender dónde está la oportunidad y qué decisión necesita apoyo.',
+      skills: ['Diagnóstico de negocio', 'Estrategia comercial', 'Pricing', 'Procesos', 'Project management'],
+    },
+    {
+      title: 'Datos y decisiones',
+      description: 'Para transformar información dispersa en una lectura útil y accionable.',
+      skills: ['Power BI', 'KPIs', 'Modelado de datos', 'Reportería', 'Analítica comercial'],
+    },
+    {
+      title: 'Clientes y crecimiento',
+      description: 'Para diseñar experiencias, campañas y momentos relevantes del ciclo de vida.',
+      skills: ['CRM', 'Customer lifecycle', 'Segmentación', 'Benchmarking', 'Marketing'],
+    },
+    {
+      title: 'IA y automatización',
+      description: 'Para probar nuevas formas de acelerar tareas, análisis y construcción de soluciones.',
+      skills: ['IA generativa', 'Prototipado', 'Automatización', 'Agentes', 'No-code / low-code'],
+    },
+  ],
+  tools: ['Power BI', 'SQL', 'Google Cloud', 'Firebase', 'Apps Script', 'GitHub', 'AI Studio', 'AJO'],
+  certifications: [
+    'Introducción a la Ciencia de Datos',
+    'Google Project Management',
+    'Gestión de Proyectos y Agile',
+    'Pensamiento estratégico',
+  ],
 };

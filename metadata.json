@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "Israel Torres — Portfolio",
+  "description": "Portafolio profesional sobre estrategia, datos, IA aplicada y mejora de procesos.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }

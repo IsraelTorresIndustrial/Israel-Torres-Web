@@ -10,9 +10,12 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen selection:bg-exec/30 selection:text-night">
+    <div className="min-h-screen overflow-x-hidden bg-canvas text-ink selection:bg-acid selection:text-night">
+      <a href="#contenido" className="skip-link">
+        Saltar al contenido
+      </a>
       <Navbar />
-      <main>
+      <main id="contenido">
         <Hero />
         <Impact />
         <Projects />

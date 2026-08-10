@@ -1,68 +1,72 @@
-import { motion } from 'motion/react';
+import { GraduationCap } from 'lucide-react';
 import { portfolioData } from '../data';
 
 export function Experience() {
-  const { experience } = portfolioData;
   return (
-    <section id="experiencia" className="py-24 bg-white">
-      <div className="max-w-[1240px] mx-auto px-5 md:px-6">
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-night mb-4">Experiencia</h2>
-          <h3 className="text-lg text-gray-600">Trayectoria en consultoría, datos, marketing y transformación digital.</h3>
+    <section id="trayectoria" className="bg-paper py-24 md:py-32">
+      <div className="mx-auto max-w-[1280px] px-5 md:px-8">
+        <div className="grid gap-8 border-b border-line pb-12 lg:grid-cols-[0.65fr_1.35fr] lg:gap-20">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-leaf">Trayectoria / 04</p>
+          </div>
+          <div>
+            <h2 className="text-balance max-w-[820px] text-4xl font-semibold leading-[1.06] tracking-[-0.045em] text-night md:text-6xl">
+              Experiencias distintas que hoy se conectan.
+            </h2>
+            <p className="mt-7 max-w-[680px] text-base leading-8 text-stone">
+              Consultoría, inteligencia comercial, BI, coordinación académica y gestión empresarial: cada etapa amplió la forma en que entiendo y resuelvo problemas.
+            </p>
+          </div>
         </div>
 
-        <div className="relative border-l-2 border-gray-100 ml-2 md:ml-4 mb-20 space-y-16">
-          {experience.map((job, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -15 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.1 }}
-              className="pl-8 md:pl-12 relative"
-            >
-              {/* Timeline Dot */}
-              <div className="absolute w-3 h-3 bg-white border-2 border-exec rounded-full -left-[7px] top-1.5" />
-              
-              <div className="flex flex-col lg:flex-row lg:items-baseline lg:justify-between mb-2 gap-1 lg:gap-4">
-                <h4 className="text-xl md:text-2xl font-display font-bold text-night">{job.role}</h4>
-                <span className="text-sm font-mono text-gray-500 whitespace-nowrap mt-1 lg:mt-0">{job.period}</span>
-              </div>
-              <h5 className="text-exec font-semibold mb-4 text-base">{job.company}</h5>
-              
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-[720px] mb-4">
-                {job.description}
-              </p>
-              
-              {job.highlights && job.highlights.length > 0 && (
-                <ul className="space-y-2 mt-5 max-w-[720px]">
-                  {job.highlights.map((highlight, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-gray-300 font-mono text-sm mt-0.5">→</span>
-                      <span className="text-sm md:text-base text-gray-600 leading-relaxed">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </motion.div>
-          ))}
+        <div className="mt-16 grid gap-12 lg:grid-cols-[0.65fr_1.35fr] lg:gap-20">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-stone">Experiencia profesional</p>
+            <p className="mt-4 max-w-[280px] text-sm leading-7 text-stone">Desde 2023, con experiencias simultáneas que cruzan proyectos profesionales y académicos.</p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute bottom-0 left-[7px] top-0 w-px bg-line" aria-hidden="true" />
+            {portfolioData.experience.map((job, index) => (
+              <article key={`${job.company}-${job.period}`} className="relative grid gap-5 pb-12 pl-9 last:pb-0 md:grid-cols-[170px_1fr] md:gap-8">
+                <span className={`absolute left-0 top-1.5 h-[15px] w-[15px] rounded-full border-[4px] border-paper ${job.current ? 'bg-leaf shadow-[0_0_0_5px_rgba(47,125,89,.12)]' : 'bg-line'}`} />
+                <div>
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-stone">{job.period}</p>
+                  {job.current && <span className="mt-3 inline-flex rounded-full bg-mint px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-forest">Actual</span>}
+                </div>
+                <div className={index !== portfolioData.experience.length - 1 ? 'border-b border-line pb-12' : ''}>
+                  <h3 className="text-xl font-bold leading-tight tracking-[-0.02em] text-night md:text-2xl">{job.role}</h3>
+                  <p className="mt-2 text-sm font-bold text-leaf">{job.company}</p>
+                  <p className="mt-5 max-w-[700px] text-sm leading-7 text-stone">{job.description}</p>
+                  {job.highlights.length > 0 && (
+                    <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+                      {job.highlights.map((highlight) => (
+                        <li key={highlight} className="flex items-start gap-2 text-xs leading-6 text-stone">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-acid ring-1 ring-night/10" /> {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-20 pt-16 border-t border-gray-100">
-          <h4 className="text-xl font-display font-bold text-night mb-10">Experiencia adicional</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {portfolioData.additionalExperience.map((exp, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                className="bg-bg p-6 border border-gray-100 rounded-2xl"
-              >
-                <h5 className="font-bold text-night text-base mb-1">{exp.title}</h5>
-                <p className="text-exec font-medium text-sm mb-4">{exp.company}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{exp.desc}</p>
-              </motion.div>
+        <div className="mt-24 grid gap-12 border-t border-line pt-16 lg:grid-cols-[0.65fr_1.35fr] lg:gap-20">
+          <div>
+            <div className="flex items-center gap-3">
+              <GraduationCap className="h-5 w-5 text-leaf" />
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-stone">Formación</p>
+            </div>
+          </div>
+          <div className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-2">
+            {portfolioData.education.map((item) => (
+              <article key={item.degree} className="bg-canvas p-7">
+                <p className="font-mono text-[10px] uppercase tracking-wider text-stone">{item.period}</p>
+                <h3 className="mt-8 text-xl font-bold text-night">{item.degree}</h3>
+                <p className="mt-2 text-sm text-stone">{item.institution}</p>
+              </article>
             ))}
           </div>
         </div>

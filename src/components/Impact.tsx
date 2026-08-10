@@ -1,34 +1,44 @@
-import { motion } from 'motion/react';
+import { ArrowDownRight } from 'lucide-react';
 import { portfolioData } from '../data';
 
 export function Impact() {
-  const { metrics } = portfolioData;
   return (
-    <section id="impacto" className="py-20 bg-white border-b border-gray-200">
-      <div className="max-w-[1240px] mx-auto px-5 md:px-6">
-        <motion.div
-           initial={{ opacity: 0, y: 15 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           className="grid grid-cols-2 md:grid-cols-4 gap-y-12"
-        >
-          {metrics.map((metric, index) => (
-            <div 
-              key={index} 
-              className={`flex flex-col px-4 md:px-8 ${
-                index % 2 !== 0 ? '' : 'border-r border-gray-100 md:border-r-0'
-              } ${
-                index !== metrics.length - 1 ? 'md:border-r md:border-gray-200' : ''
-              }`}
-            >
-              <span className="text-4xl md:text-5xl font-mono font-medium text-night mb-2">
-                {metric.value}
-              </span>
-              <span className="text-sm font-semibold text-night mb-1">{metric.label}</span>
-              <span className="text-sm text-gray-600 leading-relaxed">{metric.description}</span>
-            </div>
+    <section id="perfil" className="bg-paper py-24 md:py-32">
+      <div className="mx-auto max-w-[1280px] px-5 md:px-8">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-leaf">Perfil / 01</p>
+            <h2 className="text-balance mt-5 max-w-[520px] text-4xl font-semibold leading-[1.06] tracking-[-0.045em] text-night md:text-6xl">
+              Mi fortaleza está en las conexiones.
+            </h2>
+          </div>
+          <div className="lg:pt-12">
+            <p className="max-w-[720px] text-xl leading-9 text-stone md:text-2xl md:leading-10">
+              No me defino por una sola herramienta. Entiendo mejor los problemas cuando puedo mirarlos desde distintos ángulos y traducir entre personas que hablan lenguajes diferentes.
+            </p>
+            <div className="mt-12 section-rule" />
+          </div>
+        </div>
+
+        <div className="mt-16 grid gap-px overflow-hidden rounded-[1.75rem] border border-line bg-line md:grid-cols-3">
+          {portfolioData.valuePillars.map((pillar) => (
+            <article key={pillar.number} className="group bg-canvas p-7 md:p-9 lg:min-h-[390px]">
+              <div className="flex items-start justify-between">
+                <span className="font-mono text-xs text-stone">{pillar.number}</span>
+                <ArrowDownRight className="h-5 w-5 text-line transition-colors group-hover:text-leaf" />
+              </div>
+              <h3 className="mt-14 max-w-[260px] text-2xl font-bold leading-tight tracking-[-0.025em] text-night">{pillar.title}</h3>
+              <p className="mt-5 text-sm leading-7 text-stone">{pillar.description}</p>
+              <div className="mt-10 flex flex-wrap gap-2">
+                {pillar.examples.map((example) => (
+                  <span key={example} className="rounded-full border border-line bg-paper px-3 py-1.5 font-mono text-[10px] uppercase tracking-wide text-stone">
+                    {example}
+                  </span>
+                ))}
+              </div>
+            </article>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
