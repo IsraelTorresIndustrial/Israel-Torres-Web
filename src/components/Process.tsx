@@ -3,12 +3,12 @@ import { portfolioData } from '../data';
 
 export function Process() {
   return (
-    <section id="metodo" className="relative overflow-hidden bg-canvas py-24 md:py-32">
+    <section id="metodo" className="relative overflow-hidden bg-canvas py-20 md:py-28">
       <div className="soft-grid absolute inset-0 opacity-70" aria-hidden="true" />
       <div className="relative mx-auto max-w-[1320px] px-5 md:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.74fr_1.26fr] lg:gap-24">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-fuchsia">03 / Método</p>
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-fuchsia">06 / Método</p>
             <h2 className="text-balance mt-5 max-w-[560px] font-display text-4xl font-semibold leading-[1.02] tracking-[-0.045em] text-ink md:text-7xl">No es una línea recta. Es un sistema que aprende.</h2>
           </div>
           <div className="lg:pt-12">
@@ -17,7 +17,7 @@ export function Process() {
           </div>
         </div>
 
-        <div className="relative mt-16 grid gap-px overflow-hidden rounded-[1.75rem] border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
+        <div className="relative mt-16 grid gap-px overflow-hidden rounded-[1.75rem] border border-line bg-line md:grid-cols-2 lg:grid-cols-4">
           {portfolioData.process.map((item, index) => (
             <article key={item.step} className="group relative min-h-[280px] bg-paper p-7 md:p-8">
               <div className="flex items-center justify-between">
@@ -28,7 +28,7 @@ export function Process() {
                 <h3 className="font-display text-2xl font-semibold tracking-[-0.03em] text-ink">{item.title}</h3>
                 <p className="mt-4 max-w-[330px] text-sm leading-7 text-muted">{item.desc}</p>
               </div>
-              <span className={`absolute inset-x-0 bottom-0 h-1 origin-left bg-gradient-to-r from-fuchsia via-violet to-electric transition-transform duration-300 ${index === 5 ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
+              <span className={`absolute inset-x-0 bottom-0 h-1 origin-left bg-gradient-to-r from-fuchsia via-violet to-electric transition-transform duration-300 ${index === portfolioData.process.length - 1 ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
             </article>
           ))}
         </div>

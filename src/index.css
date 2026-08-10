@@ -152,6 +152,32 @@ button:focus-visible {
   box-shadow: 0 30px 90px rgba(7, 9, 20, 0.2);
 }
 
+.aurora {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(110px);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  animation: aurora-drift 12s ease-in-out infinite alternate;
+}
+
+.aurora-one {
+  right: -8rem;
+  top: 8rem;
+  width: 34rem;
+  height: 34rem;
+  background: rgba(117, 46, 125, 0.34);
+}
+
+.aurora-two {
+  left: 28%;
+  top: 38%;
+  width: 24rem;
+  height: 24rem;
+  background: rgba(88, 101, 255, 0.16);
+  animation-delay: -5s;
+}
+
 @keyframes marquee {
   to { transform: translateX(-50%); }
 }
@@ -164,6 +190,11 @@ button:focus-visible {
 @keyframes float-slow {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
+}
+
+@keyframes aurora-drift {
+  0% { transform: translate3d(-2%, -3%, 0) scale(0.96); opacity: 0.68; }
+  100% { transform: translate3d(7%, 5%, 0) scale(1.08); opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,9 +2,10 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Impact } from './components/Impact';
 import { Projects } from './components/Projects';
-import { Process } from './components/Process';
 import { Experience } from './components/Experience';
 import { Capabilities } from './components/Capabilities';
+import { Credentials } from './components/Credentials';
+import { Process } from './components/Process';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
@@ -17,9 +18,10 @@ export default function App() {
         <Hero />
         <Impact />
         <Projects />
-        <Process />
-        <Capabilities />
         <Experience />
+        <Capabilities />
+        <Credentials />
+        <Process />
         <Contact />
       </main>
       <Footer />
