@@ -10,18 +10,16 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-canvas text-ink selection:bg-acid selection:text-night">
-      <a href="#contenido" className="skip-link">
-        Saltar al contenido
-      </a>
+    <div className="min-h-screen overflow-x-hidden bg-canvas text-ink selection:bg-fuchsia selection:text-white">
+      <a href="#contenido" className="skip-link">Saltar al contenido</a>
       <Navbar />
       <main id="contenido">
         <Hero />
         <Impact />
         <Projects />
         <Process />
-        <Experience />
         <Capabilities />
+        <Experience />
         <Contact />
       </main>
       <Footer />
