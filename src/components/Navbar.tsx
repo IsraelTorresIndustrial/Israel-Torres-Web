@@ -53,7 +53,7 @@ export function Navbar() {
       <div className="mx-auto flex h-[76px] max-w-[1320px] items-center justify-between px-5 md:px-8">
         <a href="#inicio" className="group flex items-center gap-3 text-white" aria-label="Volver al inicio">
           <span className="relative grid h-10 w-10 place-items-center overflow-hidden rounded-xl border border-white/15 bg-white/5 font-display text-sm font-bold">
-            <span className="relative z-10">IT</span>
+            <img src="https://res.cloudinary.com/djn1qu2zf/image/upload/v1786635724/ICONO_LOGO_qhfmpv.png" alt="Logo" className="relative z-10 h-6 w-6 object-contain" />
             <span className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-fuchsia via-electric to-cyan" />
           </span>
           <span className="hidden sm:block">

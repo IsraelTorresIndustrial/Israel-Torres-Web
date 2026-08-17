@@ -31,7 +31,11 @@ export function Hero() {
 
             <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.18em] text-cyan">{personalInfo.eyebrow}</p>
             <h1 className="text-balance max-w-[820px] font-display text-[clamp(3rem,6.3vw,6.5rem)] font-semibold leading-[0.92] tracking-[-0.062em]">
-              Me cuesta ver algo que puede <span className="gradient-text">funcionar mejor</span> y dejarlo igual.
+              {personalInfo.headline.split(' ').map((word, i, arr) => {
+                if (i >= arr.length - 3) return null;
+                return word + ' ';
+              })}
+              <span className="gradient-text">{personalInfo.headline.split(' ').slice(-3).join(' ')}</span>
             </h1>
             <p className="mt-9 max-w-[720px] text-base leading-8 text-white/68 md:text-lg">{personalInfo.description}</p>
 
@@ -80,7 +84,7 @@ export function Hero() {
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-5 -left-2 rounded-2xl border border-white/10 bg-paper px-5 py-4 text-ink shadow-2xl sm:-left-8"><p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted">Hoy</p><p className="mt-1 font-display text-sm font-semibold">Data Consultant · Artefact</p></div>
+            <div className="absolute -bottom-5 -left-2 rounded-2xl border border-white/10 bg-paper px-5 py-4 text-ink shadow-2xl sm:-left-8"><p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted">Hoy</p><p className="mt-1 font-display text-sm font-semibold">Data Consultant · Artefact / Visa</p></div>
           </div>
         </div>
 
