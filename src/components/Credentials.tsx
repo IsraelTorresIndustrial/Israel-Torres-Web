@@ -1,16 +1,18 @@
 import { useMemo, useState } from 'react';
-import { ArrowUpRight, Award, GraduationCap, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, Award, GraduationCap, CheckCircle2, ExternalLink } from 'lucide-react';
 import { portfolioData } from '../data';
 
-const categories = ['Todas', 'Proyectos & Estrategia', 'Datos & BI', 'Operaciones & Mejora'] as const;
+const categories = ['Todas', 'IA & Cloud', 'Proyectos & Estrategia', 'Datos & BI', 'Operaciones & Lean'] as const;
 
 export function Credentials() {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>('Todas');
   const [showAll, setShowAll] = useState(false);
+  
   const filtered = useMemo(
     () => portfolioData.credentials.filter((item) => activeCategory === 'Todas' || item.category === activeCategory),
     [activeCategory],
   );
+  
   const visible = showAll || activeCategory !== 'Todas' ? filtered : filtered.filter((item) => item.featured);
 
   return (
@@ -19,18 +21,18 @@ export function Credentials() {
       <div className="relative mx-auto max-w-[1320px] px-5 md:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-24">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber font-semibold">05 / Formación & Certificaciones</p>
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber font-semibold">05 / Formación & Respaldo</p>
             <div className="mt-8 hidden h-28 w-px bg-gradient-to-b from-cognac via-amber to-transparent lg:block" />
             <p className="mt-5 max-w-[330px] text-xs leading-6 text-white/50">
-              Aprendo para abrir posibilidades reales de solución, con rigor metodológico y aplicación continua.
+              Aprendizaje continuo y estructurado para aplicar innovación con rigor profesional.
             </p>
           </div>
           <div>
             <h2 className="text-balance max-w-[900px] font-display text-4xl font-semibold leading-[1.02] tracking-[-0.045em] md:text-7xl text-white">
-              Base industrial. <span className="text-white/40">Aprendizaje que no se detiene.</span>
+              Base industrial. <span className="text-white/40">Especialización continua en IA y Estrategia.</span>
             </h2>
             <p className="mt-7 max-w-[760px] text-base leading-8 text-white/65">
-              Mi formación combina ingeniería de procesos, finanzas corporativas, ciencia de datos, gestión ágil e inteligencia artificial. Las credenciales respaldan el criterio; los prototipos demuestran lo que puedo construir.
+              Mi base es la ingeniería de procesos y las finanzas. A partir de ahí, he sumado especializaciones en Google AI, Agent Development, gestión de proyectos y ciencia de datos. Las credenciales muestran el recorrido; los prototipos demuestran qué hago con él.
             </p>
           </div>
         </div>
@@ -64,11 +66,11 @@ export function Credentials() {
               <div className="flex items-center gap-2.5">
                 <Award className="h-5 w-5 text-amber" />
                 <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-amber font-bold">
-                  Credenciales & Certificaciones Verificadas
+                  {portfolioData.credentials.length} Certificaciones Verificadas
                 </p>
               </div>
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-[-0.03em] md:text-3xl text-white">
-                Rigor analítico y metodológico continuo.
+                Google, Credly, Coursera & Santander Open Academy.
               </h3>
             </div>
             <a
@@ -77,11 +79,11 @@ export function Credentials() {
               rel="noreferrer"
               className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-4 py-2 text-xs font-semibold text-white/80 transition-all hover:border-cyan/50 hover:bg-white/[0.08]"
             >
-              Ver perfil verificado en LinkedIn <ArrowUpRight className="h-3.5 w-3.5 text-cyan" />
+              Ver perfil completo en LinkedIn <ArrowUpRight className="h-3.5 w-3.5 text-cyan" />
             </a>
           </div>
 
-          {/* Filtros */}
+          {/* Filtros por categoría */}
           <div className="mt-8 flex gap-2 overflow-x-auto pb-2" aria-label="Filtrar certificaciones">
             {categories.map((category) => (
               <button
@@ -107,33 +109,61 @@ export function Credentials() {
             {visible.map((credential) => (
               <article
                 key={`${credential.title}-${credential.issuer}`}
-                className="rounded-2xl border border-white/10 bg-panel/50 p-6 transition-all hover:border-cognac/40 hover:bg-panel"
+                className="rounded-2xl border border-white/10 bg-panel/50 p-6 flex flex-col justify-between transition-all hover:border-cognac/40 hover:bg-panel shadow-sm min-h-[220px]"
               >
-                <div className="flex items-center justify-between gap-4">
-                  <span className="font-mono text-[9px] uppercase tracking-wider text-cyan font-semibold">
-                    {credential.category}
-                  </span>
-                  <span className="font-mono text-[9px] text-white/40">{credential.date}</span>
+                <div>
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="rounded-md bg-white/[0.04] border border-white/10 px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-cyan font-semibold">
+                      {credential.category}
+                    </span>
+                    <span className="font-mono text-[9px] text-white/40">{credential.date}</span>
+                  </div>
+
+                  <h4 className="mt-4 font-display text-base font-semibold leading-snug text-white">
+                    {credential.title}
+                  </h4>
                 </div>
-                <h4 className="mt-6 font-display text-base font-semibold leading-snug text-white">
-                  {credential.title}
-                </h4>
-                <div className="mt-4 flex items-center gap-2 text-xs text-white/55">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-amber shrink-0" />
-                  <span>{credential.issuer}</span>
+
+                <div className="mt-5 border-t border-white/10 pt-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-1.5 text-xs text-white/60">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-amber shrink-0" />
+                      <span className="truncate">{credential.issuer}</span>
+                    </div>
+
+                    {credential.url && (
+                      <a
+                        href={credential.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 font-mono text-[8px] uppercase text-cyan hover:underline shrink-0"
+                      >
+                        Verificar <ExternalLink className="h-2.5 w-2.5" />
+                      </a>
+                    )}
+                  </div>
+
+                  {credential.validUntil && (
+                    <p className="mt-1 font-mono text-[8px] text-amber">Vigente hasta {credential.validUntil}</p>
+                  )}
+                  {credential.credentialId && (
+                    <p className="mt-0.5 font-mono text-[7px] text-white/35 truncate">ID: {credential.credentialId}</p>
+                  )}
                 </div>
               </article>
             ))}
           </div>
 
           {activeCategory === 'Todas' && (
-            <button
-              type="button"
-              onClick={() => setShowAll((value) => !value)}
-              className="mt-8 rounded-full border border-white/15 px-5 py-2.5 text-xs font-semibold text-white/80 transition-colors hover:border-cognac hover:text-amber"
-            >
-              {showAll ? 'Ver selección principal' : `Ver todas las credenciales (${portfolioData.credentials.length})`}
-            </button>
+            <div className="mt-8 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setShowAll((value) => !value)}
+                className="rounded-full border border-white/15 px-6 py-3 text-xs font-semibold text-white/80 transition-all hover:border-cognac hover:text-amber bg-white/[0.02]"
+              >
+                {showAll ? 'Mostrar selección destacada' : `Explorar las ${portfolioData.credentials.length} certificaciones completas`}
+              </button>
+            </div>
           )}
         </div>
       </div>
