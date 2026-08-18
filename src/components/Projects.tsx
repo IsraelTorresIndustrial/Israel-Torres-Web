@@ -12,6 +12,9 @@ import {
   Monitor,
   Send,
   Sparkles,
+  Users,
+  Code2,
+  Check,
 } from 'lucide-react';
 import { portfolioData } from '../data';
 
@@ -429,10 +432,221 @@ function ControlMockup() {
   );
 }
 
+// 4. Briefs Mockup: Agente de Piezas & Briefs
+function BriefsMockup() {
+  const [activeVariant, setActiveVariant] = useState(0);
+  const [viewTab, setViewTab] = useState<'preview' | 'brief'>('preview');
+
+  const variants = [
+    {
+      name: 'Variante A: Performance',
+      subject: '¡20% de descuento en tus compras de fin de semana con tu tarjeta!',
+      cta: 'Aprovechar Beneficio',
+      target: 'Segmento: Jóvenes Profesionales · Alta Transaccionalidad',
+      tone: 'Dinámico y directo',
+    },
+    {
+      name: 'Variante B: Storytelling',
+      subject: 'Descubre los mejores destinos y viaja protegido este invierno.',
+      cta: 'Ver Coberturas de Viaje',
+      target: 'Segmento: Clientes Premium · Viajeros Frecuentes',
+      tone: 'Aspiracional y seguro',
+    },
+    {
+      name: 'Variante C: Reactivación',
+      subject: 'Te extrañamos: vuelve a usar tu tarjeta y recibe $15.000 de cashback.',
+      cta: 'Reactivar Beneficios',
+      target: 'Segmento: Inactivos 60-90 días',
+      tone: 'Empático y con incentivo claro',
+    },
+  ];
+
+  const current = variants[activeVariant];
+
+  return (
+    <MockupWindow label="Agente de Piezas & Briefs" badge="GenAI Marketing">
+      <div className="min-h-[420px] bg-canvas p-4 sm:p-5">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <div className="flex gap-1.5">
+            {variants.map((v, i) => (
+              <button
+                key={v.name}
+                type="button"
+                onClick={() => setActiveVariant(i)}
+                className={`rounded-lg px-3 py-1.5 font-mono text-[8px] uppercase transition-all ${
+                  activeVariant === i
+                    ? 'bg-ink font-bold text-amber shadow-sm'
+                    : 'bg-paper border border-line text-muted hover:text-ink'
+                }`}
+              >
+                {v.name.split(':')[0]}
+              </button>
+            ))}
+          </div>
+          <div className="flex rounded-lg border border-line bg-paper p-0.5">
+            <button
+              type="button"
+              onClick={() => setViewTab('preview')}
+              className={`rounded px-2.5 py-1 font-mono text-[8px] uppercase ${
+                viewTab === 'preview' ? 'bg-amber font-bold text-void' : 'text-muted hover:text-ink'
+              }`}
+            >
+              Email Preview
+            </button>
+            <button
+              type="button"
+              onClick={() => setViewTab('brief')}
+              className={`rounded px-2.5 py-1 font-mono text-[8px] uppercase ${
+                viewTab === 'brief' ? 'bg-amber font-bold text-void' : 'text-muted hover:text-ink'
+              }`}
+            >
+              PM Brief
+            </button>
+          </div>
+        </div>
+
+        {viewTab === 'preview' ? (
+          <div className="rounded-xl border border-line bg-paper p-5 max-w-[460px] mx-auto shadow-md">
+            <div className="border-b border-line pb-2 mb-3 text-[8px] font-mono text-muted">
+              <p><span className="font-bold text-ink">Asunto:</span> {current.subject}</p>
+            </div>
+            <div className="rounded-lg bg-canvas p-4 text-center space-y-3">
+              <div className="h-10 w-10 mx-auto rounded-full bg-amber/15 grid place-items-center text-amber font-display font-bold">
+                VT
+              </div>
+              <h5 className="font-display text-sm font-semibold text-ink">{current.subject}</h5>
+              <p className="text-[9px] text-muted max-w-[280px] mx-auto">
+                Disfruta de beneficios exclusivos acumulando cashback automático en todas tus compras del mes.
+              </p>
+              <button type="button" className="inline-block rounded-lg bg-ink px-4 py-2 text-[9px] font-bold text-amber shadow-sm">
+                {current.cta}
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="rounded-xl border border-line bg-paper p-5 space-y-3">
+            <h5 className="font-display text-xs font-semibold text-ink">Ficha Técnica de Briefing Generada</h5>
+            <div className="grid grid-cols-2 gap-3 text-[9px]">
+              <div className="bg-canvas p-2.5 rounded-lg border border-line">
+                <span className="font-mono text-[7px] uppercase text-muted block">Audiencia Objetivo</span>
+                <p className="font-semibold text-ink mt-0.5">{current.target}</p>
+              </div>
+              <div className="bg-canvas p-2.5 rounded-lg border border-line">
+                <span className="font-mono text-[7px] uppercase text-muted block">Tono de Comunicación</span>
+                <p className="font-semibold text-ink mt-0.5">{current.tone}</p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </MockupWindow>
+  );
+}
+
+// 5. Scrum Mockup: Academic Scrum Master Tracker (USS)
+function ScrumMockup() {
+  const [activeTeam, setActiveTeam] = useState(0);
+
+  const teams = [
+    {
+      name: 'Equipo FinTech Digital',
+      sprint: 'Sprint 4 / 6',
+      progress: 85,
+      grade: 6.8,
+      status: 'En ritmo',
+      notes: 'Desarrollo de API de microcréditos con validación biométrica.',
+    },
+    {
+      name: 'Equipo Green Logistics',
+      sprint: 'Sprint 4 / 6',
+      progress: 60,
+      grade: 5.4,
+      status: 'Requiere Apoyo',
+      notes: 'Ajuste en modelo de ruteo y optimización de flotas eléctricas.',
+    },
+    {
+      name: 'Equipo Connected Health',
+      sprint: 'Sprint 4 / 6',
+      progress: 92,
+      grade: 7.0,
+      status: 'Destacado',
+      notes: 'Plataforma de telemedicina con triaje automático por síntomas.',
+    },
+  ];
+
+  const current = teams[activeTeam];
+
+  return (
+    <MockupWindow label="Academic Scrum Master Tracker" dark badge="30+ Equipos USS">
+      <div className="min-h-[420px] bg-night p-4 sm:p-5 text-white">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <div className="flex items-center gap-2">
+            <span className="grid h-8 w-8 place-items-center rounded-lg bg-white/5 text-cyan">
+              <Users className="h-4 w-4" />
+            </span>
+            <div>
+              <p className="font-display text-xs font-semibold">Taller de Tecnologías Digitales & Sustentabilidad</p>
+              <p className="font-mono text-[8px] uppercase text-white/40">30+ Equipos · Ponderación & Bitácoras</p>
+            </div>
+          </div>
+          <span className="font-mono text-[9px] text-amber font-semibold">Plataforma Vercel / React</span>
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-2 mb-4">
+          {teams.map((t, index) => (
+            <button
+              key={t.name}
+              type="button"
+              onClick={() => setActiveTeam(index)}
+              className={`rounded-xl border p-2.5 text-left transition-all ${
+                activeTeam === index
+                  ? 'border-cyan bg-cyan/10 shadow-sm'
+                  : 'border-white/10 bg-white/[0.02] hover:bg-white/[0.05]'
+              }`}
+            >
+              <span className="font-mono text-[7px] uppercase text-white/40">{t.sprint}</span>
+              <p className="font-display text-xs font-semibold text-white truncate mt-0.5">{t.name}</p>
+              <span className={`inline-block mt-1.5 px-2 py-0.5 rounded text-[7px] font-mono uppercase ${
+                t.status === 'Requiere Apoyo' ? 'bg-amber/20 text-amber' : 'bg-cyan/20 text-cyan'
+              }`}>
+                {t.status}
+              </span>
+            </button>
+          ))}
+        </div>
+
+        <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 space-y-3">
+          <div className="flex items-center justify-between border-b border-white/10 pb-2">
+            <h5 className="font-display text-sm font-semibold text-white">{current.name}</h5>
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-[9px] text-white/60">Nota Ponderada:</span>
+              <span className="font-display text-sm font-bold text-amber">{current.grade} / 7.0</span>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex justify-between text-[8px] font-mono text-white/50 mb-1">
+              <span>Avance del Sprint</span>
+              <span>{current.progress}%</span>
+            </div>
+            <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+              <div className="h-full bg-gradient-to-r from-cyan to-amber rounded-full" style={{ width: `${current.progress}%` }} />
+            </div>
+          </div>
+
+          <p className="text-xs text-white/70 leading-relaxed bg-white/[0.02] p-3 rounded-lg border border-white/5">
+            <span className="font-bold text-white">Bitácora de Sesión:</span> {current.notes}
+          </p>
+        </div>
+      </div>
+    </MockupWindow>
+  );
+}
+
 export function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const { featuredProjects, otherProjects } = portfolioData;
-  const project = featuredProjects[activeIndex];
+  const { projects } = portfolioData;
+  const project = projects[activeIndex];
 
   return (
     <section id="proyectos" className="relative overflow-hidden bg-void py-20 text-white md:py-28">
@@ -441,17 +655,20 @@ export function Projects() {
       <div className="relative mx-auto max-w-[1240px] px-5 md:px-8">
         <div className="max-w-[760px]">
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber font-semibold">
-            03 / Selected Work
+            03 / Selected Work & Prototipos
           </p>
           <h2 className="text-balance mt-4 font-display text-3xl font-semibold leading-[1.05] tracking-[-0.04em] md:text-6xl text-white">
             Soluciones y prototipos que se pueden probar.
           </h2>
+          <p className="mt-4 text-sm text-white/60">
+            Cada caso representa un dolor real resuelto mediante prototipado, automatización y código funcional.
+          </p>
         </div>
 
-        {/* 3 Casos Protagonistas */}
-        <div className="mt-14 grid gap-6 lg:grid-cols-[280px_1fr]">
+        {/* Selector de los 5 Proyectos */}
+        <div className="mt-14 grid gap-6 lg:grid-cols-[290px_1fr]">
           <div className="flex gap-2 overflow-x-auto pb-2 lg:block lg:space-y-2 lg:overflow-visible" role="tablist">
-            {featuredProjects.map((item, index) => (
+            {projects.map((item, index) => (
               <button
                 key={item.id}
                 type="button"
@@ -464,20 +681,29 @@ export function Projects() {
                     : 'border-white/10 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.05]'
                 }`}
               >
-                <span className={`font-mono text-[9px] uppercase font-bold ${activeIndex === index ? 'text-amber' : 'text-white/40'}`}>
-                  0{index + 1}
-                </span>
-                <p className="mt-3 font-display text-sm font-semibold text-white leading-snug">{item.short}</p>
+                <div className="flex items-center justify-between">
+                  <span className={`font-mono text-[9px] uppercase font-bold ${activeIndex === index ? 'text-amber' : 'text-white/40'}`}>
+                    0{index + 1}
+                  </span>
+                  {item.badge && (
+                    <span className="rounded bg-white/5 px-1.5 py-0.5 font-mono text-[7px] uppercase text-cyan">
+                      {item.badge}
+                    </span>
+                  )}
+                </div>
+                <p className="mt-2.5 font-display text-sm font-semibold text-white leading-snug">{item.short}</p>
                 <p className="mt-1 line-clamp-2 text-xs text-white/50">{item.tagline}</p>
               </button>
             ))}
           </div>
 
-          {/* Panel Activo */}
+          {/* Panel Activo con el Mockup Interactivo correspondiente */}
           <article className="min-w-0 rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-3 sm:p-5 lg:p-7 shadow-xl">
             {project.visual === 'presentation' && <PresentationMockup />}
             {project.visual === 'knowledge' && <KnowledgeMockup />}
             {project.visual === 'control' && <ControlMockup />}
+            {project.visual === 'briefs' && <BriefsMockup />}
+            {project.visual === 'scrum' && <ScrumMockup />}
 
             <div className="grid gap-6 px-2 pt-8 md:px-3 lg:grid-cols-[1fr_1fr] lg:gap-10">
               <div>
@@ -524,22 +750,6 @@ export function Projects() {
               </div>
             </div>
           </article>
-        </div>
-
-        {/* Otros Proyectos Desarrollados (Línea Discreta) */}
-        <div className="mt-18 border-t border-white/10 pt-12">
-          <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/40 font-semibold mb-6">
-            Otros Proyectos & Herramientas Desarrolladas
-          </p>
-          <div className="grid gap-4 sm:grid-cols-3">
-            {otherProjects.map((op) => (
-              <div key={op.title} className="rounded-xl border border-white/10 bg-white/[0.02] p-5">
-                <span className="font-mono text-[8px] uppercase text-cyan">{op.tag}</span>
-                <h4 className="mt-2 font-display text-sm font-semibold text-white">{op.title}</h4>
-                <p className="mt-2 text-xs text-white/55 leading-relaxed">{op.description}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

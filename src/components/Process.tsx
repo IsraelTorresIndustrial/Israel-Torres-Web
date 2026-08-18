@@ -16,6 +16,9 @@ export function Process() {
           <h2 className="text-balance mt-4 font-display text-3xl font-semibold leading-[1.05] tracking-[-0.035em] text-ink md:text-5xl">
             Un ciclo estructurado que reduce incertidumbre.
           </h2>
+          <p className="mt-3 text-base text-muted">
+            De la formulación conceptual a la implementación operativa en 4 pasos iterativos.
+          </p>
         </div>
 
         {/* 4 Pasos: Entender -> Estructurar -> Construir -> Medir */}
@@ -25,15 +28,18 @@ export function Process() {
             return (
               <article
                 key={item.step}
-                className="rounded-2xl border border-line bg-canvas p-6 flex flex-col justify-between shadow-sm min-h-[220px]"
+                className="card-lift rounded-2xl border border-line bg-canvas p-6 flex flex-col justify-between shadow-sm min-h-[240px]"
               >
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="font-mono text-[10px] font-bold text-amber">{item.step}</span>
                     <Icon className="h-4 w-4 text-muted" />
                   </div>
-                  <h3 className="mt-8 font-display text-lg font-semibold text-ink">{item.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-muted">{item.desc}</p>
+                  <h3 className="mt-6 font-display text-lg font-semibold text-ink">{item.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-ink/80 font-medium">{item.desc}</p>
+                  {item.detail && (
+                    <p className="mt-2 text-[11px] leading-relaxed text-muted">{item.detail}</p>
+                  )}
                 </div>
                 {index < processSteps.length - 1 && (
                   <div className="hidden lg:block pt-3 border-t border-line/60 text-right">

@@ -1,4 +1,4 @@
-import { Compass, BarChart3, Cpu, Sparkles } from 'lucide-react';
+import { Compass, BarChart3, Cpu } from 'lucide-react';
 import { portfolioData } from '../data';
 
 const familyIcons = [Compass, BarChart3, Cpu];
@@ -25,15 +25,20 @@ export function Capabilities() {
             return (
               <article
                 key={family.title}
-                className="rounded-2xl border border-line bg-canvas p-7 flex flex-col justify-between shadow-sm"
+                className="card-lift rounded-2xl border border-line bg-canvas p-7 flex flex-col justify-between shadow-sm"
               >
                 <div>
                   <div className="flex items-center gap-3">
                     <span className="grid h-9 w-9 place-items-center rounded-xl bg-paper border border-line text-amber shadow-sm">
                       <Icon className="h-4 w-4" />
                     </span>
-                    <h3 className="font-display text-xl font-semibold text-ink">{family.title}</h3>
+                    <div>
+                      <h3 className="font-display text-lg font-semibold text-ink">{family.title}</h3>
+                    </div>
                   </div>
+                  {family.subtitle && (
+                    <p className="mt-2 text-xs text-muted leading-relaxed">{family.subtitle}</p>
+                  )}
 
                   <ul className="mt-6 space-y-2.5">
                     {family.skills.map((skill) => (
