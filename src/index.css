@@ -6,21 +6,26 @@
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-void: #070914;
-  --color-night: #0b0f1f;
-  --color-ink: #12162a;
-  --color-panel: #151a31;
-  --color-fuchsia: #ff006e;
-  --color-magenta: #ff2a85;
-  --color-violet: #752e7d;
-  --color-electric: #5865ff;
-  --color-cyan: #56d7ff;
-  --color-gold: #b89047;
-  --color-canvas: #f4f4f8;
+  --color-void: #080c16;
+  --color-night: #0e1526;
+  --color-ink: #0f172a;
+  --color-panel: #131c31;
+  --color-navy: #1e293b;
+  --color-slate-dark: #0f172a;
+  --color-amber: #d97706;
+  --color-cognac: #c28b51;
+  --color-copper: #b46b38;
+  --color-fuchsia: #c28b51;
+  --color-magenta: #e2a868;
+  --color-violet: #3b82f6;
+  --color-electric: #2563eb;
+  --color-cyan: #38bdf8;
+  --color-gold: #c28b51;
+  --color-canvas: #f8fafc;
   --color-paper: #ffffff;
-  --color-mist: #eaebf2;
-  --color-muted: #6f7485;
-  --color-line: #dfe1e9;
+  --color-mist: #e2e8f0;
+  --color-muted: #64748b;
+  --color-line: #cbd5e1;
 }
 
 * {
@@ -77,21 +82,21 @@ button:focus-visible {
 
 .signal-grid {
   background-image:
-    linear-gradient(rgba(117, 46, 125, 0.13) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(88, 101, 255, 0.12) 1px, transparent 1px);
+    linear-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.08) 1px, transparent 1px);
   background-size: 52px 52px;
   mask-image: linear-gradient(to bottom, black, transparent 92%);
 }
 
 .soft-grid {
   background-image:
-    linear-gradient(rgba(18, 22, 42, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(18, 22, 42, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
   background-size: 36px 36px;
 }
 
 .dot-grid {
-  background-image: radial-gradient(rgba(18, 22, 42, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(15, 23, 42, 0.12) 1px, transparent 1px);
   background-size: 16px 16px;
 }
 
@@ -100,10 +105,14 @@ button:focus-visible {
 }
 
 .gradient-text {
-  background: linear-gradient(110deg, #ff2a85 5%, #a865ff 50%, #56d7ff 100%);
+  background: linear-gradient(110deg, #38bdf8 0%, #60a5fa 35%, #e2a868 75%, #c28b51 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.gradient-amber {
+  background: linear-gradient(135deg, #c28b51 0%, #d97706 100%);
 }
 
 .gradient-border {
@@ -117,13 +126,14 @@ button:focus-visible {
   inset: -1px;
   z-index: -1;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(255, 42, 133, 0.9), rgba(88, 101, 255, 0.35), rgba(86, 215, 255, 0.08));
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.5), rgba(194, 139, 81, 0.45), rgba(37, 99, 235, 0.25));
 }
 
 .system-glow {
   box-shadow:
-    0 35px 120px rgba(0, 0, 0, 0.48),
-    0 0 90px rgba(117, 46, 125, 0.18);
+    0 35px 120px rgba(0, 0, 0, 0.55),
+    0 0 90px rgba(56, 189, 248, 0.12),
+    0 0 60px rgba(194, 139, 81, 0.1);
 }
 
 .card-lift {
@@ -132,8 +142,8 @@ button:focus-visible {
 
 .card-lift:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 42, 133, 0.35);
-  box-shadow: 0 22px 60px rgba(11, 15, 31, 0.1);
+  border-color: rgba(194, 139, 81, 0.45);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
 }
 
 .marquee-track {
@@ -149,7 +159,7 @@ button:focus-visible {
 }
 
 .window-shadow {
-  box-shadow: 0 30px 90px rgba(7, 9, 20, 0.2);
+  box-shadow: 0 30px 90px rgba(8, 12, 22, 0.35);
 }
 
 .aurora {
@@ -166,7 +176,7 @@ button:focus-visible {
   top: 8rem;
   width: 34rem;
   height: 34rem;
-  background: rgba(117, 46, 125, 0.34);
+  background: rgba(59, 130, 246, 0.22);
 }
 
 .aurora-two {
@@ -174,7 +184,7 @@ button:focus-visible {
   top: 38%;
   width: 24rem;
   height: 24rem;
-  background: rgba(88, 101, 255, 0.16);
+  background: rgba(194, 139, 81, 0.15);
   animation-delay: -5s;
 }
 
