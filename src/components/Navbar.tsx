@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Perfil', href: '#perfil', id: 'perfil' },
+  { name: 'Enfoque', href: '#enfoque', id: 'enfoque' },
   { name: 'Proyectos', href: '#proyectos', id: 'proyectos' },
-  { name: 'Experiencia', href: '#experiencia', id: 'experiencia' },
+  { name: 'Capacidades', href: '#capacidades', id: 'capacidades' },
+  { name: 'Trayectoria', href: '#trayectoria', id: 'trayectoria' },
+  { name: 'Método', href: '#metodo', id: 'metodo' },
   { name: 'Formación', href: '#formacion', id: 'formacion' },
 ];
 
