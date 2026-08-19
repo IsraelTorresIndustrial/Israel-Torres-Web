@@ -1,0 +1,3 @@
+## 2026-08-19 - Non-semantic Accordion Structures
+**Learning:** Discovered a pattern where accordions were implemented using a clickable `div` container wrapping content and a nested generic button for the chevron. This setup forces screen readers to miss state changes and prevents standard keyboard interaction for the entire hit area.
+**Action:** Convert clickable accordion wrappers into semantic `<button>` elements spanning full width (using `w-full text-left`), replacing inner interactive elements with `aria-hidden` indicators, and properly linking the wrapper to its content via `aria-expanded` and `aria-controls`.
