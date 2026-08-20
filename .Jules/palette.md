@@ -1,0 +1,3 @@
+## 2025-03-05 - Accessible Accordion Toggles
+**Learning:** Using a `<div>` with an `onClick` handler alongside a nested `<button>` for an accordion toggle is an accessibility anti-pattern. It prevents keyboard users from easily activating the entire card and creates confusing structural semantics for screen readers by nesting interactive elements.
+**Action:** When building accordions or disclosure widgets, always wrap the entire interactive target in a `<button>` (not a `div`), use `aria-expanded` to communicate state, use `aria-controls` to link to the expanded content container's `id`, and ensure focus states are clearly visible using `focus-visible`. Avoid nested buttons.
