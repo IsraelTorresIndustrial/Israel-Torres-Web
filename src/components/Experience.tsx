@@ -35,9 +35,12 @@ export function Experience() {
                     : 'border-line bg-paper/70 hover:border-line/80'
                 }`}
               >
-                <div
-                  className="p-6 cursor-pointer flex items-start justify-between gap-4"
+                <button
+                  type="button"
+                  className="w-full text-left p-6 cursor-pointer flex items-start justify-between gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2 focus-visible:ring-offset-paper rounded-2xl"
                   onClick={() => toggleExpand(index)}
+                  aria-expanded={isExpanded}
+                  aria-controls={`experience-details-${index}`}
                 >
                   <div className="flex items-start gap-4">
                     <div className="mt-1 grid h-8 w-8 place-items-center rounded-lg bg-canvas border border-line text-amber shrink-0">
@@ -60,17 +63,16 @@ export function Experience() {
                     </div>
                   </div>
 
-                  <button
-                    type="button"
+                  <div
                     className="mt-1 text-muted hover:text-ink shrink-0 p-1"
-                    aria-label={isExpanded ? 'Ocultar detalles' : 'Ver detalles'}
+                    aria-hidden="true"
                   >
                     {isExpanded ? <ChevronUp className="h-4 w-4 text-amber" /> : <ChevronDown className="h-4 w-4" />}
-                  </button>
-                </div>
+                  </div>
+                </button>
 
                 {isExpanded && job.details && (
-                  <div className="px-6 pb-6 pt-2 border-t border-line/60">
+                  <div id={`experience-details-${index}`} className="px-6 pb-6 pt-2 border-t border-line/60">
                     <p className="font-mono text-[8px] uppercase tracking-wider text-muted font-bold mb-3">
                       Aportes y Dinámica de Trabajo:
                     </p>
