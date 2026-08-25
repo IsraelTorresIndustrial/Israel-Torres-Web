@@ -93,6 +93,7 @@ export function Credentials() {
                   setActiveCategory(category);
                   setShowAll(category !== 'Todas');
                 }}
+                aria-pressed={activeCategory === category}
                 className={`min-h-10 whitespace-nowrap rounded-full border px-4 py-2 text-xs font-semibold transition-all ${
                   activeCategory === category
                     ? 'border-cognac bg-gradient-to-r from-cognac to-amber text-void font-bold shadow-sm'

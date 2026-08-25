@@ -25,6 +25,7 @@ export function Footer() {
             rel="noreferrer"
             className="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/50 transition-colors hover:border-amber hover:text-amber"
             aria-label="LinkedIn"
+            title="LinkedIn"
           >
             <Linkedin className="h-4 w-4" />
           </a>
@@ -34,6 +35,7 @@ export function Footer() {
             rel="noreferrer"
             className="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/50 transition-colors hover:border-amber hover:text-amber"
             aria-label="GitHub"
+            title="GitHub"
           >
             <Github className="h-4 w-4" />
           </a>

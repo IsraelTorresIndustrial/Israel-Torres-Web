@@ -72,7 +72,7 @@ export function Navbar() {
 
         <a href="#contacto" className="hidden items-center gap-2 rounded-full bg-gradient-to-r from-cognac via-amber to-copper px-5 py-2.5 text-sm font-bold text-void shadow-[0_12px_28px_rgba(194,139,81,.24)] transition-transform hover:-translate-y-0.5 lg:inline-flex">Conversemos <ArrowUpRight className="h-4 w-4 text-void" /></a>
 
-        <button type="button" onClick={() => setIsOpen((value) => !value)} className="grid h-11 w-11 place-items-center rounded-full border border-white/18 text-white lg:hidden" aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={isOpen} aria-controls="menu-movil">
+        <button type="button" onClick={() => setIsOpen((value) => !value)} className="grid h-11 w-11 place-items-center rounded-full border border-white/18 text-white lg:hidden" aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'} title={isOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={isOpen} aria-controls="menu-movil">
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
