@@ -671,9 +671,11 @@ export function Projects() {
             {projects.map((item, index) => (
               <button
                 key={item.id}
+                id={`project-tab-${index}`}
                 type="button"
                 role="tab"
                 aria-selected={activeIndex === index}
+                aria-controls={`project-panel-${index}`}
                 onClick={() => setActiveIndex(index)}
                 className={`group min-w-[220px] rounded-xl border p-4 text-left transition-all lg:w-full ${
                   activeIndex === index
@@ -698,7 +700,13 @@ export function Projects() {
           </div>
 
           {/* Panel Activo con el Mockup Interactivo correspondiente */}
-          <article className="min-w-0 rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-3 sm:p-5 lg:p-7 shadow-xl">
+          <article
+            id={`project-panel-${activeIndex}`}
+            role="tabpanel"
+            aria-labelledby={`project-tab-${activeIndex}`}
+            tabIndex={0}
+            className="min-w-0 rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-3 sm:p-5 lg:p-7 shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber focus-visible:outline-offset-4"
+          >
             {project.visual === 'presentation' && <PresentationMockup />}
             {project.visual === 'knowledge' && <KnowledgeMockup />}
             {project.visual === 'control' && <ControlMockup />}
