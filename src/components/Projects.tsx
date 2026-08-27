@@ -5,6 +5,7 @@ import {
   CheckCircle2,
   Download,
   FileCode,
+  Loader2,
   FileText,
   Layers,
   LayoutDashboard,
@@ -67,6 +68,7 @@ function MockupWindow({
 function PresentationMockup() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [viewMode, setViewMode] = useState<'slide' | 'code'>('slide');
+  const [isExporting, setIsExporting] = useState(false);
   const [exported, setExported] = useState(false);
 
   const slides = [
@@ -96,8 +98,12 @@ function PresentationMockup() {
   const current = slides[activeSlide];
 
   const handleExport = () => {
-    setExported(true);
-    setTimeout(() => setExported(false), 3000);
+    setIsExporting(true);
+    setTimeout(() => {
+      setIsExporting(false);
+      setExported(true);
+      setTimeout(() => setExported(false), 3000);
+    }, 1200);
   };
 
   return (
@@ -168,15 +174,17 @@ function PresentationMockup() {
               <button
                 type="button"
                 onClick={handleExport}
-                className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-cognac to-amber px-3 py-1.5 font-mono text-[8px] uppercase font-bold text-void transition-transform hover:scale-[1.02] shadow-sm"
+                disabled={isExporting}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-cognac to-amber px-3 py-1.5 font-mono text-[8px] uppercase font-bold text-void transition-transform hover:scale-[1.02] shadow-sm disabled:opacity-70 disabled:hover:scale-100 disabled:cursor-not-allowed min-w-[110px] justify-center"
               >
-                <Download className="h-3 w-3" /> Exportar PPTx
+                {isExporting ? <Loader2 className="h-3 w-3 animate-spin" /> : <Download className="h-3 w-3" />}
+                {isExporting ? 'Generando...' : 'Exportar PPTx'}
               </button>
             </div>
           </div>
 
           {exported && (
-            <div className="mb-3 rounded-lg border border-cyan/30 bg-cyan/15 px-3 py-2 text-xs text-cyan flex items-center justify-between">
+            <div role="status" aria-live="polite" className="mb-3 rounded-lg border border-cyan/30 bg-cyan/15 px-3 py-2 text-xs text-cyan flex items-center justify-between">
               <span className="font-mono text-[10px]">✨ PPTx generado con branding, colores corporativos y tipografías editables.</span>
               <CheckCircle2 className="h-4 w-4" />
             </div>
