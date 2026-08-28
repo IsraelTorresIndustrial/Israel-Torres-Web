@@ -667,13 +667,15 @@ export function Projects() {
 
         {/* Selector de los 5 Proyectos */}
         <div className="mt-14 grid gap-6 lg:grid-cols-[290px_1fr]">
-          <div className="flex gap-2 overflow-x-auto pb-2 lg:block lg:space-y-2 lg:overflow-visible" role="tablist">
+          <div className="flex gap-2 overflow-x-auto pb-2 lg:block lg:space-y-2 lg:overflow-visible" role="tablist" aria-label="Proyectos seleccionados">
             {projects.map((item, index) => (
               <button
                 key={item.id}
+                id={`project-tab-${index}`}
                 type="button"
                 role="tab"
                 aria-selected={activeIndex === index}
+                aria-controls={`project-panel-${index}`}
                 onClick={() => setActiveIndex(index)}
                 className={`group min-w-[220px] rounded-xl border p-4 text-left transition-all lg:w-full ${
                   activeIndex === index
@@ -698,7 +700,12 @@ export function Projects() {
           </div>
 
           {/* Panel Activo con el Mockup Interactivo correspondiente */}
-          <article className="min-w-0 rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-3 sm:p-5 lg:p-7 shadow-xl">
+          <article
+            id={`project-panel-${activeIndex}`}
+            role="tabpanel"
+            aria-labelledby={`project-tab-${activeIndex}`}
+            className="min-w-0 rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-3 sm:p-5 lg:p-7 shadow-xl"
+          >
             {project.visual === 'presentation' && <PresentationMockup />}
             {project.visual === 'knowledge' && <KnowledgeMockup />}
             {project.visual === 'control' && <ControlMockup />}

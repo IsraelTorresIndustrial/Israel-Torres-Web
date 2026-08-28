@@ -1,3 +1,6 @@
 ## 2024-05-18 - Expandable Accordion Accessibility
 **Learning:** Using an `onClick` on a non-interactive `div` for expandable sections (accordions) creates keyboard accessibility issues, as users cannot tab to the header and press Enter/Space to expand it. In `Experience.tsx`, a `div` wrapped the header content with a nested `button` for the icon, which was semantically incorrect and un-navigable.
 **Action:** When implementing expandable UI patterns like accordions, use a full-width `<button>` for the entire clickable header area. Ensure you remove any nested interactive elements (like a secondary button inside it) and correctly apply `aria-expanded` and `aria-controls` to the main button to provide clear screen reader support and natural keyboard navigation.
+## 2024-03-24 - Incomplete ARIA tab structures
+**Learning:** Found instances where ARIA tab patterns were partially implemented (having `role="tablist"` and `role="tab"`) but lacked the necessary linking attributes (`aria-controls`, `aria-labelledby`, `role="tabpanel"`, and `id`s) to make them fully accessible to screen readers.
+**Action:** When creating or modifying tabbed interfaces, ensure the complete pattern is applied: containers need `role="tablist"`, tabs need `id` and `aria-controls`, and panels need `role="tabpanel"`, `id`, and `aria-labelledby`.
