@@ -114,6 +114,8 @@ function PresentationMockup() {
                 <button
                   key={s.title}
                   type="button"
+                  aria-label={`Ver slide: ${s.title}`}
+                  aria-pressed={activeSlide === index}
                   onClick={() => setActiveSlide(index)}
                   className={`w-full text-left aspect-video rounded-lg border p-1.5 transition-all ${
                     activeSlide === index
@@ -148,6 +150,7 @@ function PresentationMockup() {
               <div className="flex rounded-lg border border-white/10 bg-white/[0.04] p-0.5">
                 <button
                   type="button"
+                  aria-pressed={viewMode === 'slide'}
                   onClick={() => setViewMode('slide')}
                   className={`rounded px-2.5 py-1 font-mono text-[8px] uppercase transition-all ${
                     viewMode === 'slide' ? 'bg-cognac font-bold text-void' : 'text-white/50 hover:text-white'
@@ -157,6 +160,7 @@ function PresentationMockup() {
                 </button>
                 <button
                   type="button"
+                  aria-pressed={viewMode === 'code'}
                   onClick={() => setViewMode('code')}
                   className={`rounded px-2.5 py-1 font-mono text-[8px] uppercase transition-all ${
                     viewMode === 'code' ? 'bg-cognac font-bold text-void' : 'text-white/50 hover:text-white'
@@ -304,6 +308,8 @@ function KnowledgeMockup() {
               <button
                 key={item.q}
                 type="button"
+                aria-label={`Ver consulta sobre: ${item.category}`}
+                aria-pressed={selectedQuestion === index}
                 onClick={() => setSelectedQuestion(index)}
                 className={`w-full rounded-lg border p-2.5 text-left transition-all ${
                   selectedQuestion === index
@@ -402,6 +408,8 @@ function ControlMockup() {
             <button
               key={st.name}
               type="button"
+              aria-label={`Ver métricas de fase: ${st.name}`}
+              aria-pressed={activeStage === index}
               onClick={() => setActiveStage(index)}
               className={`rounded-xl border p-2.5 text-left transition-all ${
                 activeStage === index
@@ -472,6 +480,8 @@ function BriefsMockup() {
               <button
                 key={v.name}
                 type="button"
+                aria-label={`Seleccionar ${v.name}`}
+                aria-pressed={activeVariant === i}
                 onClick={() => setActiveVariant(i)}
                 className={`rounded-lg px-3 py-1.5 font-mono text-[8px] uppercase transition-all ${
                   activeVariant === i
@@ -486,6 +496,7 @@ function BriefsMockup() {
           <div className="flex rounded-lg border border-line bg-paper p-0.5">
             <button
               type="button"
+              aria-pressed={viewTab === 'preview'}
               onClick={() => setViewTab('preview')}
               className={`rounded px-2.5 py-1 font-mono text-[8px] uppercase ${
                 viewTab === 'preview' ? 'bg-amber font-bold text-void' : 'text-muted hover:text-ink'
@@ -495,6 +506,7 @@ function BriefsMockup() {
             </button>
             <button
               type="button"
+              aria-pressed={viewTab === 'brief'}
               onClick={() => setViewTab('brief')}
               className={`rounded px-2.5 py-1 font-mono text-[8px] uppercase ${
                 viewTab === 'brief' ? 'bg-amber font-bold text-void' : 'text-muted hover:text-ink'
@@ -597,6 +609,8 @@ function ScrumMockup() {
             <button
               key={t.name}
               type="button"
+              aria-label={`Ver progreso de ${t.name}`}
+              aria-pressed={activeTeam === index}
               onClick={() => setActiveTeam(index)}
               className={`rounded-xl border p-2.5 text-left transition-all ${
                 activeTeam === index
@@ -674,6 +688,8 @@ export function Projects() {
                 type="button"
                 role="tab"
                 aria-selected={activeIndex === index}
+                aria-controls={`project-panel-${item.id}`}
+                id={`project-tab-${item.id}`}
                 onClick={() => setActiveIndex(index)}
                 className={`group min-w-[220px] rounded-xl border p-4 text-left transition-all lg:w-full ${
                   activeIndex === index
@@ -698,7 +714,12 @@ export function Projects() {
           </div>
 
           {/* Panel Activo con el Mockup Interactivo correspondiente */}
-          <article className="min-w-0 rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-3 sm:p-5 lg:p-7 shadow-xl">
+          <article
+            id={`project-panel-${project.id}`}
+            role="tabpanel"
+            aria-labelledby={`project-tab-${project.id}`}
+            className="min-w-0 rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-3 sm:p-5 lg:p-7 shadow-xl"
+          >
             {project.visual === 'presentation' && <PresentationMockup />}
             {project.visual === 'knowledge' && <KnowledgeMockup />}
             {project.visual === 'control' && <ControlMockup />}
