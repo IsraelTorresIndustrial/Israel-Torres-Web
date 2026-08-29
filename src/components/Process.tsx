@@ -1,39 +1,67 @@
-import { ArrowDownRight, RotateCw } from 'lucide-react';
+import { ArrowRight, CheckCircle2, RotateCw } from 'lucide-react';
 import { portfolioData } from '../data';
 
 export function Process() {
   return (
-    <section id="metodo" className="relative overflow-hidden bg-canvas py-20 md:py-28">
-      <div className="soft-grid absolute inset-0 opacity-70" aria-hidden="true" />
+    <section id="metodo" className="relative overflow-hidden bg-paper py-16 md:py-24 border-b border-line">
+      <div className="dot-matrix absolute inset-0 opacity-40" aria-hidden="true" />
+
       <div className="relative mx-auto max-w-[1320px] px-5 md:px-8">
-        <div className="grid gap-12 lg:grid-cols-[0.74fr_1.26fr] lg:gap-24">
+        
+        {/* Section Header */}
+        <div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16 border-b border-line pb-10">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-fuchsia">06 / Método</p>
-            <h2 className="text-balance mt-5 max-w-[560px] font-display text-4xl font-semibold leading-[1.02] tracking-[-0.045em] text-ink md:text-7xl">No es una línea recta. Es un sistema que aprende.</h2>
+            <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-accent">
+              06 / Método de Trabajo
+            </span>
+            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink md:text-5xl">
+              Ciclo Iterativo de Entrega
+            </h2>
           </div>
-          <div className="lg:pt-12">
-            <p className="max-w-[700px] text-lg leading-8 text-muted">La primera versión no tiene que demostrar perfección; tiene que producir claridad. Cada vuelta del ciclo reduce incertidumbre, mejora la solución y deja una base más fuerte para la siguiente.</p>
-            <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-fuchsia/20 bg-fuchsia/5 px-4 py-2 font-mono text-[8px] uppercase tracking-wider text-fuchsia"><RotateCw className="h-3.5 w-3.5" /> Criticar · consolidar · construir · volver a mirar</div>
+          <div className="lg:pt-2">
+            <p className="text-sm leading-relaxed text-muted md:text-base">
+              La primera versión no busca demostrar perfección; busca producir claridad inmediata. Cada iteración reduce la incertidumbre, alinea a los stakeholders y fortalece la base para el escalamiento definitivo.
+            </p>
           </div>
         </div>
 
-        <div className="relative mt-16 grid gap-px overflow-hidden rounded-[1.75rem] border border-line bg-line md:grid-cols-2 lg:grid-cols-4">
+        {/* 4 Process Steps */}
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {portfolioData.process.map((item, index) => (
-            <article key={item.step} className="group relative min-h-[280px] bg-paper p-7 md:p-8">
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-[9px] uppercase tracking-wider text-fuchsia">{item.step}</span>
-                <ArrowDownRight className="h-4 w-4 text-line transition-colors group-hover:text-fuchsia" />
+            <div
+              key={item.step}
+              className="card-lift rounded-2xl border border-line bg-canvas p-6 flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-xs font-bold text-accent">{item.step}</span>
+                  <span className="font-mono text-[8px] uppercase tracking-wider text-muted font-medium">
+                    Fase {index + 1}
+                  </span>
+                </div>
+
+                <h3 className="mt-4 font-display text-base font-bold text-ink">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted">
+                  {item.desc}
+                </p>
               </div>
-              <div className="mt-20">
-                <h3 className="font-display text-2xl font-semibold tracking-[-0.03em] text-ink">{item.title}</h3>
-                <p className="mt-4 max-w-[330px] text-sm leading-7 text-muted">{item.desc}</p>
+
+              <div className="mt-6 pt-3 border-t border-line flex items-center justify-between text-muted text-[10px] font-mono">
+                <span>Output Validado</span>
+                <CheckCircle2 className="h-3.5 w-3.5 text-accent" />
               </div>
-              <span className={`absolute inset-x-0 bottom-0 h-1 origin-left bg-gradient-to-r from-fuchsia via-violet to-electric transition-transform duration-300 ${index === portfolioData.process.length - 1 ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
-            </article>
+            </div>
           ))}
         </div>
 
-        <div className="mt-8 flex items-center justify-center gap-3 font-mono text-[8px] uppercase tracking-[0.16em] text-muted"><span className="h-px w-10 bg-line" /> El sistema vuelve al problema con más evidencia <RotateCw className="h-3.5 w-3.5 text-fuchsia" /><span className="h-px w-10 bg-line" /></div>
+        {/* Loop Closure Signal */}
+        <div className="mt-10 flex items-center justify-center gap-2 font-mono text-[9px] uppercase tracking-wider text-muted">
+          <RotateCw className="h-3 w-3 text-accent" />
+          <span>Iteración con evidencia real · Reducción continua de ambigüedad</span>
+        </div>
+
       </div>
     </section>
   );

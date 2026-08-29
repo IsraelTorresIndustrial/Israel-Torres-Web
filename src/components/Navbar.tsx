@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { portfolioData } from '../data';
 
 const navLinks = [
-  { name: 'Perfil', href: '#perfil', id: 'perfil' },
+  { name: 'Qué aporto', href: '#que-aporto', id: 'que-aporto' },
   { name: 'Proyectos', href: '#proyectos', id: 'proyectos' },
-  { name: 'Experiencia', href: '#experiencia', id: 'experiencia' },
+  { name: 'Capacidades', href: '#capacidades', id: 'capacidades' },
+  { name: 'Trayectoria', href: '#experiencia', id: 'experiencia' },
   { name: 'Formación', href: '#formacion', id: 'formacion' },
 ];
 
@@ -16,7 +18,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 16);
+      setScrolled(window.scrollY > 20);
       const max = document.documentElement.scrollHeight - window.innerHeight;
       setProgress(max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0);
     };
@@ -32,7 +34,7 @@ export function Navbar() {
         const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
         if (visible) setActiveId(visible.target.id);
       },
-      { rootMargin: '-20% 0px -68% 0px', threshold: [0, 0.15, 0.4] },
+      { rootMargin: '-20% 0px -65% 0px', threshold: [0, 0.2, 0.5] },
     );
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
@@ -46,40 +48,118 @@ export function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled || isOpen ? 'border-b border-white/10 bg-void/90 shadow-xl backdrop-blur-xl' : 'bg-transparent'}`}>
-      <div className="absolute inset-x-0 top-0 h-[2px] bg-white/5" aria-hidden="true">
-        <span className="block h-full bg-gradient-to-r from-fuchsia via-electric to-cyan transition-[width] duration-150" style={{ width: `${progress}%` }} />
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-200 ${
+        scrolled || isOpen
+          ? 'border-b border-slate-800/80 bg-void/92 shadow-lg backdrop-blur-md'
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="absolute inset-x-0 top-0 h-[2px] bg-slate-800/40" aria-hidden="true">
+        <span
+          className="block h-full bg-gradient-to-r from-accent via-violet to-cyan transition-[width] duration-150"
+          style={{ width: `${progress}%` }}
+        />
       </div>
-      <div className="mx-auto flex h-[76px] max-w-[1320px] items-center justify-between px-5 md:px-8">
+
+      <div className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-5 md:px-8">
         <a href="#inicio" className="group flex items-center gap-3 text-white" aria-label="Volver al inicio">
-          <span className="relative grid h-10 w-10 place-items-center overflow-hidden rounded-xl border border-white/15 bg-white/5 font-display text-sm font-bold">
-            <span className="relative z-10">IT</span>
-            <span className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-fuchsia via-electric to-cyan" />
+          <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-lg border border-slate-700 bg-night font-display text-xs font-bold text-white transition-colors group-hover:border-accent">
+            <span>IT</span>
+            <span className="absolute inset-x-0 bottom-0 h-0.5 bg-accent" />
           </span>
-          <span className="hidden sm:block">
-            <span className="block font-display text-sm font-semibold leading-none">Israel Torres</span>
-            <span className="mt-1.5 block font-mono text-[9px] uppercase tracking-[0.14em] text-white/45">Curioso por diseño</span>
-          </span>
+          <div>
+            <span className="block font-display text-sm font-bold tracking-tight text-white">Israel Torres</span>
+            <span className="block font-mono text-[9px] uppercase tracking-wider text-slate-400">
+              {portfolioData.personalInfo.positioning}
+            </span>
+          </div>
         </a>
 
-        <nav className="hidden items-center gap-2 lg:flex" aria-label="Navegación principal">
-          {navLinks.map((link) => (
-            <a key={link.name} href={link.href} aria-current={activeId === link.id ? 'location' : undefined} className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${activeId === link.id ? 'bg-white/10 text-white' : 'text-white/58 hover:bg-white/5 hover:text-white'}`}>{link.name}</a>
-          ))}
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Navegación principal">
+          {navLinks.map((link) => {
+            const isActive = activeId === link.id;
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                aria-current={isActive ? 'location' : undefined}
+                className={`rounded-md px-3.5 py-1.5 text-xs font-medium transition-colors ${
+                  isActive
+                    ? 'bg-slate-800 text-white shadow-xs'
+                    : 'text-slate-300 hover:bg-slate-800/60 hover:text-white'
+                }`}
+              >
+                {link.name}
+              </a>
+            );
+          })}
         </nav>
 
-        <a href="#contacto" className="hidden items-center gap-2 rounded-full bg-fuchsia px-5 py-2.5 text-sm font-bold text-white shadow-[0_12px_30px_rgba(255,0,110,.24)] transition-transform hover:-translate-y-0.5 lg:inline-flex">Conversemos <ArrowUpRight className="h-4 w-4" /></a>
+        <div className="hidden items-center gap-3 lg:flex">
+          <a
+            href={portfolioData.personalInfo.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-md border border-slate-700 bg-slate-800/60 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-colors hover:border-slate-600 hover:bg-slate-700 hover:text-white"
+          >
+            LinkedIn <ArrowUpRight className="h-3.5 w-3.5" />
+          </a>
+          <a
+            href="#contacto"
+            className="inline-flex items-center gap-1.5 rounded-md bg-accent px-4 py-1.5 text-xs font-bold text-white shadow-sm transition-all hover:bg-accent-light"
+          >
+            Contacto
+          </a>
+        </div>
 
-        <button type="button" onClick={() => setIsOpen((value) => !value)} className="grid h-11 w-11 place-items-center rounded-full border border-white/18 text-white lg:hidden" aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={isOpen} aria-controls="menu-movil">
+        <button
+          type="button"
+          onClick={() => setIsOpen((value) => !value)}
+          className="grid h-10 w-10 place-items-center rounded-lg border border-slate-700 text-slate-200 lg:hidden hover:bg-slate-800"
+          aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={isOpen}
+          aria-controls="menu-movil"
+        >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {isOpen && (
-        <nav id="menu-movil" className="border-t border-white/10 bg-void px-5 pb-6 pt-3 lg:hidden" aria-label="Navegación móvil">
-          <div className="mx-auto flex max-w-[1320px] flex-col">
-            {navLinks.map((link) => <a key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="border-b border-white/10 py-4 font-display text-lg font-semibold text-white">{link.name}</a>)}
-            <a href="#contacto" onClick={() => setIsOpen(false)} className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-fuchsia px-5 py-3 text-sm font-bold text-white">Conversemos <ArrowUpRight className="h-4 w-4" /></a>
+        <nav
+          id="menu-movil"
+          className="border-t border-slate-800 bg-void px-5 pb-6 pt-3 lg:hidden"
+          aria-label="Navegación móvil"
+        >
+          <div className="mx-auto flex max-w-[1320px] flex-col gap-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="rounded-lg px-3 py-3 font-display text-sm font-semibold text-slate-200 hover:bg-slate-800/80 hover:text-white"
+              >
+                {link.name}
+              </a>
+            ))}
+            <div className="mt-4 flex flex-col gap-2 border-t border-slate-800 pt-4">
+              <a
+                href={portfolioData.personalInfo.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-800/80 py-2.5 text-xs font-semibold text-slate-200"
+              >
+                LinkedIn <ArrowUpRight className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="#contacto"
+                onClick={() => setIsOpen(false)}
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent py-2.5 text-xs font-bold text-white"
+              >
+                Contacto Directo
+              </a>
+            </div>
           </div>
         </nav>
       )}

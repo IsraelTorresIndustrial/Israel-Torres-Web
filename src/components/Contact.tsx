@@ -1,28 +1,107 @@
-import { ArrowUpRight, Linkedin, Mail } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { portfolioData } from '../data';
 
 export function Contact() {
   const { personalInfo } = portfolioData;
 
   return (
-    <section id="contacto" className="relative overflow-hidden bg-void py-20 text-white md:py-28">
-      <div className="signal-grid pointer-events-none absolute inset-0 opacity-40" aria-hidden="true" />
-      <div className="noise pointer-events-none absolute inset-0 opacity-[0.1]" aria-hidden="true" />
-      <div className="absolute -right-32 -top-24 h-[480px] w-[480px] rounded-full bg-violet/25 blur-[140px]" aria-hidden="true" />
-      <div className="absolute -left-36 bottom-[-120px] h-[420px] w-[420px] rounded-full bg-fuchsia/12 blur-[140px]" aria-hidden="true" />
+    <section id="contacto" className="relative overflow-hidden bg-void py-16 md:py-24 text-white">
+      <div className="enterprise-grid absolute inset-0 opacity-45" aria-hidden="true" />
+      <div className="glow-spot right-0 bottom-0 h-96 w-96 bg-accent/10" aria-hidden="true" />
+
       <div className="relative mx-auto max-w-[1320px] px-5 md:px-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-magenta">07 / Siguiente desafío</p>
-        <div className="mt-8 grid gap-14 lg:grid-cols-[1.28fr_0.72fr] lg:items-end lg:gap-20">
-          <div>
-            <h2 className="text-balance max-w-[930px] font-display text-5xl font-semibold leading-[0.96] tracking-[-0.055em] md:text-8xl">Si algo puede ser más claro, útil o inteligente, quiero explorarlo.</h2>
-            <p className="mt-8 max-w-[700px] text-base leading-8 text-white/52">Me interesan los problemas que cruzan negocio, personas, datos y tecnología. Llego con curiosidad, estructura y la disposición de construir una primera versión que nos permita aprender de verdad.</p>
-          </div>
-          <div className="flex flex-col gap-3">
-            <a href={`mailto:${personalInfo.email}`} className="group flex items-center justify-between rounded-2xl bg-fuchsia px-5 py-4 font-bold text-white shadow-[0_18px_45px_rgba(255,0,110,.22)] transition-transform hover:-translate-y-0.5"><span className="flex items-center gap-3"><Mail className="h-5 w-5" /> Escríbeme</span><ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></a>
-            <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="group flex items-center justify-between rounded-2xl border border-white/15 bg-white/[0.025] px-5 py-4 font-bold text-white transition-colors hover:border-white/30 hover:bg-white/[0.05]"><span className="flex items-center gap-3"><Linkedin className="h-5 w-5" /> LinkedIn</span><ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></a>
-            <div className="mt-4 border-t border-white/10 pt-5 font-mono text-[9px] uppercase leading-5 tracking-[0.13em] text-white/42"><p>{personalInfo.location}</p><p>{personalInfo.email}</p></div>
-          </div>
+        
+        {/* Section Header */}
+        <div className="border-b border-slate-800 pb-8">
+          <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-accent-light">
+            07 / Contacto Directo
+          </span>
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl max-w-3xl leading-tight">
+            Conectemos para abordar desafíos estratégicos y tecnológicos.
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 md:text-base">
+            Disponible para conversaciones profesionales, consultoría e iniciativas en Strategy, Product, CRM & Customer Lifecycle, Coordinación Cross-functional e IA Aplicada.
+          </p>
         </div>
+
+        {/* Contact Action Cards */}
+        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          
+          <a
+            href={`mailto:${personalInfo.email}`}
+            className="group rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition-all hover:border-accent hover:bg-slate-900 flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-accent text-white">
+                  <Mail className="h-5 w-5" />
+                </span>
+                <ArrowUpRight className="h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />
+              </div>
+              <h3 className="mt-4 font-display text-base font-bold text-white">
+                Correo Electrónico
+              </h3>
+              <p className="mt-1 font-mono text-xs text-slate-400 break-all">
+                {personalInfo.email}
+              </p>
+            </div>
+            <span className="mt-6 font-mono text-[9px] uppercase tracking-wider text-accent-light font-semibold">
+              Escribir Mensaje →
+            </span>
+          </a>
+
+          <a
+            href={personalInfo.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="group rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition-all hover:border-accent hover:bg-slate-900 flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#0077b5] text-white">
+                  <Linkedin className="h-5 w-5" />
+                </span>
+                <ArrowUpRight className="h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />
+              </div>
+              <h3 className="mt-4 font-display text-base font-bold text-white">
+                LinkedIn
+              </h3>
+              <p className="mt-1 font-mono text-xs text-slate-400">
+                linkedin.com/in/israeltorresl
+              </p>
+            </div>
+            <span className="mt-6 font-mono text-[9px] uppercase tracking-wider text-cyan font-semibold">
+              Conectar en Red →
+            </span>
+          </a>
+
+          <a
+            href={personalInfo.github}
+            target="_blank"
+            rel="noreferrer"
+            className="group rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition-all hover:border-accent hover:bg-slate-900 flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-slate-800 text-white border border-slate-700">
+                  <Github className="h-5 w-5" />
+                </span>
+                <ArrowUpRight className="h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />
+              </div>
+              <h3 className="mt-4 font-display text-base font-bold text-white">
+                GitHub
+              </h3>
+              <p className="mt-1 font-mono text-xs text-slate-400">
+                Repositorios & Código
+              </p>
+            </div>
+            <span className="mt-6 font-mono text-[9px] uppercase tracking-wider text-slate-300 font-semibold">
+              Ver Proyectos →
+            </span>
+          </a>
+
+        </div>
+
       </div>
     </section>
   );
