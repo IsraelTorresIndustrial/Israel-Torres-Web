@@ -291,7 +291,7 @@ function ContentMockup() {
           <p className="font-mono text-[7px] uppercase tracking-wider text-accent font-bold">Brief Persistente</p>
           <p className="mt-1 text-[9px] font-semibold text-ink">Campaña Activación Tarjetas · Segmento Viajero</p>
           <div className="mt-2 grid grid-cols-3 gap-2">
-            {['Ruta 1: Beneficio Directo', 'Ruta 2: Estilo de Vida', 'Ruta 3: Exclusividad'].map((item, i) => (
+            {['Ruta 1: Beneficio Directo', 'Ruta 2: Estilo de Vida', 'Ruta 3: Exclusividad'].map((item) => (
               <div key={item} className="rounded border border-line bg-slate-50 p-2 text-center">
                 <div className="aspect-video rounded bg-slate-200 mb-1 flex items-center justify-center font-mono text-[6px] text-muted">
                   Formato 16:9
@@ -378,7 +378,6 @@ function ProjectVisual({ visual }: { visual: ProjectItem['visual'] }) {
 export function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
 
-  // Keyboard escape listener for modal
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setSelectedProject(null);
@@ -594,7 +593,7 @@ export function Projects() {
                 <ProjectVisual visual={selectedProject.visual} />
               </div>
 
-              {/* Structured Framework: Context -> Problem -> Role -> Process -> Build -> Value */}
+              {/* Structured Framework */}
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
                   <p className="font-mono text-[9px] font-bold uppercase tracking-wider text-accent-light">

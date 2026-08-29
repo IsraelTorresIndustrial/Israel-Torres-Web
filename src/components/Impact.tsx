@@ -80,7 +80,7 @@ export function Impact() {
               </p>
               
               <div className="mt-5 space-y-2.5">
-                {trustedFor.map((item, index) => (
+                {trustedFor.map((item) => (
                   <div key={item} className="flex items-start gap-2.5 text-xs">
                     <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
                     <span className="text-slate-700 font-medium">{item}</span>
