@@ -1,138 +1,130 @@
-import { Briefcase, Building2, Calendar, CheckCircle2, ChevronRight, MapPin, Sparkles, Users } from 'lucide-react';
+import { Briefcase, Building2, CheckCircle2, ChevronRight, Layers, LineChart, MapPin, Users } from 'lucide-react';
 import { portfolioData } from '../data';
 
 export function Experience() {
-  const primaryExperience = portfolioData.experience.find((e) => e.current);
-  const otherExperiences = portfolioData.experience.filter((e) => !e.current);
+  const { experienceSpread } = portfolioData;
+  const { featured, progression } = experienceSpread;
 
   return (
     <section id="experiencia" className="relative overflow-hidden bg-canvas py-16 md:py-24 border-b border-line">
-      <div className="soft-grid absolute inset-0 opacity-40" aria-hidden="true" />
-
-      <div className="relative mx-auto max-w-[1280px] px-5 md:px-8">
+      <div className="mx-auto max-w-[1240px] px-5 md:px-8">
         
         {/* Section Header */}
-        <div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16 border-b border-line pb-10">
-          <div>
-            <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brand-blue">
-              04 / Trayectoria Profesional
-            </span>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink md:text-5xl">
-              Experiencia & Delivery
-            </h2>
-          </div>
-          <div className="lg:pt-2">
-            <p className="text-sm leading-relaxed text-muted md:text-base">
-              Consultoría estratégica en banca y medios de pago, coordinación metodológica de proyectos y analítica de negocio. Foco en alinear equipos transversales, generar inteligencia de mercado y acelerar la entrega de valor.
-            </p>
-          </div>
+        <div className="max-w-[840px] border-b border-line pb-10">
+          <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brand-blue">
+            04 / Trayectoria Profesional
+          </span>
+          <h2 className="mt-3 font-display text-3xl md:text-5xl font-bold tracking-tight text-ink">
+            Experiencia & Práctica Corporativa
+          </h2>
+          <p className="mt-4 text-sm leading-relaxed text-muted md:text-base md:leading-7">
+            Consultoría estratégica en banca y medios de pago regionales, gestión ágil de proyectos y analítica comercial. Una progresión orientada a articular negocio, datos y tecnología.
+          </p>
         </div>
 
-        {/* 1. PRIMARY EXPERIENCE: ARTEFACT / VISA */}
-        {primaryExperience && (
-          <div className="mt-12">
-            <div className="window-shadow rounded-2xl border-2 border-brand-blue/30 bg-paper p-6 md:p-9 relative overflow-hidden">
-              <div className="absolute top-0 right-0 h-28 w-28 bg-brand-blue/5 rounded-bl-full pointer-events-none" />
+        {/* 1. FEATURED EDITORIAL SPREAD: ARTEFACT / VISA */}
+        <div className="mt-14">
+          <div className="rounded-2xl border-2 border-brand-blue/30 bg-paper p-6 md:p-10 shadow-xs relative overflow-hidden">
+            <div className="absolute top-0 right-0 h-32 w-32 bg-brand-blue/5 rounded-bl-full pointer-events-none" />
 
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line pb-4">
-                <div className="flex items-center gap-3">
-                  <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-blue text-white shadow-xs">
-                    <Briefcase className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <h3 className="font-display text-lg md:text-xl font-bold text-ink">
-                      {primaryExperience.role}
-                    </h3>
-                    <p className="text-xs font-semibold text-brand-blue font-mono">
-                      {primaryExperience.company} · {primaryExperience.area}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 font-mono text-[9px] uppercase font-bold text-emerald-700">
-                    Posición Actual
-                  </span>
-                  <span className="font-mono text-xs text-muted font-medium">
-                    {primaryExperience.period}
-                  </span>
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line pb-5">
+              <div className="flex items-center gap-3">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-blue text-white shadow-xs">
+                  <Briefcase className="h-5 w-5" />
+                </span>
+                <div>
+                  <h3 className="font-display text-xl md:text-2xl font-bold text-ink leading-tight">
+                    {featured.role}
+                  </h3>
+                  <p className="text-xs font-semibold text-brand-blue font-mono mt-0.5">
+                    {featured.company} · <span className="text-slate-500">{featured.area}</span>
+                  </p>
                 </div>
               </div>
-
-              <p className="mt-5 text-sm leading-relaxed text-slate-700 font-medium max-w-4xl">
-                {primaryExperience.description}
-              </p>
-
-              {/* Responsibilities & Achievements */}
-              <div className="mt-6 grid gap-3 md:grid-cols-2">
-                {primaryExperience.highlights.map((highlight, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-start gap-2.5 rounded-xl border border-line bg-canvas p-3.5 text-xs leading-relaxed text-slate-700"
-                  >
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
-                    <span>{highlight}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Cross-functional Tagline */}
-              <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4 text-xs">
-                <div className="flex items-center gap-2 font-mono text-[9px] uppercase text-muted font-bold">
-                  <span>Coordinación Transversal:</span>
-                  <span className="text-slate-700">Marketing · Digital · Marca · Legal · QA · PM · Data Science</span>
-                </div>
-                <span className="font-mono text-[9px] uppercase text-brand-blue font-bold">
-                  Chile & Argentina
+              <div className="flex items-center gap-2">
+                <span className="rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 font-mono text-[9px] uppercase font-bold text-emerald-700">
+                  {featured.badge}
+                </span>
+                <span className="font-mono text-xs text-muted font-medium">
+                  {featured.period}
                 </span>
               </div>
             </div>
-          </div>
-        )}
 
-        {/* 2. OTHER ROLES TIMELINE / PROGRESSION */}
-        <div className="mt-12">
-          <div className="mb-6">
-            <h3 className="font-display text-lg font-bold text-ink">
-              Experiencias Anteriores & Progresión
-            </h3>
-            <p className="font-mono text-[9px] uppercase tracking-wider text-muted">
-              Coordinación ágil, analítica comercial y control de gestión
+            <p className="mt-5 text-sm leading-relaxed text-slate-700 font-medium max-w-4xl md:text-base">
+              {featured.description}
             </p>
+
+            {/* 3 Structured Dimension Pillars */}
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {featured.dimensions.map((dim, idx) => (
+                <div
+                  key={dim.title}
+                  className="rounded-xl border border-line bg-canvas p-4 flex flex-col justify-between"
+                >
+                  <div>
+                    <span className="font-mono text-[9px] font-bold uppercase text-brand-blue block">
+                      Dimensión 0{idx + 1}
+                    </span>
+                    <h4 className="mt-1 font-display text-sm font-bold text-ink">
+                      {dim.title}
+                    </h4>
+                    <p className="mt-2 text-xs leading-relaxed text-muted">
+                      {dim.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Cross-functional Scope Bar */}
+            <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4 text-xs">
+              <div className="flex items-center gap-2 font-mono text-[9px] uppercase text-muted font-bold">
+                <span>Coordinación Transversal:</span>
+                <span className="text-slate-700">Marketing · Digital · Marca · Legal · QA · PM · Data Science</span>
+              </div>
+              <span className="font-mono text-[9px] uppercase text-brand-blue font-bold">
+                Chile & Argentina
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* 2. PROGRESSION TIMELINE */}
+        <div className="mt-16">
+          <div className="mb-6">
+            <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500">
+              Evolución Profesional
+            </span>
+            <h3 className="mt-1 font-display text-xl md:text-2xl font-bold text-ink">
+              Progresión Histórica & Roles Previos
+            </h3>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {otherExperiences.map((exp, index) => (
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {progression.map((item) => (
               <div
-                key={`${exp.company}-${index}`}
-                className="card-lift rounded-2xl border border-line bg-paper p-5 flex flex-col justify-between"
+                key={item.company}
+                className="rounded-xl border border-line bg-paper p-5 transition-all hover:border-brand-blue/30 shadow-xs flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between text-muted text-xs">
-                    <span className="font-mono text-[9px] uppercase font-semibold">{exp.period}</span>
+                    <span className="font-mono text-[9px] uppercase font-semibold text-brand-blue">{item.period}</span>
                     <span className="rounded bg-slate-100 px-2 py-0.5 font-mono text-[8px] uppercase font-bold text-slate-700">
-                      {exp.badge}
+                      {item.badge}
                     </span>
                   </div>
 
-                  <h4 className="mt-3 font-display text-base font-bold text-ink leading-snug">
-                    {exp.role}
+                  <h4 className="mt-3 font-display text-sm font-bold text-ink leading-snug">
+                    {item.role}
                   </h4>
-                  <p className="text-xs font-semibold text-brand-blue font-mono mt-0.5">
-                    {exp.company}
+                  <p className="text-xs font-semibold text-slate-600 font-mono mt-0.5">
+                    {item.company}
                   </p>
 
                   <p className="mt-3 text-xs leading-relaxed text-muted">
-                    {exp.description}
+                    {item.highlight}
                   </p>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-line space-y-1.5">
-                  {exp.highlights.map((h, i) => (
-                    <div key={i} className="flex items-start gap-1.5 text-[11px] text-slate-700">
-                      <ChevronRight className="h-3 w-3 text-brand-blue shrink-0 mt-0.5" />
-                      <span>{h}</span>
-                    </div>
-                  ))}
                 </div>
               </div>
             ))}

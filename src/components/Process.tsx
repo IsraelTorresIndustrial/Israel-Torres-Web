@@ -1,65 +1,65 @@
-import { ArrowRight, CheckCircle2, RotateCw } from 'lucide-react';
+import { CheckCircle2, ChevronRight, Compass, RotateCw } from 'lucide-react';
 import { portfolioData } from '../data';
 
 export function Process() {
-  return (
-    <section id="metodo" className="relative overflow-hidden bg-paper py-16 md:py-24 border-b border-line">
-      <div className="dot-matrix absolute inset-0 opacity-40" aria-hidden="true" />
+  const { approachPrinciples } = portfolioData;
 
-      <div className="relative mx-auto max-w-[1280px] px-5 md:px-8">
+  return (
+    <section id="metodo" className="relative overflow-hidden bg-canvas py-16 md:py-24 border-b border-line">
+      <div className="mx-auto max-w-[1240px] px-5 md:px-8">
         
         {/* Section Header */}
-        <div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16 border-b border-line pb-10">
-          <div>
-            <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brand-blue">
-              06 / Método de Trabajo
-            </span>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink md:text-5xl">
-              Ciclo Iterativo de Entrega
-            </h2>
-          </div>
-          <div className="lg:pt-2">
-            <p className="text-sm leading-relaxed text-muted md:text-base">
-              La primera versión no busca demostrar perfección; busca producir claridad inmediata. Cada iteración reduce la incertidumbre, alinea a los stakeholders y fortalece la base para el escalamiento definitivo.
-            </p>
-          </div>
+        <div className="max-w-[840px] border-b border-line pb-10">
+          <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brand-blue">
+            05 / Enfoque de Colaboración
+          </span>
+          <h2 className="mt-3 font-display text-3xl md:text-5xl font-bold tracking-tight text-ink">
+            Cómo Avanzo Frente a la Ambigüedad
+          </h2>
+          <p className="mt-4 text-sm leading-relaxed text-muted md:text-base md:leading-7">
+            Mi forma de colaborar y tomar decisiones se basa en cuatro principios de acción que estructuran la conversación, alinean a los equipos y reducen la incertidumbre antes de escalar.
+          </p>
         </div>
 
-        {/* 4 Process Steps */}
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {portfolioData.process.map((item, index) => (
+        {/* 4 Action Verbs Grid */}
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {approachPrinciples.map((item, index) => (
             <div
-              key={item.step}
-              className="card-lift rounded-2xl border border-line bg-canvas p-6 flex flex-col justify-between"
+              key={item.verb}
+              className="rounded-2xl border border-line bg-paper p-6 flex flex-col justify-between shadow-xs transition-all hover:border-brand-blue/30"
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-brand-blue">{item.step}</span>
-                  <span className="font-mono text-[8px] uppercase tracking-wider text-muted font-medium">
-                    Fase {index + 1}
+                  <span className="font-mono text-xs font-bold text-brand-blue">0{index + 1}</span>
+                  <span className="font-mono text-[8px] uppercase tracking-wider text-slate-500 font-medium">
+                    Acción Clave
                   </span>
                 </div>
 
-                <h3 className="mt-4 font-display text-base font-bold text-ink">
-                  {item.title}
+                <h3 className="mt-4 font-display text-xl font-bold text-ink">
+                  {item.verb}
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-muted">
-                  {item.desc}
+                <p className="font-mono text-[10px] text-brand-blue font-semibold mt-0.5">
+                  {item.subtitle}
+                </p>
+
+                <p className="mt-3 text-xs leading-relaxed text-slate-700 font-medium">
+                  {item.description}
                 </p>
               </div>
 
-              <div className="mt-6 pt-3 border-t border-line flex items-center justify-between text-muted text-[10px] font-mono">
-                <span>Output Validado</span>
+              <div className="mt-6 pt-3 border-t border-line/60 flex items-center justify-between text-muted text-[10px] font-mono">
+                <span>Criterio Aplicado</span>
                 <CheckCircle2 className="h-3.5 w-3.5 text-brand-blue" />
               </div>
             </div>
           ))}
         </div>
 
-        {/* Loop Closure Signal */}
-        <div className="mt-10 flex items-center justify-center gap-2 font-mono text-[9px] uppercase tracking-wider text-muted">
-          <RotateCw className="h-3 w-3 text-brand-blue" />
-          <span>Iteración con evidencia real · Reducción continua de ambigüedad</span>
+        {/* Closure Statement */}
+        <div className="mt-10 flex items-center justify-center gap-2 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+          <RotateCw className="h-3.5 w-3.5 text-brand-blue" />
+          <span>Rigor factual · Alineamiento temprano · Entrega continua de valor</span>
         </div>
 
       </div>
