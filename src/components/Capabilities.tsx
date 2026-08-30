@@ -7,15 +7,15 @@ export function Capabilities() {
   const getIcon = (idx: number) => {
     switch (idx) {
       case 0:
-        return <LineChart className="h-5 w-5 text-brand-blue" />;
+        return <LineChart className="h-5 w-5 text-gold-deep" />;
       case 1:
-        return <Layers className="h-5 w-5 text-indigo-600" />;
+        return <Layers className="h-5 w-5 text-gold-deep" />;
       case 2:
-        return <Users className="h-5 w-5 text-emerald-600" />;
+        return <Users className="h-5 w-5 text-gold-deep" />;
       case 3:
-        return <Cpu className="h-5 w-5 text-cyan" />;
+        return <Cpu className="h-5 w-5 text-gold-deep" />;
       default:
-        return <Database className="h-5 w-5 text-brand-blue" />;
+        return <Database className="h-5 w-5 text-gold-deep" />;
     }
   };
 
@@ -25,7 +25,7 @@ export function Capabilities() {
         
         {/* Section Header */}
         <div className="max-w-[840px] border-b border-line pb-10">
-          <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brand-blue">
+          <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-gold-deep">
             03 / Matriz de Capacidades
           </span>
           <h2 className="mt-3 font-display text-3xl md:text-5xl font-bold tracking-tight text-ink">
@@ -41,17 +41,17 @@ export function Capabilities() {
           {capabilityMatrix.map((item, idx) => (
             <div
               key={item.pillar}
-              className="rounded-2xl border border-line bg-canvas p-6 md:p-7 flex flex-col justify-between shadow-xs transition-all hover:border-brand-blue/30"
+              className="rounded-2xl border border-line bg-canvas p-6 md:p-7 flex flex-col justify-between shadow-xs transition-all hover:border-gold/40"
             >
               <div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <span className="grid h-9 w-9 place-items-center rounded-lg border border-line bg-paper shadow-xs">
+                    <span className="grid h-9 w-9 place-items-center rounded-lg border border-gold/30 bg-paper shadow-xs">
                       {getIcon(idx)}
                     </span>
                     <span className="font-mono text-[9px] font-bold text-muted">0{idx + 1}</span>
                   </div>
-                  <span className="font-mono text-[8px] uppercase tracking-wider text-brand-blue font-bold">
+                  <span className="font-mono text-[8px] uppercase tracking-wider text-gold-deep font-bold">
                     Pilar de Dominio
                   </span>
                 </div>
@@ -67,7 +67,7 @@ export function Capabilities() {
               <div className="mt-6 space-y-3">
                 {/* Direct Evidence Connection */}
                 <div className="rounded-lg border border-line bg-paper p-3 text-xs flex items-start gap-2">
-                  <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-blue" />
+                  <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-deep" />
                   <div>
                     <span className="font-mono text-[8px] uppercase font-bold text-slate-500 block">Evidencia en el Portfolio:</span>
                     <span className="text-slate-800 font-semibold">{item.evidence}</span>
@@ -90,10 +90,10 @@ export function Capabilities() {
           ))}
         </div>
 
-        {/* Transversal Data Layer Banner */}
-        <div className="mt-8 rounded-xl border border-blue-200/60 bg-blue-50/50 p-5 md:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        {/* Transversal Data Layer Banner with Golden Conduit */}
+        <div className="mt-8 rounded-xl border border-gold/30 bg-canvas p-5 md:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-center gap-3">
-            <Database className="h-5 w-5 text-brand-blue shrink-0" />
+            <Database className="h-5 w-5 text-gold-deep shrink-0" />
             <div>
               <p className="font-display text-sm md:text-base font-bold text-ink">
                 Capa Transversal: Analítica de Datos, Modelamiento & BI
@@ -103,7 +103,7 @@ export function Capabilities() {
               </p>
             </div>
           </div>
-          <span className="font-mono text-[9px] uppercase tracking-wider text-brand-blue font-bold whitespace-nowrap">
+          <span className="font-mono text-[9px] uppercase tracking-wider text-gold-deep font-bold whitespace-nowrap">
             Base Analítica
           </span>
         </div>

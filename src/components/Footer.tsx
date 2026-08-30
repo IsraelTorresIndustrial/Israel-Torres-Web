@@ -5,9 +5,9 @@ export function Footer() {
   const { personalInfo } = portfolioData;
   return (
     <footer className="border-t border-navy-800 bg-void py-8 text-white">
-      <div className="mx-auto flex max-w-[1280px] flex-col gap-5 px-5 md:flex-row md:items-center md:justify-between md:px-8">
+      <div className="mx-auto flex max-w-[1240px] flex-col gap-5 px-5 md:flex-row md:items-center md:justify-between md:px-8">
         <div className="flex items-center gap-3">
-          <div className="relative h-8 w-8 overflow-hidden rounded-lg border border-gold/30 bg-night p-0.5">
+          <div className="relative h-8 w-8 overflow-hidden rounded-lg border border-gold/40 bg-night p-0.5 shadow-xs">
             <img
               src="/logo.png"
               alt="Israel Torres Emblema"
@@ -29,7 +29,7 @@ export function Footer() {
             href={personalInfo.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="grid h-8 w-8 place-items-center rounded-lg border border-navy-800 text-slate-400 transition-colors hover:border-navy-700 hover:text-white"
+            className="grid h-8 w-8 place-items-center rounded-lg border border-navy-800 text-slate-400 transition-colors hover:border-gold/40 hover:text-gold-light"
             aria-label="LinkedIn"
           >
             <Linkedin className="h-3.5 w-3.5" />
@@ -38,14 +38,14 @@ export function Footer() {
             href={personalInfo.github}
             target="_blank"
             rel="noreferrer"
-            className="grid h-8 w-8 place-items-center rounded-lg border border-navy-800 text-slate-400 transition-colors hover:border-navy-700 hover:text-white"
+            className="grid h-8 w-8 place-items-center rounded-lg border border-navy-800 text-slate-400 transition-colors hover:border-gold/40 hover:text-gold-light"
             aria-label="GitHub"
           >
             <Github className="h-3.5 w-3.5" />
           </a>
           <a
             href="#inicio"
-            className="ml-2 inline-flex items-center gap-1.5 rounded-lg border border-navy-800 px-3 py-1.5 font-mono text-[9px] uppercase tracking-wider text-slate-400 transition-colors hover:border-navy-700 hover:text-white"
+            className="ml-2 inline-flex items-center gap-1.5 rounded-lg border border-gold/40 px-3 py-1.5 font-mono text-[9px] uppercase tracking-wider text-gold-light transition-colors hover:border-gold hover:bg-gold/10 hover:text-white"
           >
             Inicio <ArrowUp className="h-3 w-3" />
           </a>
