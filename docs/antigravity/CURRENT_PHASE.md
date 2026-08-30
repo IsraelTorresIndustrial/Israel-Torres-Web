@@ -3,17 +3,15 @@
 ## Estado general
 
 - Fases históricas 00–08: completadas; sus decisiones factuales siguen vigentes.
-- Fase activa: **Fase 09 — Hero y columna vertebral narrativa**
-- Brief: `phases/phase-09-hero-narrative-spine.md`
+- Fase activa: **Fase 10 — Selected Work y capítulos de trabajo**
+- Brief: `phases/phase-10-selected-work-chapters.md`
 - Estado: **completada — en espera de aprobación**
 
 ## Resultados de la fase activa
 
-- **Informe de la Fase 09 generado:** [`deliverables/phase-09-hero-narrative-spine.md`](deliverables/phase-09-hero-narrative-spine.md)
+- **Informe de la Fase 10 generado:** [`deliverables/phase-10-selected-work-chapters.md`](deliverables/phase-10-selected-work-chapters.md)
 - **Implementación en producto completada:**
-  - `src/components/Navbar.tsx`: Navegación ejecutiva simplificada (4 enlaces: *Trabajo, Enfoque, Experiencia, Contacto*).
-  - `src/components/Hero.tsx`: Composición editorial asimétrica, 2 CTAs, sello de marca integrado y franja compacta de prueba en una sola línea. Altura mobile reducida a ~1.2 pantallas.
-  - `src/components/Impact.tsx`: Columna vertebral narrativa con apertura editorial (*“Entre una buena idea y una ejecución real suele haber ambigüedad. Mi trabajo es reducirla.”*) y flujo continuo en 6 etapas.
-  - `src/data.ts`: Copy V2 consolidado.
-- **Verificación técnica:** `tsc --noEmit` y `vite build` completados con **0 errores** (878ms). Cero errores de consola.
-- **Siguiente fase:** `phases/phase-10-selected-work-chapters.md` (Capítulos de Selected Work).
+  - `src/components/Projects.tsx`: 3 capítulos principales con composiciones visuales alternadas (*01 Presentation Intelligence, 02 Market & RAG, 03 CRM & Customer Lifecycle*) y un índice secundario compacto para las iniciativas 04 (*GenAI Marketing*), 05 (*Tracker USS*) y 06 (*Project Control*).
+  - `src/data.ts`: Incorporación formal del caso CRM & Customer Lifecycle, nuevos títulos editoriales y datos enriquecidos.
+- **Verificación técnica:** `tsc --noEmit` y `vite build` completados con **0 errores** (796ms).
+- **Siguiente fase:** `phases/phase-11-experience-proof-map.md` (Trayectoria, Matriz de Capacidades y Cierre).
