@@ -16,7 +16,7 @@ export default function App() {
         Saltar al contenido
       </a>
       <Navbar />
-      <main id="contenido">
+      <main id="contenido" tabIndex={-1} className="focus:outline-none">
         <Hero />
         <Impact />
         <Projects />
