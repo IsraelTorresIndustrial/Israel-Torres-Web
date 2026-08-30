@@ -53,3 +53,37 @@ Estos valores son una dirección inicial, no tokens finales. La Fase 03 debe mue
 **Consulting + Product + Fintech + Applied AI**, con una capa personal premium.
 
 Debe sentirse ejecutiva, tecnológica, clara, precisa y contemporánea; no cyberpunk, no dashboard, no landing SaaS genérica y no vitrina de efectos.
+
+## Evolución visual requerida
+
+La paleta ya está bien encaminada; el siguiente salto no proviene de agregar más color, sino de cambiar composición, tipografía y ritmo.
+
+### Dirección editorial
+
+- Predominio de canvas cálido y papel, con navy reservado para hero y cierre.
+- Asimetría controlada, grandes bloques tipográficos y divisores finos.
+- Una tipografía editorial de acento puede usarse en citas o statements, manteniendo una sans profesional para lectura.
+- El monoespaciado queda restringido a metadata real; no debe cubrir toda la interfaz.
+- El dorado funciona como hilo, subrayado o firma, nunca como efecto metálico generalizado.
+- El logo puede aparecer recortado o como sello de gran escala en hero/contacto, siempre conservando legibilidad y proporción.
+
+### Elementos a reducir
+
+- grids técnicos de fondo en todas las secciones;
+- glows y gradientes;
+- cards con radio uniforme;
+- pills y badges redundantes;
+- microtexto inferior a 11 px;
+- ventanas con tres dots;
+- sombras de mockup repetidas;
+- colores semánticos decorativos sin estado real.
+
+### Elementos a potenciar
+
+- jerarquía tipográfica;
+- composiciones alternadas;
+- líneas narrativas y timeline;
+- visuales de outputs saneados;
+- labels de contexto simples;
+- espacios en blanco con intención;
+- transiciones sutiles que indiquen progresión.

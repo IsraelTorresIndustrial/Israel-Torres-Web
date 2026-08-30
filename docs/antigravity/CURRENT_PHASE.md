@@ -1,28 +1,19 @@
-# Estado del Proyecto Antigravity
+# Fase activa — Segunda etapa visual
 
-## Estado General
+## Estado general
 
-- **Fases Completadas:** Fases 00 a 08 (Ciclo Completo Finalizado)
-- **Estado:** **Listo para despliegue final en producción**
+- Fases históricas 00–08: completadas; sus decisiones factuales siguen vigentes.
+- Fase activa: **Fase 09 — Hero y columna vertebral narrativa**
+- Brief: `phases/phase-09-hero-narrative-spine.md`
+- Estado: **completada — en espera de aprobación**
 
----
+## Resultados de la fase activa
 
-## Registro de Entregables Generados
-
-1. **Fase 00 — Auditoría y baseline:** [`deliverables/phase-00-audit-report.md`](deliverables/phase-00-audit-report.md)
-2. **Fase 01 — Veracidad y evidencia:** [`deliverables/phase-01-content-evidence.md`](deliverables/phase-01-content-evidence.md)
-3. **Fase 02 — Storytelling y arquitectura IA:** [`deliverables/phase-02-narrative-ia.md`](deliverables/phase-02-narrative-ia.md)
-4. **Fase 03 — Identidad y sistema de diseño:** [`deliverables/phase-03-design-system.md`](deliverables/phase-03-design-system.md)
-5. **Fase 04 — Núcleo narrativo:** [`deliverables/phase-04-core-experience.md`](deliverables/phase-04-core-experience.md)
-6. **Fase 05 — Selected Work:** [`deliverables/phase-05-selected-work.md`](deliverables/phase-05-selected-work.md)
-7. **Fase 06 — Trayectoria y credenciales:** [`deliverables/phase-06-professional-proof.md`](deliverables/phase-06-professional-proof.md)
-8. **Fase 07 — Calidad y metadata:** [`deliverables/phase-07-quality-report.md`](deliverables/phase-07-quality-report.md)
-9. **Fase 08 — QA final y lanzamiento:** [`deliverables/phase-08-launch-report.md`](deliverables/phase-08-launch-report.md)
-
----
-
-## Verificación Técnica Final
-
-- **TypeScript (`npm run lint`):** 0 errores.
-- **Build de Producción (`npm run build`):** Compilación en 859ms con bundle ultra-optimizado.
-- **Cumplimiento Factual:** 100% de los lineamientos de veracidad, confidencialidad y posicionamiento (*Strategy, Product & Applied AI*) verificados.
+- **Informe de la Fase 09 generado:** [`deliverables/phase-09-hero-narrative-spine.md`](deliverables/phase-09-hero-narrative-spine.md)
+- **Implementación en producto completada:**
+  - `src/components/Navbar.tsx`: Navegación ejecutiva simplificada (4 enlaces: *Trabajo, Enfoque, Experiencia, Contacto*).
+  - `src/components/Hero.tsx`: Composición editorial asimétrica, 2 CTAs, sello de marca integrado y franja compacta de prueba en una sola línea. Altura mobile reducida a ~1.2 pantallas.
+  - `src/components/Impact.tsx`: Columna vertebral narrativa con apertura editorial (*“Entre una buena idea y una ejecución real suele haber ambigüedad. Mi trabajo es reducirla.”*) y flujo continuo en 6 etapas.
+  - `src/data.ts`: Copy V2 consolidado.
+- **Verificación técnica:** `tsc --noEmit` y `vite build` completados con **0 errores** (878ms). Cero errores de consola.
+- **Siguiente fase:** `phases/phase-10-selected-work-chapters.md` (Capítulos de Selected Work).

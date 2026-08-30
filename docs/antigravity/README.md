@@ -31,6 +31,7 @@ Una fase no se considera terminada porque “se ve mejor”. Debe cumplir sus cr
 - `04-brand-direction.md`: traducción digital de la identidad del logo.
 - `05-content-evidence-register.md`: control de afirmaciones y evidencias pendientes.
 - `06-prioritized-roadmap.md`: prioridades P0–P3 y orden de ejecución.
+- `07-frontend-recomposition.md`: dirección maestra del nuevo frontend editorial.
 - `phases/`: briefs acotados para Antigravity.
 - `templates/`: formato obligatorio de cierre de fase.
 - `deliverables/`: resultados producidos por Antigravity.
@@ -56,3 +57,14 @@ La documentación, decisiones, briefs y cierres viven aquí. Cuando una fase aut
 ## Puertas de aprobación
 
 Las fases 00, 01, 02 y 03 son de definición. La implementación visual no comienza hasta que narrativa, evidencia y dirección de marca estén aprobadas. Cada fase posterior también requiere cierre antes de continuar.
+
+## Segunda etapa: recomposición visual
+
+La primera implementación mejoró marca, limpieza y veracidad, pero conservó la estructura original. Por ello, las Fases 09–12 sustituyen la arquitectura visual ejecutada en las Fases 04–08, sin invalidar el trabajo factual.
+
+- Fase 09: hero y columna vertebral narrativa.
+- Fase 10: Selected Work como capítulos visuales.
+- Fase 11: trayectoria, capacidades, método y credenciales.
+- Fase 12: integración responsive, accesibilidad y cierre.
+
+Sólo la fase indicada en `CURRENT_PHASE.md` está autorizada. Haber completado las Fases 00–08 no autoriza ejecutar 09–12 de forma continua.

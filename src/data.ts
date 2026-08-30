@@ -24,116 +24,68 @@ export const portfolioData = {
     fullName: 'Israel Torres López',
     title: 'Ingeniero Civil Industrial · Data Consultant',
     positioning: 'Strategy, Product & Applied AI',
-    eyebrow: 'Strategy · CRM & Lifecycle · Data · Applied AI',
-    headline: 'Convierto problemas de negocio en estrategias, prototipos y herramientas que se pueden probar.',
+    eyebrow: 'Strategy, Product & Applied AI',
+    headline: 'Estructuro problemas complejos y los convierto en propuestas que se pueden ver, probar e iterar.',
     description:
-      'Ingeniero Civil Industrial y Data Consultant. Articulo estrategia comercial, customer lifecycle, inteligencia de mercado e IA aplicada. Mi diferencial está en traducir requerimientos difusos en análisis estructurados y prototipos funcionales que aceleran el alineamiento entre stakeholders, reducen la incertidumbre y aseguran una ejecución coordinada.',
+      'Ingeniero Civil Industrial y Data Consultant en Artefact. Trabajo entre estrategia comercial, CRM, inteligencia de mercado e IA aplicada, conectando áreas y haciendo tangibles las ideas antes de escalar.',
     email: 'itorresl@correo.uss.cl',
     linkedin: 'https://www.linkedin.com/in/israeltorresl',
     github: 'https://github.com/IsraelTorresIndustrial/Israel-Torres-Web',
     location: 'Santiago, Chile',
+    currentRole: 'Data Consultant en Artefact',
+    scopeBadge: 'Iniciativas Regionales · Chile & Argentina',
   },
 
-  heroSignals: [
-    {
-      value: '2 Países',
-      label: 'Alcance Regional',
-      detail: 'Iniciativas corporativas para Chile y Argentina en medios de pago.',
-    },
-    {
-      value: '+30 Equipos',
-      label: 'Coordinación Paralela',
-      detail: 'Gestión metodológica simultánea de proyectos bajo marcos ágiles.',
-    },
-    {
-      value: 'Cross-functional',
-      label: 'Articulación Transversal',
-      detail: 'Alineamiento con Marketing, Negocio, Legal, QA, PM y Data Science.',
-    },
+  heroProofItems: [
+    'Banca y medios de pago',
+    'Chile y Argentina',
+    'Coordinación de +30 equipos',
+    'Prototipado con IA',
   ],
 
-  heroScenarios: [
-    {
-      ask: '“La información comercial y de mercado está dispersa entre múltiples fuentes.”',
-      question: '¿Cómo estructuramos el conocimiento para guiar decisiones en tiempo real?',
-      outcome: 'Un copiloto RAG que conecta evidencia estructurada, contexto competitivo y recomendaciones guiadas.',
-      label: 'Conocimiento → Decisión',
-    },
-    {
-      ask: '“Necesitamos comunicar una narrativa estratégica con estándar ejecutivo.”',
-      question: '¿Y si convertimos la generación de presentaciones en un sistema trazable y editable?',
-      outcome: 'Un motor modular que separa inteligencia, storyline, render nativo PPTX y control de calidad visual.',
-      label: 'Narrativa → Sistema',
-    },
-    {
-      ask: '“Coordinar decenas de iniciativas en paralelo satura el seguimiento tradicional.”',
-      question: '¿Cómo anticipar bloqueos y dependencias críticas antes de que afecten el delivery?',
-      outcome: 'Herramientas de control y trazabilidad que centralizan hitos, acuerdos y visibilidad operativa.',
-      label: 'Seguimiento → Acompañamiento',
-    },
-  ],
-
-  transformationPipeline: [
-    {
-      step: '01',
-      phase: 'Problema de Negocio',
-      action: 'Inmersión en la necesidad, mapeo de fricciones y alineamiento con objetivos comerciales.',
-    },
-    {
-      step: '02',
-      phase: 'Estructuración & Brief',
-      action: 'Traducción a journeys, especificaciones funcionales y conexión entre áreas clave.',
-    },
-    {
-      step: '03',
-      phase: 'MVP & Prototipado Rápido',
-      action: 'Construcción ágil de maquetas e interfaces funcionales en HTML/React asistidas por IA.',
-    },
-    {
-      step: '04',
-      phase: 'Validación con Stakeholders',
-      action: 'Discusión sobre un artefacto tangible para validar hipótesis y reducir ambigüedad.',
-    },
-    {
-      step: '05',
-      phase: 'Coordinación & Escalamiento',
-      action: 'Gestión de dependencias (Legal, QA, Marca, TI) y acompañamiento en la ejecución.',
-    },
-  ],
-
-  trustedFor: [
-    'Estructurar y ordenar desafíos de negocio que llegan con alto nivel de ambigüedad',
-    'Conectar áreas multidisciplinarias (Negocio, Marketing, Legal, QA, Data y TI)',
-    'Construir prototipos funcionales rápidos para tangibilizar ideas y validar requerimientos',
-    'Integrar analítica, inteligencia competitiva y GenAI en procesos comerciales reales',
-  ],
-
-  principles: [
-    {
-      number: '01',
-      title: 'Estructuración antes que tecnología',
-      description: 'Comprendo la necesidad de negocio, las restricciones operativas y el usuario final antes de definir cualquier herramienta o arquitectura técnica.',
-      signal: 'Problem Framing',
-    },
-    {
-      number: '02',
-      title: 'Hacer visible para alinear',
-      description: 'Una maqueta interactiva o un MVP funcional resuelve más dudas que decenas de reuniones abstractas. Construyo prototipos para validar con evidencia.',
-      signal: 'Tangibilidad & Validación',
-    },
-    {
-      number: '03',
-      title: 'Rigor factual y trazabilidad',
-      description: 'En banca y consultoría, la confiabilidad es mandatoria. Cada análisis, recomendación o flujo de IA debe contar con fuentes verificables y criterios explícitos.',
-      signal: 'Criterio & Control',
-    },
-    {
-      number: '04',
-      title: 'Construir capacidades sostenibles',
-      description: 'Busco que cada iniciativa deje un método, un activo o un flujo reutilizable que permita al equipo iterar de forma autónoma y con estándar superior.',
-      signal: 'Impacto & Escala',
-    },
-  ],
+  narrativeSpine: {
+    eyebrow: '01 / Mecanismo Diferencial',
+    title: 'Hacer tangible para avanzar.',
+    statement:
+      'Entre una buena idea y una ejecución real suele haber ambigüedad. Mi trabajo es reducirla.',
+    substatement:
+      'En contextos de alta exigencia, discutir sobre abstracciones alarga los ciclos y aumenta el riesgo. Mi enfoque estructura el problema y construye artefactos que permiten validar antes de comprometer desarrollo a gran escala.',
+    callout:
+      'El prototipo no es el final: es el punto donde la conversación se vuelve concreta.',
+    steps: [
+      {
+        number: '01',
+        name: 'Problema de Negocio',
+        desc: 'Mapear la fricción real, restricciones operativas y objetivo comercial.',
+      },
+      {
+        number: '02',
+        name: 'Estructuración & Brief',
+        desc: 'Traducir requerimientos difusos a journeys, lógica de datos y alcance funcional.',
+      },
+      {
+        number: '03',
+        name: 'Articulación de Áreas',
+        desc: 'Conectar tempranamente a Marketing, Negocio, Legal, QA, Marca y Data Science.',
+      },
+      {
+        number: '04',
+        name: 'MVP & Prototipado Rápido',
+        desc: 'Construir maquetas interactivas o flujos de IA asistidos por código para hacer visible la propuesta.',
+        isCore: true,
+      },
+      {
+        number: '05',
+        name: 'Validación con Evidencia',
+        desc: 'Discutir sobre una interfaz o entregable tangible para calibrar requerimientos y reducir dudas.',
+      },
+      {
+        number: '06',
+        name: 'Acompañamiento & Iteración',
+        desc: 'Coordinar dependencias, incorporar feedback y asegurar una ejecución ordenada.',
+      },
+    ],
+  },
 
   projects: [
     {
