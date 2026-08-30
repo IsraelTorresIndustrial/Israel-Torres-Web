@@ -9,12 +9,12 @@ export function Experience() {
     <section id="experiencia" className="relative overflow-hidden bg-canvas py-16 md:py-24 border-b border-line">
       <div className="soft-grid absolute inset-0 opacity-40" aria-hidden="true" />
 
-      <div className="relative mx-auto max-w-[1320px] px-5 md:px-8">
+      <div className="relative mx-auto max-w-[1280px] px-5 md:px-8">
         
         {/* Section Header */}
         <div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16 border-b border-line pb-10">
           <div>
-            <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-accent">
+            <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brand-blue">
               04 / Trayectoria Profesional
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink md:text-5xl">
@@ -28,22 +28,22 @@ export function Experience() {
           </div>
         </div>
 
-        {/* 1. PRIMARY EXPERIENCE: ARTEFACT / VISA (High visual weight) */}
+        {/* 1. PRIMARY EXPERIENCE: ARTEFACT / VISA */}
         {primaryExperience && (
           <div className="mt-12">
-            <div className="rounded-2xl border-2 border-accent/30 bg-paper p-6 md:p-9 shadow-md relative overflow-hidden">
-              <div className="absolute top-0 right-0 h-24 w-24 bg-accent/5 rounded-bl-full pointer-events-none" />
+            <div className="window-shadow rounded-2xl border-2 border-brand-blue/30 bg-paper p-6 md:p-9 relative overflow-hidden">
+              <div className="absolute top-0 right-0 h-28 w-28 bg-brand-blue/5 rounded-bl-full pointer-events-none" />
 
               <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line pb-4">
-                <div className="flex items-center gap-2">
-                  <span className="grid h-8 w-8 place-items-center rounded-lg bg-accent text-white">
-                    <Briefcase className="h-4 w-4" />
+                <div className="flex items-center gap-3">
+                  <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-blue text-white shadow-xs">
+                    <Briefcase className="h-5 w-5" />
                   </span>
                   <div>
                     <h3 className="font-display text-lg md:text-xl font-bold text-ink">
                       {primaryExperience.role}
                     </h3>
-                    <p className="text-xs font-semibold text-accent font-mono">
+                    <p className="text-xs font-semibold text-brand-blue font-mono">
                       {primaryExperience.company} · {primaryExperience.area}
                     </p>
                   </div>
@@ -69,7 +69,7 @@ export function Experience() {
                     key={idx}
                     className="flex items-start gap-2.5 rounded-xl border border-line bg-canvas p-3.5 text-xs leading-relaxed text-slate-700"
                   >
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
                     <span>{highlight}</span>
                   </div>
                 ))}
@@ -81,7 +81,7 @@ export function Experience() {
                   <span>Coordinación Transversal:</span>
                   <span className="text-slate-700">Marketing · Digital · Marca · Legal · QA · PM · Data Science</span>
                 </div>
-                <span className="font-mono text-[9px] uppercase text-accent font-bold">
+                <span className="font-mono text-[9px] uppercase text-brand-blue font-bold">
                   Chile & Argentina
                 </span>
               </div>
@@ -89,7 +89,7 @@ export function Experience() {
           </div>
         )}
 
-        {/* 2. OTHER ROLES TIMELINE */}
+        {/* 2. OTHER ROLES TIMELINE / PROGRESSION */}
         <div className="mt-12">
           <div className="mb-6">
             <h3 className="font-display text-lg font-bold text-ink">
@@ -117,7 +117,7 @@ export function Experience() {
                   <h4 className="mt-3 font-display text-base font-bold text-ink leading-snug">
                     {exp.role}
                   </h4>
-                  <p className="text-xs font-semibold text-accent font-mono mt-0.5">
+                  <p className="text-xs font-semibold text-brand-blue font-mono mt-0.5">
                     {exp.company}
                   </p>
 
@@ -129,7 +129,7 @@ export function Experience() {
                 <div className="mt-4 pt-3 border-t border-line space-y-1.5">
                   {exp.highlights.map((h, i) => (
                     <div key={i} className="flex items-start gap-1.5 text-[11px] text-slate-700">
-                      <ChevronRight className="h-3 w-3 text-accent shrink-0 mt-0.5" />
+                      <ChevronRight className="h-3 w-3 text-brand-blue shrink-0 mt-0.5" />
                       <span>{h}</span>
                     </div>
                   ))}

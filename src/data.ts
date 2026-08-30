@@ -155,7 +155,7 @@ export const portfolioData = {
       build:
         'Pipeline que procesa requerimientos estructurados y compila presentaciones nativas de PowerPoint (.pptx) con tipografía institucional, alineación precisa de contenedores, tarjetas de impacto y mapas conceptuales 100% editables.',
       value:
-        'Refleja visión sistémica para automatizar flujos de trabajo intelectual, estandarizar storytelling de alta dirección y asegurar entregables corporativos de máxima calidad en una fracción del tiempo habitual.',
+        'Refleja visión sistémica para automatizar flujos de trabajo intelectual, estandarizar storytelling de alta dirección y asegurar entregables corporativos de máxima calidad optimizando sustancialmente el ciclo de producción.',
       facts: [
         '13 familias visuales nativas',
         'PPTX 100% editable (sin imágenes estáticas)',
@@ -182,11 +182,11 @@ export const portfolioData = {
       process:
         'Estructuré una base de conocimiento curada con taxonomía bancaria, desarrollé flujos de recuperación con RAG (Retrieval-Augmented Generation), implementé validadores factuales determinísticos y diseñé interfaces diferenciadas para ejecutivo y cliente final.',
       build:
-        'Construí dos interfaces conectadas (copiloto para ejecutivo y asesor para cliente). Integra una base estructurada de 84 fragmentos de conocimiento, motor determinístico de recomendación, validación de condiciones de elegibilidad y guardrails para prevenir alucinaciones.',
+        'Construí dos interfaces conectadas (copiloto para ejecutivo y asesor para cliente). Integra una base de conocimiento estructurada y curada por dominios, motor determinístico de recomendación, validación de condiciones de elegibilidad y guardrails para prevenir alucinaciones.',
       value:
         'Demuestra capacidad para estructurar conocimiento complejo, diseñar flujos conversacionales B2B/B2C y construir prototipos basados en IA con control estricto de evidencia.',
       facts: [
-        '84 fragmentos estructurados',
+        'Base de conocimiento estructurada',
         '2 experiencias interconectadas',
         'Benchmark de mercado 1:1',
         'Validación determinística de respuestas',
@@ -211,7 +211,7 @@ export const portfolioData = {
       process:
         'Levanté requerimientos con stakeholders operativos, definí un modelo de datos unificado de iniciativas, diseñé una interfaz con jerarquía ejecutiva y construí la solución con persistencia en tiempo real.',
       build:
-        'Construí una plataforma con autenticación segura, tablero de métricas consolidadas, vista Gantt interactiva, gestión de responsables y alertas automáticas por bloqueo de hitos.',
+        'Construí una plataforma con autenticación y permisos de usuario, tablero de métricas consolidadas, vista Gantt interactiva, gestión de responsables y alertas automáticas por bloqueo de hitos.',
       value:
         'Demuestra habilidad para levantar requerimientos operacionales, diseñar dashboards orientados a la acción y construir herramientas web que mejoran la coordinación de proyectos.',
       facts: [
@@ -259,7 +259,7 @@ export const portfolioData = {
       title: 'Plataforma de Coordinación & Seguimiento Ágil Multiequipo',
       context: 'Universidad San Sebastián · Gestión de Proyectos',
       type: 'Orquestación de Equipos + Control de Hitos + Trazabilidad',
-      status: 'Plataforma Implementada en Producción',
+      status: 'Aplicación Web Implementada',
       isFlagship: false,
       role: 'Scrum Master, diseño de proceso de seguimiento y desarrollo de la herramienta',
       thesis:
@@ -309,7 +309,7 @@ export const portfolioData = {
   experience: [
     {
       company: 'Artefact Spanish LATAM (ex-Brain Food)',
-      role: 'Data Consultant – Strategy, CRM, GenAI & Business Automation',
+      role: 'Data Consultant – Strategic Marketing, GenAI & Business Automation',
       period: 'Abr 2026 — Actualidad',
       area: 'Consultoría Estratégica · Banca & Medios de Pago',
       badge: 'Experiencia Principal',
@@ -345,7 +345,7 @@ export const portfolioData = {
       area: 'Gestión Ágil & Coordinación a Escala',
       badge: '+30 Equipos en Paralelo',
       description:
-        'Liderazgo operativo y metodológico en la coordinación de más de 30 equipos multidisciplinarios en paralelo, asegurando cumplimiento de cronograma y calidad de entregas.',
+        'Coordinación metodológica y seguimiento simultáneo de más de 30 equipos multidisciplinarios en paralelo, asegurando cumplimiento de cronograma, trazabilidad y calidad de entregas.',
       highlights: [
         'Seguimiento simultáneo a más de 30 equipos y proyectos, gestionando dependencias y alertas tempranas de desviación.',
         'Diseño de una herramienta semiautomatizada de evaluación y control para estandarizar criterios y agilizar la toma de decisiones basada en desempeño.',

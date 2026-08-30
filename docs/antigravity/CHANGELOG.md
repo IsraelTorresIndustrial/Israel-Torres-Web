@@ -1,0 +1,11 @@
+# Registro de cambios del sitio
+
+La creación de documentación de arquitectura no cuenta como modificación del producto. A partir de la primera fase de implementación, registrar cada bloque aquí.
+
+| Fecha | Fase | Archivos del producto modificados | Resumen | Verificaciones |
+|---|---|---|---|---|
+| 2026-08-29 | Preparación | Ninguno | Se creó el centro de control para Antigravity y se archivaron los materiales originales | Revisión documental |
+| 2026-08-29 | Fase 04 — Core Experience | `src/index.css`, `src/components/Navbar.tsx`, `src/components/Hero.tsx`, `src/components/Impact.tsx`, `public/favicon.svg`, `public/logo.png` | Implementación de tokens base Navy/Canvas/Brand-Blue/Gold, logo oficial en Navbar, Hero en primer viewport con 3 señales métricas y Value Engine con pipeline de 5 fases adaptado a responsive. | `npm run lint` (0 errores), `npm run build` (0 errores, 902ms). |
+| 2026-08-29 | Fase 05 — Selected Work | `src/data.ts`, `src/components/Projects.tsx` | Implementación editorial del Flagship Case (*Executive Communication OS*), 4 casos secundarios en grid 2x2, modal accesible de 6 etapas, saneamiento de cifras no autorizadas (`84 fragmentos` retirado) y rotulado explícito de simulaciones. | `npm run lint` (0 errores), `npm run build` (0 errores, 882ms). |
+| 2026-08-29 | Fase 06 — Professional Proof | `src/components/Capabilities.tsx`, `src/components/Experience.tsx`, `src/components/Credentials.tsx`, `src/components/Process.tsx`, `src/components/Contact.tsx`, `src/components/Footer.tsx` | Sincronización oficial del cargo Artefact/Visa, trayectoria con progresión de roles y coordinación USS (+30 equipos), 4 familias de capacidades con evidencia, método de trabajo (How I Work), 16 credenciales organizadas con filtro y footer institucional con logo oficial. | `npm run lint` (0 errores), `npm run build` (0 errores, 888ms). |
+| 2026-08-29 | Fase 07 — Quality & Metadata | `index.html` | Enriquecimiento integral de SEO, Open Graph para LinkedIn/Facebook, Twitter Card, Canonical URL, preconnects de fuentes y schema estructurado Schema.org Person en JSON-LD. | `npm run lint` (0 errores), `npm run build` (0 errores, 860ms). |

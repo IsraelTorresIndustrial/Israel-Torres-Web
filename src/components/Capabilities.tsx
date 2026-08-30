@@ -7,27 +7,27 @@ export function Capabilities() {
   const getIcon = (id: string) => {
     switch (id) {
       case 'strategy':
-        return <LineChart className="h-5 w-5 text-accent" />;
+        return <LineChart className="h-5 w-5 text-brand-blue" />;
       case 'product-crm':
-        return <Layers className="h-5 w-5 text-indigo" />;
+        return <Layers className="h-5 w-5 text-indigo-600" />;
       case 'project-delivery':
         return <Users className="h-5 w-5 text-emerald-600" />;
       case 'applied-ai':
         return <Cpu className="h-5 w-5 text-cyan" />;
       default:
-        return <Database className="h-5 w-5 text-accent" />;
+        return <Database className="h-5 w-5 text-brand-blue" />;
     }
   };
 
   return (
     <section id="capacidades" className="overflow-hidden bg-paper py-16 md:py-24 border-b border-line">
-      <div className="mx-auto max-w-[1320px] px-5 md:px-8">
+      <div className="mx-auto max-w-[1280px] px-5 md:px-8">
         
         {/* Section Header */}
         <div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16 border-b border-line pb-10">
           <div>
-            <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-accent">
-              03 / Capacidades & Stack
+            <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brand-blue">
+              03 / Capacidades & Dominio
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink md:text-5xl">
               Áreas de Especialización
@@ -35,7 +35,7 @@ export function Capabilities() {
           </div>
           <div className="lg:pt-2">
             <p className="text-sm leading-relaxed text-muted md:text-base">
-              Estructura de capacidades organizadas en 4 familias clave. La analítica y modelamiento de datos operan de forma transversal para sustentar la toma de decisiones, el diseño de producto y el entrenamiento de flujos con IA.
+              Competencias organizadas en 4 familias clave respaldadas por iniciativas reales. La analítica de datos opera de manera transversal para sustentar la estrategia comercial, el diseño de producto y los flujos con IA.
             </p>
           </div>
         </div>
@@ -55,7 +55,7 @@ export function Capabilities() {
                     </span>
                     <span className="font-mono text-[9px] font-bold text-muted">0{index + 1}</span>
                   </div>
-                  <span className="font-mono text-[8px] uppercase tracking-wider text-accent font-semibold">
+                  <span className="font-mono text-[8px] uppercase tracking-wider text-brand-blue font-semibold">
                     Núcleo de Dominio
                   </span>
                 </div>
@@ -71,7 +71,7 @@ export function Capabilities() {
               <div className="mt-6 space-y-4">
                 {/* Application Evidence */}
                 <div className="rounded-lg border border-line bg-paper p-3 text-xs flex items-start gap-2">
-                  <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
+                  <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-blue" />
                   <span className="text-slate-700 font-medium">{cap.application}</span>
                 </div>
 
@@ -94,7 +94,7 @@ export function Capabilities() {
         {/* Continuous Tools & Tech Marquee */}
         <div className="mt-14 rounded-2xl border border-line bg-canvas p-6">
           <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-            <p className="font-mono text-[9px] font-bold uppercase tracking-wider text-accent">
+            <p className="font-mono text-[9px] font-bold uppercase tracking-wider text-brand-blue">
               Stack & Tecnologías Utilizadas
             </p>
             <p className="text-xs text-muted">Adaptadas al problema; el criterio estratégico permanece.</p>
@@ -107,7 +107,7 @@ export function Capabilities() {
                   <span className="font-display text-sm font-bold text-ink whitespace-nowrap md:text-base">
                     {tool}
                   </span>
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent/40" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-blue/40" />
                 </div>
               ))}
             </div>

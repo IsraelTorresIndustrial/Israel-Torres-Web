@@ -6,12 +6,12 @@ export function Process() {
     <section id="metodo" className="relative overflow-hidden bg-paper py-16 md:py-24 border-b border-line">
       <div className="dot-matrix absolute inset-0 opacity-40" aria-hidden="true" />
 
-      <div className="relative mx-auto max-w-[1320px] px-5 md:px-8">
+      <div className="relative mx-auto max-w-[1280px] px-5 md:px-8">
         
         {/* Section Header */}
         <div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16 border-b border-line pb-10">
           <div>
-            <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-accent">
+            <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brand-blue">
               06 / Método de Trabajo
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink md:text-5xl">
@@ -34,7 +34,7 @@ export function Process() {
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-accent">{item.step}</span>
+                  <span className="font-mono text-xs font-bold text-brand-blue">{item.step}</span>
                   <span className="font-mono text-[8px] uppercase tracking-wider text-muted font-medium">
                     Fase {index + 1}
                   </span>
@@ -50,7 +50,7 @@ export function Process() {
 
               <div className="mt-6 pt-3 border-t border-line flex items-center justify-between text-muted text-[10px] font-mono">
                 <span>Output Validado</span>
-                <CheckCircle2 className="h-3.5 w-3.5 text-accent" />
+                <CheckCircle2 className="h-3.5 w-3.5 text-brand-blue" />
               </div>
             </div>
           ))}
@@ -58,7 +58,7 @@ export function Process() {
 
         {/* Loop Closure Signal */}
         <div className="mt-10 flex items-center justify-center gap-2 font-mono text-[9px] uppercase tracking-wider text-muted">
-          <RotateCw className="h-3 w-3 text-accent" />
+          <RotateCw className="h-3 w-3 text-brand-blue" />
           <span>Iteración con evidencia real · Reducción continua de ambigüedad</span>
         </div>
 
