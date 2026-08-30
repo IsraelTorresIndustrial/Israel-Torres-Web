@@ -1,21 +1,25 @@
-# Estado del Proyecto Antigravity — Sistema visual firma V3
+# Estado del Proyecto Antigravity — Sistema visual firma V3 ("El Hilo Dorado")
 
-## Fase activa
+## Estado General
 
-- **Fase 15 — Trayectoria, Matriz de Capacidades y Cierre**
-- Brief: [`phases/phase-15-signature-experience-closure.md`](phases/phase-15-signature-experience-closure.md)
-- Estado: **completada — en espera de aprobación**
+- **Fases Históricas 00–08:** Completadas (Decisiones factuales y de veracidad integradas).
+- **Fases Visuales 09–12 (Recomposición V2):** Completadas.
+- **Fases Visuales 13–16 (Sistema Firma V3 "El Hilo Dorado"):** **100% Completadas, Auditadas y Desplegadas**.
+- **Estado:** **Producción Activa, Estable y Verificada**.
 
 ---
 
-## Resultados de la Fase 15
+## Registro de Entregables V3
 
-- **Entregable Oficial:** [`deliverables/phase-15-signature-experience-closure.md`](deliverables/phase-15-signature-experience-closure.md)
-- **Implementación Completada:**
-  - `src/components/Capabilities.tsx`: Matriz firma con 4 pilares vinculados a evidencia directa y franja transversal de datos.
-  - `src/components/Experience.tsx`: Editorial spread de Artefact/Visa y línea temporal de progresión conectada por El Hilo Dorado.
-  - `src/components/Process.tsx`: 4 verbos clave (*Estructurar, Articular, Tangibilizar, Acompañar*) con nodos de criterio.
-  - `src/components/Credentials.tsx`: Educación formal y 6 credenciales prioritarias con expansión accesible.
-  - `src/components/Contact.tsx` & `src/components/Footer.tsx`: Cierre con titular Newsreader serif, tarjetas táctiles y sello de monograma personal.
-- **Verificación Técnica:** `npm run lint` y `npm run build` completados con **0 errores** (840ms).
-- **Siguiente Gate:** Fase 16 (Integración Final, Motion QA y Despliegue V3).
+1. **Fase 13 — Sistema firma, Hero y Narrative Spine:** [`deliverables/phase-13-signature-hero.md`](deliverables/phase-13-signature-hero.md)
+2. **Fase 14 — Teatro de Artefactos en Selected Work:** [`deliverables/phase-14-signature-selected-work.md`](deliverables/phase-14-signature-selected-work.md)
+3. **Fase 15 — Trayectoria, Matriz de Capacidades y Cierre:** [`deliverables/phase-15-signature-experience-closure.md`](deliverables/phase-15-signature-experience-closure.md)
+4. **Fase 16 — Integración Final, Motion QA y Cierre V3:** [`deliverables/phase-16-signature-final-integration.md`](deliverables/phase-16-signature-final-integration.md)
+
+---
+
+## Verificaciones Técnicas Finales
+
+- **TypeScript (`npm run lint`):** 0 errores.
+- **Build de Producción (`npm run build`):** Compilación limpia en 876ms.
+- **Identidad & Motion:** Sistema "El Hilo Dorado" con tipografía híbrida (Sans + Newsreader serif), monograma con presencia en tercio derecho, cero grillas de cards en el flujo narrativo y teatro de artefactos propios.
