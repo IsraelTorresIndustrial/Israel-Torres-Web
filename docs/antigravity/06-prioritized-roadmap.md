@@ -28,6 +28,9 @@ El roadmap describe prioridad de producto. El orden operativo está definido por
 - Sustituir Capabilities + marquee por un mapa de evidencia.
 - Comprimir credenciales y herramientas.
 - Diseñar mobile como una composición propia, no como desktop apilado.
+- Convertir el monograma y la idea de reducción de ambigüedad en un sistema visual firma.
+- Sustituir Narrative Spine en cards por una línea realmente continua.
+- Dar a cada caso una escenografía de artefacto distinta.
 
 ## P2 — Mejora UX/UI
 
@@ -63,3 +66,12 @@ El roadmap describe prioridad de producto. El orden operativo está definido por
 2. Fase 10 — Selected Work como capítulos.
 3. Fase 11 — Trayectoria y mapa de evidencia.
 4. Fase 12 — Integración, responsive y QA final.
+
+## Orden operativo de la tercera etapa
+
+1. **Fase 13 — Sistema firma, Navbar, Hero y Narrative Spine. Única fase activa.**
+2. Teatro de artefactos en Selected Work — gate futuro, brief aún no creado.
+3. Trayectoria, capability map y cierre — gate futuro, brief aún no creado.
+4. Integración y motion QA — gate futuro, brief aún no creado.
+
+La falta deliberada de briefs posteriores impide ejecutar la tercera etapa de una sola vez. Primero se valida si El Hilo Dorado se siente propio, profesional y claro en desktop/mobile.

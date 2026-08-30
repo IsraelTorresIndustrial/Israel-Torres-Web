@@ -32,6 +32,7 @@ Una fase no se considera terminada porque “se ve mejor”. Debe cumplir sus cr
 - `05-content-evidence-register.md`: control de afirmaciones y evidencias pendientes.
 - `06-prioritized-roadmap.md`: prioridades P0–P3 y orden de ejecución.
 - `07-frontend-recomposition.md`: dirección maestra del nuevo frontend editorial.
+- `08-signature-visual-system.md`: lenguaje visual propio, motivos de marca y sistema de movimiento V3.
 - `phases/`: briefs acotados para Antigravity.
 - `templates/`: formato obligatorio de cierre de fase.
 - `deliverables/`: resultados producidos por Antigravity.
@@ -48,6 +49,7 @@ Una fase no se considera terminada porque “se ve mejor”. Debe cumplir sus cr
 - Usar la tecnología como historia principal.
 - Encerrar cada contenido en una card.
 - agregar animaciones, gradientes o adornos sin una función narrativa.
+- usar ventanas de software, cards y badges como solución visual predeterminada.
 - Comenzar una fase futura “aprovechando” una edición de la fase actual.
 
 ## Relación con el código
@@ -68,3 +70,13 @@ La primera implementación mejoró marca, limpieza y veracidad, pero conservó l
 - Fase 12: integración responsive, accesibilidad y cierre.
 
 Sólo la fase indicada en `CURRENT_PHASE.md` está autorizada. Haber completado las Fases 00–08 no autoriza ejecutar 09–12 de forma continua.
+
+## Tercera etapa: identidad visual firma
+
+La V2 ordenó el contenido, pero todavía conservó una estética corporativa intercambiable. La tercera etapa introduce **El Hilo Dorado**, un sistema derivado del monograma y de la historia “de la ambigüedad al artefacto tangible”.
+
+Por ahora existe un solo brief ejecutable:
+
+- Fase 13: Navbar, Hero y Narrative Spine como prueba del sistema firma.
+
+Los briefs posteriores no se crean hasta revisar esta primera aplicación en desktop y mobile. La existencia de `08-signature-visual-system.md` define una visión, no autoriza implementar el sitio completo.

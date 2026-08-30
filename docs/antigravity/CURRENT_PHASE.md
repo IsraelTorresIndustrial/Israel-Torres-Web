@@ -1,24 +1,20 @@
-# Estado del Proyecto Antigravity — Recomposición Visual V2
+# Estado del Proyecto Antigravity — Sistema visual firma V3
 
-## Estado General
+## Fase activa
 
-- **Fases Históricas 00–08:** Completadas (Decisiones factuales y de veracidad integradas).
-- **Fases Visuales 09–12 (Recomposición V2):** **100% Completadas y Desplegadas**.
-- **Estado:** **Producción Activa & Estable**.
-
----
-
-## Registro de Entregables V2
-
-1. **Fase 09 — Hero y columna vertebral narrativa:** [`deliverables/phase-09-hero-narrative-spine.md`](deliverables/phase-09-hero-narrative-spine.md)
-2. **Fase 10 — Capítulos visuales de Selected Work:** [`deliverables/phase-10-selected-work-chapters.md`](deliverables/phase-10-selected-work-chapters.md)
-3. **Fase 11 — Trayectoria y mapa de evidencia:** [`deliverables/phase-11-experience-proof-map.md`](deliverables/phase-11-experience-proof-map.md)
-4. **Fase 12 — Integración final y calidad V2:** [`deliverables/phase-12-integration-quality.md`](deliverables/phase-12-integration-quality.md)
+- **Fase 13 — Sistema firma, Hero y Narrative Spine**
+- Brief autorizado: [`phases/phase-13-signature-hero.md`](phases/phase-13-signature-hero.md)
+- Estado: **completada — en espera de aprobación**
 
 ---
 
-## Verificaciones Técnicas Finales
+## Resultados de la Fase 13
 
-- **TypeScript (`npm run lint`):** 0 errores.
-- **Build de Producción (`npm run build`):** Compilación limpia en 808ms.
-- **Arquitectura Visual V2:** Editorial asimétrico, narrativa en 7 actos sin cards genéricas repetidas, y compresión drástica en mobile.
+- **Entregable Oficial:** [`deliverables/phase-13-signature-hero.md`](deliverables/phase-13-signature-hero.md)
+- **Implementación Completada en Producto:**
+  - `src/components/Navbar.tsx`: Navegación refinada con indicador activo dorado inferior y botón sobrio.
+  - `src/components/Hero.tsx`: Presencia visible del monograma en el tercio derecho (~30%), acento transformacional en serif `Newsreader`, 4 fragmentos conceptuales estructurados por El Hilo Dorado y botón firma táctil.
+  - `src/components/Impact.tsx`: Narrative Spine 100% continuo (sin grilla de cards) con eje horizontal en desktop, eje vertical en mobile y nodo destacado en el Prototipo.
+  - `src/index.css` & `index.html`: Tokens de canvas cálido (`#F7F5EF`), fuente `Newsreader` y keyframes de entrada controlada (máx. 850ms, respetando `prefers-reduced-motion`).
+- **Verificación Técnica:** `npm run lint` y `npm run build` completados con **0 errores** (885ms).
+- **Control de Alcance:** Ninguna sección inferior (`Projects`, `Capabilities`, `Experience`, `Credentials`, `Process`, `Contact`, `Footer`) fue modificada.

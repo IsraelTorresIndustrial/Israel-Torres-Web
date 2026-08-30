@@ -13,3 +13,7 @@ Sólo registrar aquí decisiones aprobadas por Israel o por el arquitecto dentro
 | 2026-08-29 | Sustituir la arquitectura visual de Fase 02 por la Arquitectura Narrativa V2 | La versión previa formalizó el layout existente en vez de recomponerlo | Fases 09–12 | Aprobada |
 | 2026-08-29 | Limitar la Fase 09 a Hero + Narrative Spine | Permite validar una dirección visual real antes de extenderla al resto del portfolio | Navbar, Hero, Impact y estilos base | Aprobada |
 | 2026-08-29 | Diseñar mobile como composición propia | El sitio actual alcanza aproximadamente 18.300 px en 390 px y apila patrones desktop durante más de 20 pantallas | Responsive completo | Aprobada |
+| 2026-08-29 | Adoptar `El Hilo Dorado` como sistema visual firma V3 | Deriva del monograma y representa el paso de ambigüedad a artefacto tangible; evita efectos genéricos sin función | Marca, movimiento y composición | Aprobada |
+| 2026-08-29 | Mantener la arquitectura narrativa V2 y reabrir su lenguaje visual | La historia es más clara, pero su ejecución aún depende de cards, ventanas, azul corporativo y microcopy mono | Frontend completo por fases | Aprobada |
+| 2026-08-29 | Abrir únicamente Fase 13 y no crear briefs posteriores | Permite validar el sistema firma en Hero/Narrative Spine antes de extenderlo | Flujo de Antigravity | Aprobada |
+| 2026-08-29 | Evitar dependencias de animación, SVG complejo, canvas y WebGL | Los gestos previstos se resuelven con HTML/CSS e IntersectionObserver, preservando performance y accesibilidad | Implementación visual V3 | Aprobada |

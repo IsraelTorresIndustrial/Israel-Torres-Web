@@ -48,25 +48,29 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-200 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-250 ${
         scrolled || isOpen
-          ? 'border-b border-navy-800/80 bg-void/95 shadow-lg backdrop-blur-md'
+          ? 'border-b border-navy-800/80 bg-void/95 shadow-md backdrop-blur-md'
           : 'bg-transparent'
       }`}
     >
-      {/* Top Gold Accent Line */}
-      <div className="absolute inset-x-0 top-0 h-[2px] bg-navy-800/40" aria-hidden="true">
+      {/* Top Golden Thread Progress Indicator */}
+      <div className="absolute inset-x-0 top-0 h-[2px] bg-navy-900/60" aria-hidden="true">
         <span
-          className="block h-full gold-accent-line transition-[width] duration-150"
+          className="block h-full golden-thread transition-[width] duration-150"
           style={{ width: `${progress}%` }}
         />
       </div>
 
       <div className="mx-auto flex h-[68px] max-w-[1240px] items-center justify-between px-5 md:px-8">
         
-        {/* Brand Signature */}
-        <a href="#inicio" className="group flex items-center gap-3 text-white" aria-label="Volver al inicio">
-          <div className="relative h-8 w-8 overflow-hidden rounded-md border border-gold/30 bg-night p-0.5 shadow-xs transition-colors group-hover:border-gold">
+        {/* Brand Monogram Signature */}
+        <a
+          href="#inicio"
+          className="group flex items-center gap-3 text-white"
+          aria-label="Israel Torres — Inicio"
+        >
+          <div className="relative h-8 w-8 overflow-hidden rounded-md border border-gold/40 bg-night/90 p-0.5 shadow-xs transition-colors group-hover:border-gold-light">
             <img
               src="/logo.png"
               alt="Israel Torres Emblema"
@@ -85,8 +89,8 @@ export function Navbar() {
           </div>
         </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Navegación principal">
+        {/* Desktop Navigation with Signature Editorial Active Indicator */}
+        <nav className="hidden items-center gap-2 md:flex" aria-label="Navegación principal">
           {navLinks.map((link) => {
             const isActive = activeId === link.id;
             return (
@@ -94,31 +98,37 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 aria-current={isActive ? 'location' : undefined}
-                className={`rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
+                className={`relative px-3 py-1.5 text-xs transition-colors ${
                   isActive
-                    ? 'bg-navy-800 text-white font-semibold'
-                    : 'text-slate-300 hover:bg-navy-800/50 hover:text-white'
+                    ? 'text-white font-semibold'
+                    : 'text-slate-300 hover:text-white font-medium'
                 }`}
               >
                 {link.name}
+                {isActive && (
+                  <span
+                    className="absolute inset-x-2 bottom-0 h-[2px] bg-gold rounded-full"
+                    aria-hidden="true"
+                  />
+                )}
               </a>
             );
           })}
         </nav>
 
-        {/* Action Buttons */}
-        <div className="hidden items-center gap-2.5 md:flex">
+        {/* Action Elements */}
+        <div className="hidden items-center gap-3 md:flex">
           <a
             href={portfolioData.personalInfo.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1 rounded-md px-2.5 py-1.5 text-xs font-medium text-slate-300 hover:text-white transition-colors"
+            className="inline-flex items-center gap-1 text-xs font-medium text-slate-300 hover:text-white transition-colors"
           >
-            LinkedIn <ArrowUpRight className="h-3 w-3" />
+            LinkedIn <ArrowUpRight className="h-3 w-3 text-slate-400" />
           </a>
           <a
             href="#contacto"
-            className="inline-flex items-center rounded-md bg-brand-blue px-3.5 py-1.5 text-xs font-semibold text-white shadow-xs transition-all hover:bg-blue-600"
+            className="inline-flex items-center rounded-md border border-gold/40 bg-night/80 px-3 py-1.5 text-xs font-semibold text-gold-light shadow-xs transition-all hover:border-gold hover:bg-gold/10"
           >
             Contacto
           </a>
@@ -168,7 +178,7 @@ export function Navbar() {
               <a
                 href="#contacto"
                 onClick={() => setIsOpen(false)}
-                className="inline-flex items-center justify-center rounded-lg bg-brand-blue py-2 text-xs font-bold text-white"
+                className="inline-flex items-center justify-center rounded-lg border border-gold/40 bg-gold/10 py-2 text-xs font-bold text-gold-light"
               >
                 Contacto Directo
               </a>

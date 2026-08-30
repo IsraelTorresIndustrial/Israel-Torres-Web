@@ -180,3 +180,15 @@ La identidad no se consigue añadiendo efectos. Se consigue cuando:
 ## 11. Regla de implementación
 
 No reescribir la aplicación desde cero. Reutilizar React, Vite, Tailwind, data centralizada, semántica, contenido aprobado y componentes cuando su responsabilidad siga siendo válida. Refactorizar layout y presentación sí está autorizado por fase.
+
+## 12. Hallazgo posterior a la V2
+
+La recomposición se ejecutó, pero no cumplió completamente varias intenciones de este documento:
+
+- Narrative Spine terminó como seis cards dentro de una grilla.
+- Selected Work mantiene varias ventanas oscuras de software.
+- El logo continúa funcionando principalmente como marca de agua.
+- El lenguaje visual sigue dependiendo de azul corporativo, mono, bordes y radios.
+- La originalidad se apoya en copy y orden, no todavía en una gramática visual propia.
+
+La estructura narrativa V2 se conserva. La capa de identidad y movimiento se amplía mediante `08-signature-visual-system.md`, comenzando únicamente por la Fase 13.

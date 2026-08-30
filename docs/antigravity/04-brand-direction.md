@@ -87,3 +87,22 @@ La paleta ya está bien encaminada; el siguiente salto no proviene de agregar m�
 - labels de contexto simples;
 - espacios en blanco con intención;
 - transiciones sutiles que indiquen progresión.
+
+## Evolución V3 — De paleta a firma
+
+Navy y dorado por sí solos no constituyen identidad. El sistema firma aprobado se denomina **El Hilo Dorado** y se desarrolla en `08-signature-visual-system.md`.
+
+Su función es traducir dos fuentes reales:
+
+- las curvas y el aro del monograma;
+- la capacidad profesional de pasar de señales dispersas a una propuesta visible y testeable.
+
+El hilo puede conectar, subrayar, atravesar o cerrar una composición. Los efectos sólo se autorizan cuando muestran fragmentos encontrando estructura, artefactos revelando capas o una trayectoria avanzando. Se descartan partículas, glows permanentes, pulsos infinitos y movimiento sin consecuencia narrativa.
+
+La firma no reemplaza el sistema funcional:
+
+- azul sigue reservado para interacción y foco;
+- dorado identifica transformación y resolución;
+- serif editorial aporta humanidad en frases clave;
+- sans sostiene claridad;
+- mono se limita a metadata auténtica.
