@@ -19,6 +19,16 @@ export interface ProjectItem {
   isFlagship?: boolean;
 }
 
+export interface CardProduct {
+  id: string;
+  name: string;
+  brand: 'Visa' | 'Mastercard';
+  segment: string;
+  query: string;
+  answer: string;
+  url: string;
+}
+
 export const portfolioData = {
   personalInfo: {
     name: 'Israel Torres',
@@ -43,6 +53,45 @@ export const portfolioData = {
     'Coordinación de +30 equipos',
     'Prototipado con IA',
   ],
+
+  cardProducts: [
+    {
+      id: 'infinite',
+      name: 'Visa Infinite',
+      brand: 'Visa',
+      segment: 'High Net Worth & Travel',
+      query: '¿Cuáles son los beneficios de viaje y salones VIP para Visa Infinite?',
+      answer: 'Acumulación preferente en Dólares Premio, acceso ilimitado a Salones VIP Pacific Club y cobertura médica internacional sin deducible.',
+      url: 'https://sitiospublicos.bancochile.cl/personas/tarjetas/detalle/visa-infinite',
+    },
+    {
+      id: 'signature',
+      name: 'Visa Signature',
+      brand: 'Visa',
+      segment: 'Premium & Viajeros Frecuentes',
+      query: '¿Qué condiciones de acumulación y seguros aplican en compras internacionales?',
+      answer: 'Acumulación de 1.5 puntos por USD. Cobertura médica en viajes al extranjero sin necesidad de aviso previo y protección de compras.',
+      url: 'https://sitiospublicos.bancochile.cl/personas/tarjetas/detalle/visa-signature',
+    },
+    {
+      id: 'black',
+      name: 'Mastercard Black',
+      brand: 'Mastercard',
+      segment: 'Elite & Lifestyle',
+      query: '¿Qué accesos y concierge ofrece Mastercard Black para el titular?',
+      answer: 'Membresía Mastercard Airport Experiences por LoungeKey, servicio de Concierge global 24/7 y garantía extendida en compras.',
+      url: 'https://sitiospublicos.bancochile.cl/personas/tarjetas/detalle/mastercard-black',
+    },
+    {
+      id: 'platinum',
+      name: 'Visa Platinum',
+      brand: 'Visa',
+      segment: 'Mid-High & Beneficios',
+      query: '¿Cuáles son los beneficios para compras y protección de precio?',
+      answer: 'Protección de compras y precios, acumulación en programa de fidelización y asistencia médica internacional.',
+      url: 'https://sitiospublicos.bancochile.cl/personas/tarjetas/detalle/visa-platinum',
+    },
+  ] as CardProduct[],
 
   narrativeSpine: {
     eyebrow: '01 / Mecanismo Diferencial',

@@ -2,12 +2,14 @@ import { useState } from 'react';
 import {
   ArrowDownRight,
   ArrowRight,
+  ArrowUpRight,
   Bot,
   Building2,
   CheckCircle2,
   ChevronDown,
   ChevronRight,
   ChevronUp,
+  CreditCard,
   Database,
   ExternalLink,
   FileSpreadsheet,
@@ -22,9 +24,10 @@ import {
 import { portfolioData } from '../data';
 
 export function Projects() {
-  const { mainChapters, secondaryProjects } = portfolioData;
+  const { mainChapters, secondaryProjects, cardProducts } = portfolioData;
   const [expandedChapterId, setExpandedChapterId] = useState<string | null>(null);
   const [expandedSecondaryId, setExpandedSecondaryId] = useState<string | null>(null);
+  const [activeCardId, setActiveCardId] = useState<string>('signature');
 
   const toggleChapter = (id: string) => {
     setExpandedChapterId((curr) => (curr === id ? null : id));
@@ -33,6 +36,8 @@ export function Projects() {
   const toggleSecondary = (id: string) => {
     setExpandedSecondaryId((curr) => (curr === id ? null : id));
   };
+
+  const currentCard = cardProducts?.find((c) => c.id === activeCardId) || cardProducts?.[0];
 
   return (
     <section id="proyectos" className="relative overflow-hidden bg-canvas py-16 md:py-24 border-b border-line">
@@ -215,55 +220,118 @@ export function Projects() {
               <span className="text-slate-600">{mainChapters[1].context}</span>
             </div>
 
-            <div className="mt-4 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div className="mt-4 grid gap-8 lg:grid-cols-[0.98fr_1.02fr] lg:items-center">
               
-              {/* Left Column: Knowledge Graph to Answer Artifact */}
+              {/* Left Column: Interactive Knowledge Graph to Answer Artifact with Connected Card Links */}
               <div className="order-2 lg:order-1 relative">
                 <div className="rounded-2xl border border-line bg-paper p-6 shadow-xs">
                   <div className="flex items-center justify-between border-b border-line pb-3 text-xs">
                     <span className="font-mono text-[9px] font-bold uppercase tracking-wider text-slate-500">
-                      Arquitectura RAG & Consulta de Mercado
+                      Copiloto RAG & Asesoría Bancaria Guiada
                     </span>
                     <span className="rounded bg-emerald-50 px-2 py-0.5 font-mono text-[8px] uppercase font-bold text-emerald-700">
                       Control Factual Estricto
                     </span>
                   </div>
 
-                  {/* Curated Knowledge Sources flowing via Golden Thread */}
-                  <div className="mt-4 space-y-2.5">
-                    <div className="grid grid-cols-3 gap-1.5 text-center font-mono text-[9px]">
-                      <div className="rounded border border-line bg-canvas p-2 text-slate-700">
-                        Tasas & Costos
-                      </div>
-                      <div className="rounded border border-line bg-canvas p-2 text-slate-700">
-                        Beneficios Tarjetas
-                      </div>
-                      <div className="rounded border border-line bg-canvas p-2 text-slate-700">
-                        Benchmark 1:1
-                      </div>
+                  {/* Interactive Card Product Selector Tabs */}
+                  <div className="mt-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-mono text-[9px] uppercase font-bold text-slate-500">
+                        Selecciona tarjeta para consultar:
+                      </span>
+                      <span className="font-mono text-[8px] text-gold-deep font-semibold">
+                        4 Segmentos
+                      </span>
                     </div>
 
-                    {/* Connecting Thread Conduit */}
-                    <div className="h-[2px] w-full golden-thread my-1" aria-hidden="true" />
-
-                    {/* Factual Response Card */}
-                    <div className="rounded-xl border border-gold/30 bg-canvas p-4 text-xs">
-                      <div className="flex items-center justify-between text-gold-deep font-mono text-[9px] font-bold">
-                        <span className="flex items-center gap-1">
-                          <Bot className="h-3.5 w-3.5" />
-                          Respuesta Verificada · Modo Ejecutivo
-                        </span>
-                        <span className="text-emerald-700">100% Determinístico</span>
-                      </div>
-                      <p className="mt-2 text-xs text-ink font-medium leading-relaxed">
-                        "En el segmento Signature, la acumulación es 1.5 puntos por USD. Para viajes al extranjero, la cobertura médica no requiere aviso previo."
-                      </p>
-                      <div className="mt-3 pt-2 border-t border-line/60 flex items-center justify-between text-[9px] font-mono text-muted">
-                        <span>Fuente: Tarifario Vigente Q3</span>
-                        <span>Doble Interfaz B2B / B2C</span>
-                      </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+                      {cardProducts?.map((card) => {
+                        const isSelected = card.id === activeCardId;
+                        return (
+                          <button
+                            key={card.id}
+                            type="button"
+                            onClick={() => setActiveCardId(card.id)}
+                            className={`rounded-lg p-2 text-left transition-all flex flex-col justify-between ${
+                              isSelected
+                                ? 'border-2 border-gold bg-gold/10 shadow-xs'
+                                : 'border border-line bg-canvas hover:border-slate-300'
+                            }`}
+                          >
+                            <span className="font-mono text-[8px] uppercase font-bold text-slate-400">
+                              {card.brand}
+                            </span>
+                            <span className={`mt-1 font-display text-xs font-bold leading-tight ${isSelected ? 'text-gold-deep' : 'text-ink'}`}>
+                              {card.name.replace('Visa ', '').replace('Mastercard ', '')}
+                            </span>
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
+
+                  {/* Connecting Golden Thread Conduit */}
+                  <div className="h-[2px] w-full golden-thread my-3" aria-hidden="true" />
+
+                  {/* Factual Response Card for Active Card */}
+                  {currentCard && (
+                    <div className="rounded-xl border border-gold/30 bg-canvas p-4 text-xs">
+                      
+                      <div className="flex flex-wrap items-center justify-between gap-1 text-gold-deep font-mono text-[9px] font-bold">
+                        <span className="flex items-center gap-1">
+                          <Bot className="h-3.5 w-3.5" />
+                          Consulta: {currentCard.name} ({currentCard.segment})
+                        </span>
+                        <span className="text-emerald-700">Respuesta Determinística</span>
+                      </div>
+
+                      <p className="mt-2 text-xs font-semibold text-slate-800">
+                        "{currentCard.query}"
+                      </p>
+
+                      <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                        {currentCard.answer}
+                      </p>
+
+                      {/* Explicit Connected "Conoce la tarjeta" Button */}
+                      <div className="mt-4 pt-3 border-t border-line/60 flex flex-wrap items-center justify-between gap-2">
+                        <span className="text-[9px] font-mono text-muted">
+                          Fuente: Banco de Chile · Sitio Oficial
+                        </span>
+                        <a
+                          href={currentCard.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-gold/60 bg-gold/15 px-3 py-1.5 font-mono text-[10px] font-bold text-ink hover:bg-gold hover:text-white transition-all shadow-xs"
+                        >
+                          Conoce la tarjeta {currentCard.name} <ArrowUpRight className="h-3.5 w-3.5 text-gold-deep" />
+                        </a>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Direct Link Grid for All 4 Cards */}
+                  <div className="mt-4 pt-3 border-t border-line">
+                    <span className="font-mono text-[8px] uppercase font-bold text-slate-400 block mb-2">
+                      Accesos directos oficiales (Banco de Chile):
+                    </span>
+                    <div className="grid grid-cols-2 gap-1.5 text-[10px] font-mono">
+                      {cardProducts?.map((card) => (
+                        <a
+                          key={card.id}
+                          href={card.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center justify-between rounded-md border border-line bg-paper px-2.5 py-1 text-slate-700 hover:border-gold/50 hover:text-gold-deep transition-colors"
+                        >
+                          <span className="truncate">{card.name}</span>
+                          <ExternalLink className="h-3 w-3 shrink-0 ml-1 text-slate-400" />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
