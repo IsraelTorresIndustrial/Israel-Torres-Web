@@ -1,4 +1,4 @@
-import { ArrowDownRight, ChevronRight, MapPin, Sparkles } from 'lucide-react';
+import { ArrowDownRight, ChevronRight, MapPin } from 'lucide-react';
 import { portfolioData } from '../data';
 
 export function Hero() {
@@ -14,18 +14,19 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden bg-void text-white pt-24 pb-14 md:pt-32 md:pb-20 border-b border-navy-800"
+      className="relative overflow-hidden bg-void text-white pt-24 pb-14 md:pt-32 md:pb-20"
     >
+      {/* Subtle Ambient Monogram Arc in Deep Night */}
+      <div className="monogram-arc-dark -right-24 -top-24 h-[560px] w-[560px]" aria-hidden="true" />
+
       {/* Background Monogram Composition (Intentional framing in the right-third) */}
-      <div className="absolute right-[-4%] top-1/2 -translate-y-1/2 pointer-events-none hidden lg:block opacity-25 select-none transition-opacity">
+      <div className="absolute right-[-4%] top-1/2 -translate-y-1/2 pointer-events-none hidden lg:block opacity-25 select-none transition-opacity" aria-hidden="true">
         <div className="relative">
           <img
             src="/logo.png"
             alt=""
             className="h-[480px] w-[480px] object-contain drop-shadow-[0_0_45px_rgba(197,138,36,0.18)]"
-            aria-hidden="true"
           />
-          {/* Subtle radial mask to blend with the canvas */}
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-void/40 to-void" />
         </div>
       </div>
@@ -114,6 +115,9 @@ export function Hero() {
         </div>
 
       </div>
+
+      {/* Golden Thread crossing down into Parchment act */}
+      <div className="absolute bottom-0 inset-x-0 h-[2px] golden-thread opacity-70" aria-hidden="true" />
     </section>
   );
 }

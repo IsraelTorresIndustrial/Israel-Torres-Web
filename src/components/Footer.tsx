@@ -4,7 +4,7 @@ import { portfolioData } from '../data';
 export function Footer() {
   const { personalInfo } = portfolioData;
   return (
-    <footer className="border-t border-navy-800 bg-void py-8 text-white">
+    <footer className="border-t border-navy-850 bg-void pb-12 pt-6 text-white">
       <div className="mx-auto flex max-w-[1240px] flex-col gap-5 px-5 md:flex-row md:items-center md:justify-between md:px-8">
         <div className="flex items-center gap-3">
           <div className="relative h-8 w-8 overflow-hidden rounded-lg border border-gold/40 bg-night p-0.5 shadow-xs">

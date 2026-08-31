@@ -29,9 +29,12 @@ export function Impact() {
     <section
       id="enfoque"
       ref={sectionRef}
-      className="relative overflow-hidden bg-canvas py-16 md:py-24 border-b border-line"
+      className="relative overflow-hidden bg-canvas py-16 md:py-24"
     >
-      <div className="mx-auto max-w-[1240px] px-5 md:px-8">
+      {/* Ambient Monogram Arc in Warm Parchment */}
+      <div className="monogram-arc-light -left-32 -bottom-32 h-[520px] w-[520px]" aria-hidden="true" />
+
+      <div className="relative mx-auto max-w-[1240px] px-5 md:px-8">
         
         {/* Section Lead / Editorial Opening */}
         <div className="max-w-[900px]">

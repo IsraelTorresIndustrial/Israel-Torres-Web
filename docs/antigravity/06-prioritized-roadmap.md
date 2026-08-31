@@ -69,9 +69,13 @@ El roadmap describe prioridad de producto. El orden operativo está definido por
 
 ## Orden operativo de la tercera etapa
 
-1. **Fase 13 — Sistema firma, Navbar, Hero y Narrative Spine. Única fase activa.**
-2. Teatro de artefactos en Selected Work — gate futuro, brief aún no creado.
-3. Trayectoria, capability map y cierre — gate futuro, brief aún no creado.
-4. Integración y motion QA — gate futuro, brief aún no creado.
+1. Fase 13 — Sistema firma, Navbar, Hero y Narrative Spine. Completada.
+2. Fase 14 — Teatro de artefactos en Selected Work. Completada.
+3. Fase 15 — Trayectoria, capability map y cierre. Completada.
+4. Fase 16 — Integración y motion QA. Completada.
 
-La falta deliberada de briefs posteriores impide ejecutar la tercera etapa de una sola vez. Primero se valida si El Hilo Dorado se siente propio, profesional y claro en desktop/mobile.
+## Orden operativo de la cuarta etapa
+
+1. **Fase 17 — Dirección de arte, fondos y coherencia visual. Única fase activa.**
+
+La estructura, el contenido y la evidencia están congelados. No se contempla otra fase hasta revisar el resultado visual de V3.1.

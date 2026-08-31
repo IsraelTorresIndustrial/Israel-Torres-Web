@@ -106,3 +106,11 @@ La firma no reemplaza el sistema funcional:
 - serif editorial aporta humanidad en frases clave;
 - sans sostiene claridad;
 - mono se limita a metadata auténtica.
+
+## Dirección de arte V3.1
+
+El sistema firma necesita una partitura de superficies para no convertirse en un motivo aplicado sobre componentes heterogéneos. La guía `09-art-direction-coherence.md` define seis ambientes: Night, Parchment, Studio, Structure, Archive y Closure.
+
+Estos nombres no aparecen en la interfaz. Sirven para decidir fondo, contraste y profundidad. El objetivo no es que cada sección tenga un efecto distinto, sino que cada acto tenga un ambiente funcional y que Hero/Contact cierren el mismo arco visual.
+
+Los grids técnicos, dot matrix y glows genéricos dejan de ser fondos predeterminados. Se priorizan canvas cálido, papel, cambios tonales, arcos amplios derivados del monograma y segmentos del Hilo Dorado con función narrativa.

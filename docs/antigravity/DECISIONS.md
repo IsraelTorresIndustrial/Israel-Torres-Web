@@ -17,3 +17,6 @@ Sólo registrar aquí decisiones aprobadas por Israel o por el arquitecto dentro
 | 2026-08-29 | Mantener la arquitectura narrativa V2 y reabrir su lenguaje visual | La historia es más clara, pero su ejecución aún depende de cards, ventanas, azul corporativo y microcopy mono | Frontend completo por fases | Aprobada |
 | 2026-08-29 | Abrir únicamente Fase 13 y no crear briefs posteriores | Permite validar el sistema firma en Hero/Narrative Spine antes de extenderlo | Flujo de Antigravity | Aprobada |
 | 2026-08-29 | Evitar dependencias de animación, SVG complejo, canvas y WebGL | Los gestos previstos se resuelven con HTML/CSS e IntersectionObserver, preservando performance y accesibilidad | Implementación visual V3 | Aprobada |
+| 2026-08-29 | Congelar contenido y arquitectura durante la Fase 17 | El objetivo solicitado es pulir diseño, fondos y coherencia sin abrir otra recomposición narrativa | Frontend V3.1 | Aprobada |
+| 2026-08-29 | Adoptar una partitura de seis superficies | Da función a cada fondo y conecta el recorrido sin depender de bordes repetidos | Dirección de arte V3.1 | Aprobada |
+| 2026-08-29 | Reservar profundidad para artefactos e interacción | Evita cards dentro de cards y permite que texto, timeline y matrices respiren en el plano editorial | Sistema de materiales | Aprobada |

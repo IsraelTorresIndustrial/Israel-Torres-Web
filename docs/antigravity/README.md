@@ -33,6 +33,7 @@ Una fase no se considera terminada porque “se ve mejor”. Debe cumplir sus cr
 - `06-prioritized-roadmap.md`: prioridades P0–P3 y orden de ejecución.
 - `07-frontend-recomposition.md`: dirección maestra del nuevo frontend editorial.
 - `08-signature-visual-system.md`: lenguaje visual propio, motivos de marca y sistema de movimiento V3.
+- `09-art-direction-coherence.md`: partitura de fondos, superficies, materiales y estados para el pulido V3.1.
 - `phases/`: briefs acotados para Antigravity.
 - `templates/`: formato obligatorio de cierre de fase.
 - `deliverables/`: resultados producidos por Antigravity.
@@ -75,8 +76,10 @@ Sólo la fase indicada en `CURRENT_PHASE.md` está autorizada. Haber completado 
 
 La V2 ordenó el contenido, pero todavía conservó una estética corporativa intercambiable. La tercera etapa introduce **El Hilo Dorado**, un sistema derivado del monograma y de la historia “de la ambigüedad al artefacto tangible”.
 
-Por ahora existe un solo brief ejecutable:
+Las Fases 13–16 extendieron el sistema desde el Hero hasta el cierre. Sus briefs y entregables se conservan como registro histórico, pero ya no constituyen autorización activa.
 
-- Fase 13: Navbar, Hero y Narrative Spine como prueba del sistema firma.
+## Cuarta etapa: dirección de arte V3.1
 
-Los briefs posteriores no se crean hasta revisar esta primera aplicación en desktop y mobile. La existencia de `08-signature-visual-system.md` define una visión, no autoriza implementar el sitio completo.
+Después de extender El Hilo Dorado, el contenido y la arquitectura se congelan. La Fase 17 trabaja únicamente fondos, superficies, transiciones, materiales, profundidad, tipografía visual y estados interactivos.
+
+Esta etapa no autoriza copywriting, cambios de proyectos, nuevas secciones, funcionalidad, dependencias ni despliegue.
