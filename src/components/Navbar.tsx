@@ -155,16 +155,24 @@ export function Navbar() {
           aria-label="Navegación móvil"
         >
           <div className="mx-auto flex max-w-[1240px] flex-col gap-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="rounded-lg px-3 py-2.5 font-display text-sm font-semibold text-slate-200 hover:bg-navy-800/80 hover:text-white"
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeId === link.id;
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  aria-current={isActive ? 'location' : undefined}
+                  className={`rounded-lg px-3 py-2.5 font-display text-sm font-semibold transition-colors ${
+                    isActive
+                      ? 'bg-navy-800/80 text-white'
+                      : 'text-slate-200 hover:bg-navy-800/80 hover:text-white'
+                  }`}
+                >
+                  {link.name}
+                </a>
+              );
+            })}
             <div className="mt-3 flex flex-col gap-2 border-t border-navy-800 pt-3">
               <a
                 href={portfolioData.personalInfo.linkedin}
