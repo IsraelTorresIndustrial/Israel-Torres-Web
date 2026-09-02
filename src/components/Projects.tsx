@@ -105,6 +105,7 @@ export function Projects() {
                     type="button"
                     onClick={() => toggleChapter(mainChapters[0].id)}
                     aria-expanded={expandedChapterId === mainChapters[0].id}
+                    aria-controls={`chapter-content-${mainChapters[0].id}`}
                     className="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-gold-deep hover:text-gold transition-colors"
                   >
                     {expandedChapterId === mainChapters[0].id ? 'Ocultar profundización' : 'Profundizar en arquitectura & hechos'}
@@ -181,7 +182,10 @@ export function Projects() {
 
             {/* Inline Deep Dive */}
             {expandedChapterId === mainChapters[0].id && (
-              <div className="mt-6 rounded-xl border border-line bg-paper p-6 text-xs text-slate-700 animate-fadeIn">
+              <div
+                id={`chapter-content-${mainChapters[0].id}`}
+                className="mt-6 rounded-xl border border-line bg-paper p-6 text-xs text-slate-700 animate-fadeIn"
+              >
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <span className="font-mono text-[9px] font-bold uppercase text-gold-deep block">Arquitectura Desacoplada:</span>
@@ -308,6 +312,7 @@ export function Projects() {
                     type="button"
                     onClick={() => toggleChapter(mainChapters[1].id)}
                     aria-expanded={expandedChapterId === mainChapters[1].id}
+                    aria-controls={`chapter-content-${mainChapters[1].id}`}
                     className="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-gold-deep hover:text-gold transition-colors"
                   >
                     {expandedChapterId === mainChapters[1].id ? 'Ocultar profundización' : 'Profundizar en taxonomía & hechos'}
@@ -324,7 +329,10 @@ export function Projects() {
 
             {/* Inline Deep Dive */}
             {expandedChapterId === mainChapters[1].id && (
-              <div className="mt-6 rounded-xl border border-line bg-paper p-6 text-xs text-slate-700 animate-fadeIn">
+              <div
+                id={`chapter-content-${mainChapters[1].id}`}
+                className="mt-6 rounded-xl border border-line bg-paper p-6 text-xs text-slate-700 animate-fadeIn"
+              >
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <span className="font-mono text-[9px] font-bold uppercase text-gold-deep block">Taxonomía & Guardrails:</span>
@@ -463,6 +471,7 @@ export function Projects() {
                 type="button"
                 onClick={() => toggleChapter(mainChapters[2].id)}
                 aria-expanded={expandedChapterId === mainChapters[2].id}
+                aria-controls={`chapter-content-${mainChapters[2].id}`}
                 className="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-gold-deep hover:text-gold transition-colors"
               >
                 {expandedChapterId === mainChapters[2].id ? 'Ocultar profundización' : 'Profundizar en coordinación & hechos'}
@@ -476,7 +485,10 @@ export function Projects() {
 
             {/* Inline Deep Dive */}
             {expandedChapterId === mainChapters[2].id && (
-              <div className="mt-6 rounded-xl border border-line bg-paper p-6 text-xs text-slate-700 animate-fadeIn">
+              <div
+                id={`chapter-content-${mainChapters[2].id}`}
+                className="mt-6 rounded-xl border border-line bg-paper p-6 text-xs text-slate-700 animate-fadeIn"
+              >
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <span className="font-mono text-[9px] font-bold uppercase text-gold-deep block">Mi Rol & Contribución:</span>
@@ -542,6 +554,7 @@ export function Projects() {
                     type="button"
                     onClick={() => toggleSecondary(item.id)}
                     aria-expanded={expandedSecondaryId === item.id}
+                    aria-controls={`secondary-content-${item.id}`}
                     className="inline-flex items-center gap-1 font-mono text-xs font-bold text-gold-deep self-start sm:self-center hover:text-gold transition-colors whitespace-nowrap"
                   >
                     {expandedSecondaryId === item.id ? 'Menos detalle' : 'Ver detalle'}
@@ -555,7 +568,10 @@ export function Projects() {
 
                 {/* Inline Expansion */}
                 {expandedSecondaryId === item.id && (
-                  <div className="mt-4 pt-4 border-t border-line grid gap-3 sm:grid-cols-2 text-xs text-slate-700 animate-fadeIn">
+                  <div
+                    id={`secondary-content-${item.id}`}
+                    className="mt-4 pt-4 border-t border-line grid gap-3 sm:grid-cols-2 text-xs text-slate-700 animate-fadeIn"
+                  >
                     <div className="rounded-lg bg-canvas p-3">
                       <span className="font-mono text-[8px] uppercase font-bold text-slate-500 block">Fricción / Problema:</span>
                       <p className="mt-0.5 text-muted">{item.problem}</p>
