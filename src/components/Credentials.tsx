@@ -73,7 +73,7 @@ export function Credentials() {
           </div>
 
           {/* Grid of Credentials */}
-          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div id="credentials-list" aria-live="polite" className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {displayedCredentials.map((credential) => (
               <div
                 key={`${credential.title}-${credential.issuer}`}
@@ -103,6 +103,8 @@ export function Credentials() {
             <button
               type="button"
               onClick={() => setShowAll((v) => !v)}
+              aria-expanded={showAll}
+              aria-controls="credentials-list"
               className="inline-flex items-center gap-1.5 rounded-lg border border-gold/40 bg-navy-800/80 px-4 py-2 text-xs font-semibold text-gold-light hover:bg-gold/15 hover:text-white transition-colors"
             >
               {showAll ? 'Mostrar selección prioritaria (6)' : `Ver todas las credenciales (${allCredentials.length})`}

@@ -31,6 +31,7 @@ export function Footer() {
             rel="noreferrer"
             className="grid h-8 w-8 place-items-center rounded-lg border border-navy-800 text-slate-400 transition-colors hover:border-gold/40 hover:text-gold-light"
             aria-label="LinkedIn"
+            title="Ver perfil de LinkedIn"
           >
             <Linkedin className="h-3.5 w-3.5" />
           </a>
@@ -40,6 +41,7 @@ export function Footer() {
             rel="noreferrer"
             className="grid h-8 w-8 place-items-center rounded-lg border border-navy-800 text-slate-400 transition-colors hover:border-gold/40 hover:text-gold-light"
             aria-label="GitHub"
+            title="Ver repositorios en GitHub"
           >
             <Github className="h-3.5 w-3.5" />
           </a>
