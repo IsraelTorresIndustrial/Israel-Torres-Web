@@ -1,4 +1,4 @@
-import { ArrowUp, Github, Linkedin } from 'lucide-react';
+import { ArrowUp, Linkedin } from 'lucide-react';
 import { portfolioData } from '../data';
 
 export function Footer() {
@@ -33,15 +33,6 @@ export function Footer() {
             aria-label="LinkedIn"
           >
             <Linkedin className="h-3.5 w-3.5" />
-          </a>
-          <a
-            href={personalInfo.github}
-            target="_blank"
-            rel="noreferrer"
-            className="grid h-8 w-8 place-items-center rounded-lg border border-navy-800 text-slate-400 transition-colors hover:border-gold/40 hover:text-gold-light"
-            aria-label="GitHub"
-          >
-            <Github className="h-3.5 w-3.5" />
           </a>
           <a
             href="#inicio"

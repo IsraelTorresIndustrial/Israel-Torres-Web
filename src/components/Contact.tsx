@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { ArrowUpRight, Linkedin, Mail } from 'lucide-react';
 import { portfolioData } from '../data';
 
 export function Contact() {
@@ -36,8 +36,8 @@ export function Contact() {
           </p>
         </div>
 
-        {/* Primary Contact Action Cards with Tactile Signature Finish */}
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Primary Contact Action Cards (Email & LinkedIn) */}
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 max-w-3xl">
           
           <a
             href={`mailto:${personalInfo.email}`}
@@ -84,31 +84,6 @@ export function Contact() {
             </div>
             <span className="mt-6 font-mono text-[9px] uppercase tracking-wider text-cyan font-bold">
               Conectar en LinkedIn →
-            </span>
-          </a>
-
-          <a
-            href={personalInfo.github}
-            target="_blank"
-            rel="noreferrer"
-            className="group rounded-xl border border-navy-800 bg-night p-6 transition-all hover:border-navy-700 hover:bg-navy-900 flex flex-col justify-between sm:col-span-2 lg:col-span-1 shadow-artifact-dark"
-          >
-            <div>
-              <div className="flex items-center justify-between">
-                <span className="grid h-10 w-10 place-items-center rounded-lg bg-navy-800 text-slate-300 border border-navy-700">
-                  <Github className="h-5 w-5" />
-                </span>
-                <ArrowUpRight className="h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />
-              </div>
-              <h3 className="mt-4 font-display text-base font-bold text-white">
-                GitHub
-              </h3>
-              <p className="mt-1 font-mono text-xs text-slate-400">
-                Repositorios de Código & Prototipos
-              </p>
-            </div>
-            <span className="mt-6 font-mono text-[9px] uppercase tracking-wider text-slate-400 font-semibold">
-              Ver Repositorios →
             </span>
           </a>
 
