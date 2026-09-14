@@ -520,42 +520,43 @@ export function Projects() {
                 key={item.id}
                 className="rounded-xl border border-line bg-paper p-5 transition-all hover:border-gold/30 shadow-xs"
               >
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                  <div className="flex items-start gap-3">
-                    <span className="font-mono text-xs font-bold text-gold-deep mt-0.5">
+                <button
+                  type="button"
+                  onClick={() => toggleSecondary(item.id)}
+                  aria-expanded={expandedSecondaryId === item.id}
+                  aria-controls={`secondary-panel-${item.id}`}
+                  className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-left focus-visible:ring-2 focus-visible:ring-gold focus-visible:outline-none rounded-md group"
+                >
+                  <span className="flex items-start gap-3">
+                    <span className="font-mono text-xs font-bold text-gold-deep mt-0.5 block">
                       {item.number}
                     </span>
-                    <div>
-                      <h4 className="font-display text-base font-bold text-ink leading-snug">
+                    <span className="block">
+                      <strong className="font-display text-base font-bold text-ink leading-snug block">
                         {item.editorialTitle}
-                      </h4>
-                      <p className="font-mono text-[10px] text-gold-deep mt-0.5">
+                      </strong>
+                      <span className="font-mono text-[10px] text-gold-deep mt-0.5 block">
                         {item.title} · <span className="text-slate-500">{item.context}</span>
-                      </p>
-                      <p className="mt-2 text-xs text-slate-700 font-medium max-w-3xl">
+                      </span>
+                      <span className="mt-2 text-xs text-slate-700 font-medium max-w-3xl block">
                         {item.thesis}
-                      </p>
-                    </div>
-                  </div>
+                      </span>
+                    </span>
+                  </span>
 
-                  <button
-                    type="button"
-                    onClick={() => toggleSecondary(item.id)}
-                    aria-expanded={expandedSecondaryId === item.id}
-                    className="inline-flex items-center gap-1 font-mono text-xs font-bold text-gold-deep self-start sm:self-center hover:text-gold transition-colors whitespace-nowrap"
-                  >
+                  <span className="inline-flex items-center gap-1 font-mono text-xs font-bold text-gold-deep self-start sm:self-center group-hover:text-gold transition-colors whitespace-nowrap">
                     {expandedSecondaryId === item.id ? 'Menos detalle' : 'Ver detalle'}
                     {expandedSecondaryId === item.id ? (
                       <ChevronUp className="h-3.5 w-3.5" />
                     ) : (
                       <ChevronDown className="h-3.5 w-3.5" />
                     )}
-                  </button>
-                </div>
+                  </span>
+                </button>
 
                 {/* Inline Expansion */}
                 {expandedSecondaryId === item.id && (
-                  <div className="mt-4 pt-4 border-t border-line grid gap-3 sm:grid-cols-2 text-xs text-slate-700 animate-fadeIn">
+                  <div id={`secondary-panel-${item.id}`} className="mt-4 pt-4 border-t border-line grid gap-3 sm:grid-cols-2 text-xs text-slate-700 animate-fadeIn">
                     <div className="rounded-lg bg-canvas p-3">
                       <span className="font-mono text-[8px] uppercase font-bold text-slate-500 block">Fricción / Problema:</span>
                       <p className="mt-0.5 text-muted">{item.problem}</p>
