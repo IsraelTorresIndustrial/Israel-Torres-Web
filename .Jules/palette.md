@@ -1,3 +1,7 @@
 ## 2024-05-18 - Expandable Accordion Accessibility
 **Learning:** Using an `onClick` on a non-interactive `div` for expandable sections (accordions) creates keyboard accessibility issues, as users cannot tab to the header and press Enter/Space to expand it. In `Experience.tsx`, a `div` wrapped the header content with a nested `button` for the icon, which was semantically incorrect and un-navigable.
 **Action:** When implementing expandable UI patterns like accordions, use a full-width `<button>` for the entire clickable header area. Ensure you remove any nested interactive elements (like a secondary button inside it) and correctly apply `aria-expanded` and `aria-controls` to the main button to provide clear screen reader support and natural keyboard navigation.
+
+## 2024-05-19 - Accordion ARIA Relationship Pattern
+**Learning:** In multiple components (`Projects.tsx`, `Credentials.tsx`), toggle buttons for expanding or revealing content were either missing `aria-controls` or entirely lacking `aria-expanded` and `aria-controls`. Providing `aria-expanded` without `aria-controls` leaves screen reader users unaware of *which* content just expanded, which is a common accessibility issue pattern in dynamic React components here.
+**Action:** Always ensure that when implementing "Show more" or accordion patterns, the toggle `<button>` has an `aria-controls="[content-id]"` attribute that matches the `id` of the dynamically rendered container, and correctly syncs `aria-expanded` to the state.
