@@ -1,9 +1,9 @@
-import { Briefcase, Building2, CheckCircle2, ChevronRight, Layers, LineChart, MapPin, Users } from 'lucide-react';
+import { Briefcase, Building2, CheckCircle2, ChevronRight, Layers, LineChart, MapPin, Sparkles, Users } from 'lucide-react';
 import { portfolioData } from '../data';
 
 export function Experience() {
   const { experienceSpread } = portfolioData;
-  const { featured, progression } = experienceSpread;
+  const { featured, upcomingMilestone, progression } = experienceSpread;
 
   return (
     <section id="experiencia" className="relative overflow-hidden bg-canvas py-16 md:py-24 border-b border-line">
@@ -90,7 +90,39 @@ export function Experience() {
           </div>
         </div>
 
-        {/* 2. PROGRESSION TIMELINE CONNECTED BY THE GOLDEN THREAD */}
+        {/* 2. UPCOMING MILESTONE: ACID LABS (FORWARD-LOOKING) */}
+        {upcomingMilestone && (
+          <div className="mt-8 rounded-2xl border border-dashed border-gold/45 bg-paper/70 p-6 md:p-8 shadow-xs relative">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line pb-4">
+              <div className="flex items-center gap-3">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-night text-gold-light border border-gold/30 shadow-xs">
+                  <Sparkles className="h-5 w-5 text-gold-light" />
+                </span>
+                <div>
+                  <h3 className="font-display text-lg md:text-xl font-bold text-ink">
+                    {upcomingMilestone.role}
+                  </h3>
+                  <p className="text-xs font-semibold text-gold-deep font-mono mt-0.5">
+                    {upcomingMilestone.company} · <span className="text-slate-500">{upcomingMilestone.area}</span>
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="rounded-full bg-gold/15 border border-gold/40 px-3 py-1 font-mono text-[9px] uppercase font-bold text-gold-deep">
+                  {upcomingMilestone.badge}
+                </span>
+                <span className="font-mono text-xs text-muted font-semibold">
+                  {upcomingMilestone.period}
+                </span>
+              </div>
+            </div>
+            <p className="mt-4 text-xs md:text-sm leading-relaxed text-slate-700 font-medium max-w-4xl">
+              {upcomingMilestone.description}
+            </p>
+          </div>
+        )}
+
+        {/* 3. PROGRESSION TIMELINE CONNECTED BY THE GOLDEN THREAD */}
         <div className="mt-16">
           <div className="mb-6">
             <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500">

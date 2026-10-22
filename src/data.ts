@@ -23,12 +23,12 @@ export const portfolioData = {
   personalInfo: {
     name: 'Israel Torres',
     fullName: 'Israel Torres López',
-    title: 'Ingeniero Civil Industrial · Data Consultant',
+    title: 'Ingeniero Civil Industrial · Data Consultant · Product Owner',
     positioning: 'Strategy, Product & Applied AI',
     eyebrow: 'Strategy, Product & Applied AI',
     headline: 'Estructuro problemas complejos y los convierto en propuestas que se pueden ver, probar e iterar.',
     description:
-      'Ingeniero Civil Industrial y Data Consultant en Artefact. Trabajo entre estrategia comercial, CRM, inteligencia de mercado e IA aplicada, conectando áreas y haciendo tangibles las ideas antes de escalar.',
+      'Ingeniero Civil Industrial chileno, Data Consultant en Artefact y próximo Product Owner Senior en Acid Labs (incorporación prevista para noviembre de 2026). Trabajo entre estrategia comercial, CRM, analítica de datos, inteligencia de mercado e IA aplicada, conectando áreas y haciendo tangibles las ideas antes de escalar.',
     email: 'itorresl@correo.uss.cl',
     linkedin: 'https://www.linkedin.com/in/israeltorresl',
     github: 'https://github.com/IsraelTorresIndustrial/Israel-Torres-Web',
@@ -41,7 +41,7 @@ export const portfolioData = {
     'Banca y medios de pago',
     'Chile y Argentina',
     'Coordinación de +30 equipos',
-    'Prototipado con IA',
+    'Prototipado con IA & Vibecoding',
   ],
 
   narrativeSpine: {
@@ -223,28 +223,28 @@ export const portfolioData = {
 
   capabilityMatrix: [
     {
-      pillar: 'Strategy & Problem Framing',
-      howItManifests: 'Estructuración de problemas difusos, alineamiento con objetivos de negocio, benchmarks 1:1 y storytelling de alta dirección.',
+      pillar: 'Consultoría Estratégica & Problem Framing',
+      howItManifests: 'Estructuración de problemas difusos, alineamiento con objetivos de negocio, benchmarks competitivos 1:1 y storytelling de alta dirección.',
       evidence: 'Consultoría estratégica en banca, Iniciativas de Visa y Copiloto Comercial.',
-      skills: ['Business Strategy', 'Problem Framing', 'Competitive Benchmarks', 'Storytelling Ejecutivo'],
+      skills: ['Consultoría Estratégica', 'Business Strategy', 'Problem Framing', 'Competitive Benchmarks', 'Storytelling Ejecutivo'],
     },
     {
-      pillar: 'Product, CRM & Lifecycle',
-      howItManifests: 'Mapeo de customer journeys, mecánicas comerciales de activación y reactivación, y product discovery orientado a valor.',
+      pillar: 'Product Ownership, CRM & Medios de Pago',
+      howItManifests: 'Product Discovery, diseño de customer journeys, mecánicas comerciales de activación temprana, recurrencia y reactivación en medios de pago y banca.',
       evidence: 'Iniciativas regionales en portafolios de tarjetas y flujos de GenAI para marketing.',
-      skills: ['Customer Lifecycle', 'CRM Strategy', 'Product Discovery', 'Journeys & Funnels'],
+      skills: ['Product Ownership', 'Product Management', 'Customer Lifecycle', 'CRM Strategy', 'Medios de Pago & Banca'],
     },
     {
-      pillar: 'Cross-functional Coordination',
+      pillar: 'Coordinación Cross-functional & Gestión Ágil',
       howItManifests: 'Gestión de stakeholders, seguimiento de hitos, mitigación de bloqueos y alineación con áreas de soporte y control.',
       evidence: 'Articulación multiarea (Marketing, Legal, QA, Marca, DS) y gestión de +30 equipos en paralelo.',
       skills: ['Stakeholder Management', 'Cross-functional Delivery', 'Agile / Scrum', 'Gestión de Dependencias'],
     },
     {
-      pillar: 'Applied AI & Rapid Prototyping',
-      howItManifests: 'Construcción ágil de MVPs, maquetas interactivas en HTML/React, arquitecturas RAG y flujos asistidos por IA.',
+      pillar: 'IA Aplicada, Vibecoding & Prototipado',
+      howItManifests: 'Construcción ágil de herramientas y MVPs con IA, vibecoding asistido por LLMs, arquitecturas RAG, validación factual y automatización de procesos.',
       evidence: 'Executive Communication OS, Copiloto RAG y plataformas web a medida.',
-      skills: ['Applied AI & RAG', 'Rapid Prototyping', 'Gemini / Google Cloud', 'AI-assisted Development'],
+      skills: ['Inteligencia Artificial Aplicada', 'Vibecoding', 'Architecturas RAG', 'Gemini Enterprise', 'Rapid Prototyping', 'Automatización de Procesos'],
     },
   ],
 
@@ -294,6 +294,15 @@ export const portfolioData = {
           desc: 'Articulación y seguimiento transversal de campañas con Marketing, Digital, Marca, Legal, QA, PM, Business Analytics y Data Science.',
         },
       ],
+    },
+    upcomingMilestone: {
+      company: 'Acid Labs',
+      role: 'Product Owner Senior',
+      period: 'Inicio previsto: Noviembre 2026',
+      badge: 'Próxima Incorporación',
+      area: 'Productos Digitales & Soluciones Tecnológicas',
+      description:
+        'Próxima incorporación planificada como Product Owner Senior para liderar el ciclo de vida de productos digitales, articulando requerimientos estratégicos de negocio con metodologías ágiles y ejecución técnica de alto impacto.',
     },
     progression: [
       {
@@ -410,8 +419,8 @@ export const portfolioData = {
       category: 'IA & Cloud',
     },
     {
-      title: 'Fundamentos de ChatGPT',
-      issuer: 'Santander Open Academy',
+      title: 'Fundamentos de ChatGPT e IA Generativa',
+      issuer: 'OpenAI / Santander Open Academy',
       date: 'Ene 2025',
       category: 'IA & Cloud',
     },

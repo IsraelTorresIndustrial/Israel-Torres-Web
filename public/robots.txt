@@ -1,0 +1,32 @@
+# ==============================================================================
+# Robots.txt for Israel Torres (https://israel-torres-web.vercel.app/)
+# Optimization for Google Search, Googlebot, and AI Search Engines (GEO)
+# ==============================================================================
+
+User-agent: *
+Allow: /
+
+# Dedicated directives for Search & AI Indexers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://israel-torres-web.vercel.app/sitemap.xml

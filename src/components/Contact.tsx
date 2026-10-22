@@ -13,8 +13,10 @@ export function Contact() {
       <div className="absolute right-[-2%] bottom-[-5%] pointer-events-none hidden md:block opacity-15 select-none" aria-hidden="true">
         <img
           src="/logo.png"
-          alt=""
+          alt="Monograma oficial de Israel Torres"
           className="h-[380px] w-[380px] object-contain drop-shadow-[0_0_35px_rgba(197,138,36,0.15)]"
+          width={380}
+          height={380}
         />
       </div>
 

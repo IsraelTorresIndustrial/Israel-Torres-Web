@@ -73,7 +73,7 @@ export function Navbar() {
           <div className="relative h-8 w-8 overflow-hidden rounded-md border border-gold/40 bg-night/90 p-0.5 shadow-xs transition-colors group-hover:border-gold-light">
             <img
               src="/logo.png"
-              alt="Israel Torres Emblema"
+              alt="Israel Torres — Isotipo e Identidad Profesional"
               className="h-full w-full object-contain"
               width={32}
               height={32}

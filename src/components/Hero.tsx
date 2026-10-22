@@ -24,8 +24,10 @@ export function Hero() {
         <div className="relative">
           <img
             src="/logo.png"
-            alt=""
+            alt="Monograma e isotipo de Israel Torres"
             className="h-[480px] w-[480px] object-contain drop-shadow-[0_0_45px_rgba(197,138,36,0.18)]"
+            width={480}
+            height={480}
           />
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-void/40 to-void" />
         </div>
@@ -64,11 +66,18 @@ export function Hero() {
 
         {/* Hero Core Content */}
         <div className="mt-6 max-w-[940px]">
-          <p className="font-mono text-xs font-semibold uppercase tracking-widest text-gold-light">
-            {personalInfo.eyebrow}
-          </p>
+          <div className="flex items-center gap-2">
+            <span className="font-mono text-xs font-bold uppercase tracking-widest text-gold-light">
+              Israel Torres
+            </span>
+            <span className="text-slate-500 font-mono text-xs">·</span>
+            <span className="font-mono text-xs font-semibold uppercase tracking-widest text-slate-300">
+              {personalInfo.eyebrow}
+            </span>
+          </div>
 
           <h1 className="mt-3 font-display text-[clamp(2.2rem,4.8vw,4.2rem)] font-bold leading-[1.08] tracking-tight text-white text-balance">
+            <span className="sr-only">Israel Torres — Ingeniero Civil Industrial, Product Owner y Consultor en Inteligencia Artificial en Chile. </span>
             Estructuro problemas complejos y los convierto en{' '}
             <span className="font-editorial italic font-normal text-gold-light">
               propuestas que se pueden ver, probar e iterar.
