@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
@@ -39,12 +40,6 @@
           "value": "public, max-age=3600, stale-while-revalidate=86400"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/((?!assets/|robots.txt|sitemap.xml|googlee4010bf84bb58835.html|favicon.svg|logo.png|404.html).*)",
-      "destination": "/index.html"
     }
   ]
 }
