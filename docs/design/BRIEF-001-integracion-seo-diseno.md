@@ -2,18 +2,17 @@
 <!-- Fecha: 2026-10-22 | Hito: Rediseño "Plano editorial" | Aprobación: acuerdo de Israel 2026-10-22 (Home + rutas internas, tagline visible "Estrategia, producto y tecnología", sin foto, rama solo local) -->
 
 ## Objetivo
-Integrar la rama `design/experience` (Claude) sobre `main` **después** de `seo/optimization` (Antigravity), conservando metadatos, JSON-LD, robots, sitemap y verificación de Search Console, y registrando en el sitemap las nuevas URLs.
+Integrar la rama `design/experience` (Claude) en `main`, conservando metadatos, JSON-LD, robots, sitemap y verificación de Search Console, y registrando en el sitemap las nuevas URLs.
 **Resultado:** el sitio rediseñado se publica con 11 páginas prerenderizadas (HTML real sin JS), cada una con su propio title/description/canonical.
 
 ## Contexto
-- Base de la rama: `main @ e732643`. Dirección y componentes: `docs/design/DIRECTION.md`.
+- Base de la rama: `main @ e732643`, **ya mergeada con `main @ 9854914`** (los 4 commits SEO de Antigravity). Conflictos resueltos en el merge: `index.html` (se conservó el head de Antigravity y se quitaron solo las 3 líneas de Google Fonts) y los componentes antiguos eliminados (`Hero`, `Navbar`, `Footer`, `Contact`, `Experience`). Dirección y componentes: `docs/design/DIRECTION.md`.
 - La rama **no modifica** `src/data.ts`, `public/*`, `vercel.json` ni el JSON-LD.
 - Build nuevo: `vite build` → `vite build --ssr src/entry-server.tsx` → `node scripts/prerender.mjs`.
 - El prerender reemplaza **todo** el contenido de `<div id="root">` (incluido el fallback estático que Antigravity escribió en `index.html`) por el HTML real de cada ruta, y **no toca el `<head>` de `/`**.
 
 ## Alcance
-- [ ] Merge `seo/optimization` → `main`; luego `design/experience` → `main`.
-- [ ] Resolver conflictos según "Comportamiento requerido".
+- [ ] Revisar el merge ya hecho en la rama y mergear `design/experience` → `main` (si `main` avanzó, resolver según "Comportamiento requerido").
 - [ ] Añadir al `public/sitemap.xml` las 10 URLs nuevas (lista abajo).
 - [ ] Verificar en un Preview de Vercel que cada ruta responde 200 con su HTML prerenderizado.
 - [ ] Decidir y documentar los puntos de "Preguntas abiertas".
@@ -41,7 +40,7 @@ Integrar la rama `design/experience` (Claude) sobre `main` **después** de `seo/
 ## Comportamiento requerido
 1. **Conflicto en `index.html`:** conservar el `<head>` de Antigravity completo **y** eliminar las 3 líneas de Google Fonts (`preconnect` ×2 + stylesheet DM Mono/Inter/Newsreader/Space Grotesk). Las fuentes ahora son autoalojadas (`@fontsource-variable/*`); mantener esas líneas carga ~4 familias sin uso y bloquea el render.
 2. **Fallback estático en `#root`:** puede quedarse; el prerender lo sustituye en `dist`. Recomendado vaciarlo (`<div id="root"></div>`) para no mantener dos versiones del contenido.
-3. **H1 de la Home:** pasa a ser `Israel Torres` + línea de rol tomada de `portfolioData.personalInfo.title` (ej. "Ingeniero Civil Industrial · Data Consultant · Product Owner"), visibles ambos dentro del `<h1>`. Para ajustar keywords del H1, editar `personalInfo.title` en `src/data.ts`; no cambiar el componente.
+3. **H1 de la Home:** el `sr-only` con keywords que existía en el `Hero.tsx` antiguo ya no existe; el H1 pasa a ser `Israel Torres` + línea de rol tomada de `portfolioData.personalInfo.title` (ej. "Ingeniero Civil Industrial · Data Consultant · Product Owner"), visibles ambos dentro del `<h1>`. Para ajustar keywords del H1, editar `personalInfo.title` en `src/data.ts`; no cambiar el componente.
 4. **Componentes eliminados:** si `seo/optimization` modificó alguno, mantener la eliminación y llevar cualquier cambio de texto a `src/data.ts`.
 5. **Sitemap:** añadir las 10 URLs con `lastmod` de la fecha de deploy; no añadir `/diseno` ni `/articulos` mientras `src/content/articles.ts` esté vacío.
 
