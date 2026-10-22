@@ -1,3 +1,4 @@
+import type React from 'react';
 import { formatArticleDate, type Article, type ArticleBlock } from '../../content/articles';
 import { Link } from '../../router';
 import { Arrow } from '../ui/primitives';
@@ -34,7 +35,7 @@ export function ArticleIndex({ items, headingLevel = 'h3' }: { items: Article[];
   );
 }
 
-function Block({ block }: { block: ArticleBlock }) {
+function Block({ block }: { block: ArticleBlock; key?: React.Key }) {
   switch (block.type) {
     case 'p':
       return <p>{block.text}</p>;

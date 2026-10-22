@@ -1,3 +1,4 @@
+import type React from 'react';
 import { projectPath, type CaseStudy } from '../../content/projects';
 import { Link } from '../../router';
 import { Arrow, ArrowLink, Schematic, TagList } from '../ui/primitives';
@@ -47,7 +48,7 @@ export function ProjectFeature({ project, headingLevel = 'h3' }: { project: Case
 }
 
 /** Mid-size entry: used two-up on the home page. */
-export function ProjectEntry({ project, headingLevel = 'h3' }: { project: CaseStudy; headingLevel?: 'h2' | 'h3' }) {
+export function ProjectEntry({ project, headingLevel = 'h3' }: { project: CaseStudy; headingLevel?: 'h2' | 'h3'; key?: React.Key }) {
   const H = headingLevel;
   return (
     <article className="flex h-full flex-col border-t border-rule-strong pt-6" data-reveal>
