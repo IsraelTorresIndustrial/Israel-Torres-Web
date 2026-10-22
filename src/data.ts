@@ -22,7 +22,7 @@ export interface ProjectItem {
 export const portfolioData = {
   personalInfo: {
     name: 'Israel Torres',
-    fullName: 'Israel Torres López',
+    fullName: 'Israel Torres',
     title: 'Ingeniero Civil Industrial · Data Consultant · Product Owner',
     positioning: 'Strategy, Product & Applied AI',
     eyebrow: 'Strategy, Product & Applied AI',
@@ -31,7 +31,7 @@ export const portfolioData = {
       'Ingeniero Civil Industrial chileno, Data Consultant en Artefact y próximo Product Owner Senior en Acid Labs (incorporación prevista para noviembre de 2026). Trabajo entre estrategia comercial, CRM, analítica de datos, inteligencia de mercado e IA aplicada, conectando áreas y haciendo tangibles las ideas antes de escalar.',
     email: 'itorresl@correo.uss.cl',
     linkedin: 'https://www.linkedin.com/in/israeltorresl',
-    github: 'https://github.com/IsraelTorresIndustrial/Israel-Torres-Web',
+    github: 'https://github.com/IsraelTorresIndustrial',
     location: 'Santiago, Chile',
     currentRole: 'Data Consultant en Artefact',
     scopeBadge: 'Iniciativas Regionales · Chile & Argentina',
